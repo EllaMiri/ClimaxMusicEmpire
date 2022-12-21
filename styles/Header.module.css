@@ -36,3 +36,42 @@
 .linkStyle {
   text-decoration: none;
 }
+
+.headerOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+}
+
+.listItemsOpen {
+  display: flex;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.headerOpen .navLinks {
+  display: block;
+  flex-direction: column;
+}
+
+.headerOpen .headerLeft {
+  height: 5rem;
+}
+
+.headerOpen .headerRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoBurgerMenu {
+  /* display: block; */
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
