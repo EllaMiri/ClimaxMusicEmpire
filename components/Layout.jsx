@@ -2,14 +2,6 @@ import { Button, Typography, Box } from "@mui/material";
 import { useEffect } from "react";
 
 const Layout = () => {
-  // const videoRef = useRef()
-
-  // useEffect(() => {
-  //     setTimeout(() => {
-  //         videoRef.current.play()
-  //     }, 5000)
-  // }, [])
-
   const style = {
     width: "100%",
     height: "100%",
