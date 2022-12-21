@@ -2,6 +2,8 @@ import { Typography } from "@mui/material";
 import Image from "next/image";
 import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Header.module.css";
+import Link from "next/link";
+import { style } from "@mui/system";
 
 const Header = () => {
   return (
@@ -21,30 +23,40 @@ const Header = () => {
       <nav className={styles.headerRight}>
         <ul className={styles.navLinks}>
           <li id="home" className={styles.listItems}>
-            <Typography variant="p" component="p">
-              News
-            </Typography>
+            <Link className={styles.linkStyle} href="/News">
+              <Typography variant="p" component="p">
+                News
+              </Typography>
+            </Link>
             {/* <a href="#"></a>Home */}
           </li>
           <li id="about-me" className={styles.listItems}>
-            <Typography variant="p" component="p">
-              Gallery
-            </Typography>
+            <Link className={styles.linkStyle} href="/Gallery">
+              <Typography variant="p" component="p">
+                Gallery
+              </Typography>
+            </Link>
           </li>
           <li id="skills" className={styles.listItems}>
-            <Typography variant="p" component="p">
-              Contact
-            </Typography>
+            <Link className={styles.linkStyle} href="/Contact">
+              <Typography variant="p" component="p">
+                Contact
+              </Typography>
+            </Link>
           </li>
           <li id="projects" className={styles.listItems}>
-            <Typography variant="p" component="p">
-              Events
-            </Typography>
+            <Link className={styles.linkStyle} href="/Events">
+              <Typography variant="p" component="p">
+                Events
+              </Typography>
+            </Link>
           </li>
           <li id="contact" className={styles.listItems}>
-            <Typography variant="p" component="p">
-              Artists
-            </Typography>
+            <Link className={styles.linkStyle} href="/Artists">
+              <Typography variant="p" component="p">
+                Artists
+              </Typography>
+            </Link>
           </li>
         </ul>
       </nav>

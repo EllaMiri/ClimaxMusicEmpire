@@ -32,3 +32,7 @@
 .logo {
   cursor: pointer;
 }
+
+.linkStyle {
+  text-decoration: none;
+}
