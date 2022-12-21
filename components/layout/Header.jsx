@@ -38,11 +38,10 @@ const Header = () => {
             </Link>
           </li>
           <li id="skills" className={styles.listItems}>
-            <Link className={styles.linkStyle} href="/Contact">
-              <Typography variant="p" component="p">
-                Contact
-              </Typography>
-            </Link>
+            {/* REACT SCROLL LINK TO CONTACTS HERE */}
+            <Typography variant="p" component="p">
+              Contact
+            </Typography>
           </li>
           <li id="projects" className={styles.listItems}>
             <Link className={styles.linkStyle} href="/Events">
