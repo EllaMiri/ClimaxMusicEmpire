@@ -1,0 +1,53 @@
+.s {
+    color: #E2B945;
+}
+
+.titleBox {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.imageContainer {
+   
+    display: flex;
+
+}
+
+.image {
+    width: 20rem;
+    height: 23rem;
+}
+
+.image1 {
+    width: 20rem;
+    height: 23rem;
+    position: relative;
+    left: -10%;
+    bottom: -10%;
+}
+
+@media  screen and (max-width: 900px) {
+    .image {
+        width: 12rem;
+        height: 18rem;
+    }
+
+    .image1 {
+        width: 12rem;
+        height: 18rem;
+        
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .image {
+        width: 10rem;
+        height: 15rem;
+    }
+    .image1 {
+        width: 10rem;
+        height: 15rem;
+        position: relative;
+        bottom: -20%;
+    }
+}
