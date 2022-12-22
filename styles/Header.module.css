@@ -51,6 +51,7 @@
   align-items: center;
   justify-content: flex-start;
   background-color: black;
+  z-index: 1;
 }
 
 .listItemsOpen {
