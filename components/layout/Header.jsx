@@ -122,14 +122,22 @@ const Header = () => {
               ></CloseIcon>
               <ul className={styles.navLinks}>
                 <li className={styles.listItemsOpen}>
-                  <Link className={styles.linkStyle} href="/News">
+                  <Link
+                    onClick={toggleMenu}
+                    className={styles.linkStyle}
+                    href="/News"
+                  >
                     <Typography variant="p" component="p">
                       News
                     </Typography>
                   </Link>
                 </li>
                 <li className={styles.listItemsOpen}>
-                  <Link className={styles.linkStyle} href="/Gallery">
+                  <Link
+                    onClick={toggleMenu}
+                    className={styles.linkStyle}
+                    href="/Gallery"
+                  >
                     <Typography variant="p" component="p">
                       Gallery
                     </Typography>
@@ -142,14 +150,22 @@ const Header = () => {
                   </Typography>
                 </li>
                 <li className={styles.listItemsOpen}>
-                  <Link className={styles.linkStyle} href="/Events">
+                  <Link
+                    onClick={toggleMenu}
+                    className={styles.linkStyle}
+                    href="/Events"
+                  >
                     <Typography variant="p" component="p">
                       Events
                     </Typography>
                   </Link>
                 </li>
                 <li className={styles.listItemsOpen}>
-                  <Link className={styles.linkStyle} href="/Artists">
+                  <Link
+                    onClick={toggleMenu}
+                    className={styles.linkStyle}
+                    href="/Artists"
+                  >
                     <Typography variant="p" component="p">
                       Artists
                     </Typography>
