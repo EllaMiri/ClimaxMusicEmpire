@@ -8,11 +8,11 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 
 const Header = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
-    setIsOpen(!isOpen);
-    console.log(isOpen);
+    setIsMenuOpen(!isMenuOpen);
+    console.log(isMenuOpen);
   };
 
   const burgerMenuBreakpoints = {
@@ -31,9 +31,9 @@ const Header = () => {
   };
   return (
     <div>
-      <header className={isOpen ? [styles.headerOpen] : styles.header}>
+      <header className={isMenuOpen ? [styles.headerOpen] : styles.header}>
         <div className={styles.headerLeft}>
-          {!isOpen && (
+          {!isMenuOpen && (
             <Link href="/">
               <Image
                 className={styles.logo}
@@ -44,7 +44,7 @@ const Header = () => {
             </Link>
           )}
         </div>
-        {!isOpen && (
+        {!isMenuOpen && (
           <>
             <nav className={styles.headerRight}>
               <ul className={styles.navLinks}>
@@ -109,7 +109,7 @@ const Header = () => {
             </nav>
           </>
         )}
-        {isOpen && (
+        {isMenuOpen && (
           <>
             <nav className={styles.headerRight}>
               <CloseIcon
