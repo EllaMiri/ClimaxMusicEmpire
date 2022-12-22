@@ -1,0 +1,19 @@
+.us {
+    color: #E2B945;
+    margin-left: 1rem;
+}
+
+.titleBox {
+    display: flex;
+    margin: 0 0 2rem 7.5rem;
+}
+
+.contentBox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.description {
+    width: 50%;
+}
+

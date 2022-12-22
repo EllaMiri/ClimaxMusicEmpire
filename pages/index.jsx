@@ -1,4 +1,5 @@
 import Head from "next/head";
+import AboutUs from "../components/AboutUs";
 import Layout from "../components/Layout";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <link rel="icon" href="/CLIMAXMUSICLOGOv3.png" />
       </Head>
       <Layout />
+      <AboutUs />
     </>
   );
 }
