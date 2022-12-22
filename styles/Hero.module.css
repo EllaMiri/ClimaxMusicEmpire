@@ -1,48 +1,50 @@
 .container {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    margin: 0;
-    display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 105vh;
+  /* min-height: 105vh; */
+  padding: 0;
 }
 
 .video {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
 }
 
 .heroText {
-      text-align: center;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  text-align: center;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .titleBox {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .contactBtn {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .empire {
-    color: #E2B945;
+  color: #e2b945;
 }
 
 .headingContainer {
-    display: flex;
+  display: flex;
 }
 
 .description {
-    flex-direction: column;
-    display: flex; 
-    /* align-items: flex-end; */
+  flex-direction: column;
+  display: flex;
+  /* align-items: flex-end; */
 }

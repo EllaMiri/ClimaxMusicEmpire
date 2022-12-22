@@ -2,9 +2,12 @@
   height: 5rem;
   min-height: 5rem;
   display: flex;
-  justify-content: space-between;
   transition: height 400ms;
   padding: 0 2rem;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 .headerLeft {
