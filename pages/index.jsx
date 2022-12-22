@@ -12,7 +12,7 @@ export default function Home() {
         <link rel="icon" href="/CLIMAXMUSICLOGOv3.png" />
       </Head>
       <Layout />
-     <ScrollToTop />
+      <ScrollToTop />
     </>
   );
 }

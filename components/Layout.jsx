@@ -37,7 +37,7 @@ const Layout = () => {
   };
 
   return (
-    <Box id='hero' className={styles.container}>
+    <Box id="hero" className={styles.container}>
       <Box>
         <video autoPlay muted loop className={styles.video}>
           <source src="./rolling-web-edit.mp4" type="video/mp4" />
