@@ -8,34 +8,31 @@
 }
 
 .imageContainer {
-   
     display: flex;
-
 }
 
 .image {
-    width: 20rem;
-    height: 23rem;
+    width: 15rem;
+    height: 20rem;
 }
 
 .image1 {
-    width: 20rem;
-    height: 23rem;
-    position: relative;
+    width: 15rem;
+    height: 20rem;
+    /* position: relative;
     left: -10%;
-    bottom: -10%;
+    bottom: -10%; */
 }
 
 @media  screen and (max-width: 900px) {
     .image {
-        width: 12rem;
-        height: 18rem;
+        width: 10rem;
+        height: 15rem;
     }
 
     .image1 {
-        width: 12rem;
-        height: 18rem;
-        
+        width: 10rem;
+        height: 15rem;
     }
 }
 
@@ -47,7 +44,5 @@
     .image1 {
         width: 10rem;
         height: 15rem;
-        position: relative;
-        bottom: -20%;
     }
 }

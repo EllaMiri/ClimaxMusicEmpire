@@ -19,6 +19,10 @@ const Artist = () => {
       const lastTitleMediaQueries = {
         marginLeft: { xs: "0.1rem" },
       };
+
+      const imageContainer = {
+        margin: {xs: 'auto'}
+      }
     
       const contentMediaQueries = {
         display: "flex",
@@ -29,8 +33,8 @@ const Artist = () => {
       };
     
       const descriptionMediaQueries = {
-        marginTop: { xs: "2rem", sm: "0" },
-        width: { xs: "75%", sm: "75%", md: "50%" },
+        margin: { xs: "2rem auto 0", sm: "0 0 0 1rem" },
+        width: { xs: "90%", sm: "75%", md: "50%" },
         fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
       };
     return (
@@ -49,7 +53,7 @@ const Artist = () => {
             </Typography>
         </Box>
         <Box sx={contentMediaQueries}>
-        <Box className={styles.imageContainer}>
+        <Box className={styles.imageContainer} sx={imageContainer}>
             <img className={styles.image} src="./boi-ous.png" alt="boious" />
             <img className={styles.image1} src="./icekid-ds.png" alt="icekidds" />
         </Box>
