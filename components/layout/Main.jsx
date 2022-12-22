@@ -1,9 +1,9 @@
-import Layout from "../Layout";
+import Hero from "../Hero";
 
 const Main = () => {
   return (
     <div>
-      <Layout></Layout>
+      <Hero></Hero>
     </div>
   );
 };

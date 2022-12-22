@@ -1,7 +1,7 @@
 import { Button, Typography, Box } from "@mui/material";
 import styles from "../styles/Hero.module.css";
 
-const Layout = () => {
+const Hero = () => {
   const textContentMediaQueries = {
     width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
   };
@@ -77,4 +77,4 @@ const Layout = () => {
   );
 };
 
-export default Layout;
+export default Hero;
