@@ -4,13 +4,17 @@ import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Footer.module.css";
+import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 
 const Footer = () => {
+  const lowerMediaQueries = {
+    fontSize: { xs: ".7rem", sm: ".8rem", md: "1rem" },
+  };
   return (
     <footer>
-      <div className={styles.upper}>
+      <Box className={styles.upper}>
         <Link
           href="https://www.instagram.com/climaxmusicempire/"
           target="_blank"
@@ -39,23 +43,33 @@ const Footer = () => {
           icon={faYoutube}
           style={{ color: "white", fontSize: "2rem" }}
         />
-      </div>
-      <div className={styles.middle}>
-        <Image src={logo} alt="Climax Music Empire" width={50} />
-      </div>
-      <div className={styles.lower}>
+      </Box>
+      <Box className={styles.middle}>
+        <Link href="/">
+          <Image src={logo} alt="Climax Music Empire" width={50} />
+        </Link>
+      </Box>
+      <Box className={styles.lower}>
         <Link href="/News">
-          <span className={styles.links}>NEWS</span>
+          <Typography sx={lowerMediaQueries} className={styles.links}>
+            NEWS
+          </Typography>
         </Link>
         <Link href="/Artists">
-          <span className={styles.links}>ARTISTS</span>
+          <Typography sx={lowerMediaQueries} className={styles.links}>
+            ARTISTS
+          </Typography>
         </Link>
         {/* INSERT REACT SCROLL LINK HERE */}
-        <span className={styles.links}>CONTACT US</span>
+        <Typography sx={lowerMediaQueries} className={styles.links}>
+          CONTACT US
+        </Typography>
         <Link href="/Events">
-          <span className={styles.links}>EVENTS</span>
+          <Typography sx={lowerMediaQueries} className={styles.links}>
+            EVENTS
+          </Typography>
         </Link>
-      </div>
+      </Box>
     </footer>
   );
 };
