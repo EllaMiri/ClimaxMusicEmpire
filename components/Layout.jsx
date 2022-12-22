@@ -1,6 +1,5 @@
 import { Button, Typography, Box } from "@mui/material";
 import styles from "../styles/Hero.module.css";
-import Header from "./layout/Header";
 
 const Layout = () => {
   const textContentMediaQueries = {
@@ -39,13 +38,11 @@ const Layout = () => {
 
   return (
     <Box className={styles.container}>
-      {/* <Header /> */}
       <Box>
         <video autoPlay muted loop className={styles.video}>
           <source src="./rollingWEB.mp4" type="video/mp4" />
         </video>
       </Box>
-
       <Box className={styles.heroText} sx={textContentMediaQueries}>
         <Box className={styles.titleBox} sx={titleBoxMediaQueries}>
           <Box className={styles.headingContainer}>
@@ -61,7 +58,6 @@ const Layout = () => {
               EMPIRE
             </Typography>
           </Box>
-
           <Box sx={descriptionMediaQueries} className={styles.description}>
             <Typography sx={paragraphMediaQueries} variant="p" component="p">
               Swedens aspiring music label
