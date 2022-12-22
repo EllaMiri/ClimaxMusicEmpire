@@ -1,19 +1,28 @@
 .us {
     color: #E2B945;
-    margin-left: 1rem;
 }
 
 .titleBox {
     display: flex;
-    margin: 0 0 2rem 7.5rem;
+    margin-bottom: 1rem;
 }
 
-.contentBox {
-    display: flex;
-    justify-content: space-around;
+.image {
+    width: 20rem;
+    height: 23rem;
 }
 
-.description {
-    width: 50%;
+@media  screen and (max-width: 900px) {
+    .image {
+        width: 8rem;
+        height: 10rem;
+    }
 }
 
+@media screen and (max-width: 600px) {
+    .image {
+        width: 4rem;
+        height: 5rem;
+    }
+    
+}
