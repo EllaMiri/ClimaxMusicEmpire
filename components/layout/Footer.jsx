@@ -38,11 +38,15 @@ const Footer = () => {
             }}
           />
         </Link>
-        {/* INSERT LINK TO YOUTUBE HERE */}
-        <FontAwesomeIcon
-          icon={faYoutube}
-          style={{ color: "white", fontSize: "2rem" }}
-        />
+        <Link
+          href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
+          target="_blank"
+        >
+          <FontAwesomeIcon
+            icon={faYoutube}
+            style={{ color: "white", fontSize: "2rem" }}
+          />
+        </Link>
       </Box>
       <Box className={styles.middle}>
         <Link href="/">
