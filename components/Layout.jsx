@@ -1,70 +1,78 @@
 import { Button, Typography, Box } from "@mui/material";
-import { useEffect } from "react";
+import styles from "../styles/Hero.module.css"
 
 const Layout = () => {
-  const style = {
-    width: "100%",
-    height: "100%",
-    position: "relative",
-    margin: 0,
+  const textContentMediaQueries = {
+    width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
   };
 
-  const textContent = {
-    width: { xs: "100%", sm: "25rem", md: "25rem", lg: "60rem" },
-    textAlign: "center",
-    position: "absolute",
-    top: "50%",
-    left: { sm: "20%", md: "30%", lg: "15%", xl: "20%" },
-  };
-
-  const titleBox = {
-    display: "flex",
+  const titleBoxMediaQueries = {
     flexDirection: { xs: "column", sm: "row" },
   };
 
-  const title = {
-    fontSize: { xs: "2rem", lg: "5rem" },
+  const titleMediaQueries = {
+    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
   };
 
-  const lastTitle = {
-    marginLeft: { xs: "1.5rem", sm: "0.5rem", md: "0.5rem", lg: "1.5rem" },
+  const lastTitleMediaQueries = {
+    marginLeft: { xs: "0.5rem", sm: "0.5rem", md: "0.5rem", lg: "1.5rem" },
   };
+
+  const descriptionMediaQueries = {
+    alignItems: {xs: "center", sm: "center", md: "flex-end", lg: "flex-end", xl: "flex-end"}
+  }
+
+  const paragraphMediaQueries = {
+    fontSize: {xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem"}
+  }
+
+  const contactBtnMediaQueries = {
+    fontSize: {xs: ".5rem", sm: ".9rem", md: ".9rem", lg: "1.2rem"}
+  }
 
   return (
-    <Box sx={style}>
+ 
+    <Box className={styles.container}>
       <Box>
-        <video autoPlay muted loop style={{ width: "100%", height: "100%" }}>
+        <video autoPlay muted loop className={styles.video}>
           <source src="./rolling-web-edit.mp4" type="video/mp4" />
         </video>
       </Box>
-
-      <Box sx={textContent}>
-        <Box sx={titleBox}>
-          <Typography sx={title} variant="h1" component="h1">
+  
+      <Box className={styles.heroText} sx={textContentMediaQueries}>
+        <Box className={styles.titleBox} sx={titleBoxMediaQueries}>
+          <Box className={styles.headingContainer}>
+          <Typography sx={titleMediaQueries} variant="h1" component="h1">
             CLIMAX MUSIC
           </Typography>
           <Typography
-            sx={[title, lastTitle]}
+            sx={[titleMediaQueries, lastTitleMediaQueries]}
             variant="h2"
             component="h2"
-            style={{ color: "#E2B945" }}
+            className={styles.empire}
           >
             EMPIRE
           </Typography>
-        </Box>
-        <Typography variant="p" component="p">
+          </Box>
+         
+          <Box sx={descriptionMediaQueries} className={styles.description}>
+        <Typography sx={paragraphMediaQueries} variant="p" component="p">
           Swedens aspiring music label
         </Typography>
         <Button
-          style={{ marginTop: "1rem" }}
+        sx={contactBtnMediaQueries}
+          className={styles.contactBtn}
           variant="contained"
           color="primary"
         >
           Contact us
         </Button>
+          </Box>
+        </Box>
       </Box>
     </Box>
-  );
-};
+  )
+  }
+
 
 export default Layout;
