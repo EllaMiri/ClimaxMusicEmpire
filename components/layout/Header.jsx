@@ -59,13 +59,13 @@ const Header = () => {
                   </Link>
                 </li>
                 <li className={styles.listItems}>
-                  <Link className={styles.linkStyle} href="/Gallery">
+                  <Link className={styles.linkStyle} href="/Media">
                     <Typography
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
                     >
-                      Gallery
+                      Media
                     </Typography>
                   </Link>
                 </li>
@@ -135,10 +135,10 @@ const Header = () => {
                   <Link
                     onClick={toggleMenu}
                     className={styles.linkStyle}
-                    href="/Gallery"
+                    href="/Media"
                   >
                     <Typography variant="p" component="p">
-                      Gallery
+                      Media
                     </Typography>
                   </Link>
                 </li>
