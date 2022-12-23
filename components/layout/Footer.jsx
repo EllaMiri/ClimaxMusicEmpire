@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
@@ -33,9 +34,15 @@ const Footer = () => {
             style={{
               color: "white",
               fontSize: "2rem",
-              paddingLeft: "5rem",
-              paddingRight: "5rem",
+              paddingLeft: "3rem",
+              paddingRight: "3rem",
             }}
+          />
+        </Link>
+        <Link href="https://twitter.com/Climaxmusicemp" target="_blank">
+          <FontAwesomeIcon
+            icon={faTwitter}
+            style={{ color: "white", fontSize: "2rem", paddingRight: "3rem" }}
           />
         </Link>
         <Link
