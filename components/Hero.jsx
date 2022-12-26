@@ -37,7 +37,7 @@ const Hero = () => {
   };
 
   return (
-    <Box className={styles.container}>
+    <Box id="hero" className={styles.container}>
       <Box>
         <video autoPlay muted loop className={styles.video}>
           <source src="./rollingWEB.mp4" type="video/mp4" />
