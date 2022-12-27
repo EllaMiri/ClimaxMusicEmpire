@@ -61,21 +61,25 @@ const Footer = () => {
         </Link>
       </Box>
       <Box className={styles.lower}>
-        <Link href="/News">
+        <Link style={{ textDecoration: "none" }} href="/News">
           <Typography sx={lowerMediaQueries} className={styles.links}>
             NEWS
           </Typography>
         </Link>
-        <Link href="/Artists">
+        <Link style={{ textDecoration: "none" }} href="/Artists">
           <Typography sx={lowerMediaQueries} className={styles.links}>
             ARTISTS
           </Typography>
         </Link>
         {/* INSERT REACT SCROLL LINK HERE */}
-        <Typography sx={lowerMediaQueries} className={styles.links}>
+        <Typography
+          style={{ textDecoration: "none" }}
+          sx={lowerMediaQueries}
+          className={styles.links}
+        >
           CONTACT US
         </Typography>
-        <Link href="/Events">
+        <Link style={{ textDecoration: "none" }} href="/Events">
           <Typography sx={lowerMediaQueries} className={styles.links}>
             EVENTS
           </Typography>

@@ -35,6 +35,10 @@
   margin-top: 1rem;
 }
 
+.contactBtn:hover {
+  background-color: #9e8335;
+}
+
 .empire {
   color: #e2b945;
 }

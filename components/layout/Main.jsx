@@ -1,12 +1,14 @@
 import Hero from "../Hero";
 import ScrollToTop from "../Scroll";
 import AboutUs from "../AboutUs";
+import Artist from "../Artist";
 
 const Main = () => {
   return (
     <div>
-      <Hero></Hero>
+      <Hero />
       <AboutUs />
+      <Artist />
       <ScrollToTop />
     </div>
   );
