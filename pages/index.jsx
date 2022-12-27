@@ -1,6 +1,8 @@
 import Head from "next/head";
 import AboutUs from "../components/AboutUs";
 import Layout from "../components/Layout";
+import Main from "../components/layout/Main";
+
 
 export default function Home() {
   return (
@@ -13,6 +15,7 @@ export default function Home() {
       </Head>
       <Layout />
       <AboutUs />
+      <Main />
     </>
   );
 }

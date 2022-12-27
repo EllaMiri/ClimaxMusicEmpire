@@ -1,0 +1,24 @@
+.links {
+  font-family: "Montserrat";
+  color: white;
+}
+
+.lower {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 1.5rem;
+}
+
+.upper {
+  display: flex;
+  justify-content: center;
+  margin-left: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.middle {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}

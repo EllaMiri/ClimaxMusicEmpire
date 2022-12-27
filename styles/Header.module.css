@@ -1,0 +1,82 @@
+.header {
+  height: 5rem;
+  min-height: 5rem;
+  display: flex;
+  transition: height 400ms;
+  padding: 0 2rem;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  min-height: 5rem;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.listItems {
+  /* color: white; */
+  list-style-type: none;
+  padding-left: 1rem;
+  cursor: pointer;
+}
+
+.logo {
+  cursor: pointer;
+}
+
+.linkStyle {
+  text-decoration: none;
+}
+
+.headerOpen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: black;
+  z-index: 1;
+}
+
+.listItemsOpen {
+  display: flex;
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.headerOpen .navLinks {
+  display: block;
+  flex-direction: column;
+}
+
+.headerOpen .headerLeft {
+  height: 5rem;
+}
+
+.headerOpen .headerRight {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoBurgerMenu {
+  /* display: block; */
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
