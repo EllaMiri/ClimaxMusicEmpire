@@ -29,14 +29,27 @@ const Hero = () => {
   };
 
   const titleMediaQueries = {
-    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
+    fontSize: { xs: "1.6rem", sm: "3rem", md: "4rem", lg: "5rem" },
+  };
+
+  const desktopVideoMediaQueries = {
+    display: { xs: "none", sm: "block" },
+  };
+
+  const mobileVideoMediaQueries = {
+    display: { xs: "block", sm: "none" },
   };
 
   return (
     <Box id="hero" className={styles.container}>
-      <Box>
+      <Box sx={desktopVideoMediaQueries}>
         <video autoPlay muted loop className={styles.video}>
           <source src="./rollingWEB.mp4" type="video/mp4" />
+        </video>
+      </Box>
+      <Box sx={mobileVideoMediaQueries}>
+        <video autoPlay muted loop className={styles.video}>
+          <source src="./heroVideoMobile.mp4" type="video/mp4" />
         </video>
       </Box>
       <Box className={styles.heroText} sx={textContentMediaQueries}>
