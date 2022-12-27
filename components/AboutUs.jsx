@@ -10,6 +10,7 @@ const AboutUs = () => {
     marginLeft: { xs: 0, md: "3rem", lg: "3rem" },
     paddingLeft: { xs: "1rem", md: "0" },
     paddingRight: { xs: "1rem", md: "0" },
+    marginTop: { xs: "1.5rem" },
   };
 
   const imageMediaQueries = {
