@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Artist from "../components/Artist";
 import Layout from "../components/Layout";
+import Main from "../components/layout/Main";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       </Head>
       <Layout />
       <Artist />
+      <Main />
     </>
   );
 }
