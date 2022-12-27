@@ -1,48 +1,72 @@
 .s {
-    color: #E2B945;
+  color: #e2b945;
+}
+
+.ourArtistsBtn {
+  border: 1px solid #e2b945;
+  margin-top: 1rem;
+}
+
+.ourArtistsBtn:hover {
+  background-color: #9e8335;
 }
 
 .titleBox {
-    display: flex;
-    margin-bottom: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .imageContainer {
-    display: flex;
+  display: flex;
 }
 
 .image {
-    width: 15rem;
-    height: 20rem;
+  /* width: 120%; */
+  width: 30rem;
+  margin-left: 0.5rem;
+  height: auto;
 }
 
-.image1 {
-    width: 15rem;
-    height: 20rem;
-    /* position: relative;
-    left: -10%;
-    bottom: -10%; */
+.description {
+  text-align: left;
 }
 
-@media  screen and (max-width: 900px) {
-    .image {
-        width: 10rem;
-        height: 15rem;
-    }
+@media screen and (min-width: 1200px) {
+  .image {
+    width: 45rem;
+    height: auto;
+    margin-left: 0.5rem;
+  }
+}
 
-    .image1 {
-        width: 10rem;
-        height: 15rem;
-    }
+@media screen and (max-width: 900px) {
+  .image {
+    margin-bottom: 1rem;
+    width: 30rem;
+    height: auto;
+    margin-left: 0;
+  }
+  .ourArtistsBtn {
+    width: 40%;
+    height: auto;
+  }
+  .description {
+    text-align: center;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .image {
-        width: 10rem;
-        height: 15rem;
-    }
-    .image1 {
-        width: 10rem;
-        height: 15rem;
-    }
+  .image {
+    margin-bottom: 1rem;
+    width: 16rem;
+    height: auto;
+    margin-left: 0;
+  }
+  .ourArtistsBtn {
+    font-size: 0.9rem;
+    height: auto;
+  }
+  .description {
+    text-align: center;
+  }
 }

@@ -5,16 +5,16 @@ customTheme = createTheme(customTheme, {
   typography: {
     h1: {
       [customTheme.breakpoints.down("xs")]: {
-        fontSize: "1.3rem", // 20px
+        fontSize: "1.3rem",
       },
       [customTheme.breakpoints.down("sm")]: {
-        fontSize: "2.3rem", // 20px
+        fontSize: "2.3rem",
       },
       [customTheme.breakpoints.down("lg")]: {
-        fontSize: "5rem", // 20px
+        fontSize: "5rem",
       },
       [customTheme.breakpoints.down("md")]: {
-        fontSize: "4rem", // 20px
+        fontSize: "4rem",
       },
       fontFamily: "Montserrat",
       fontWeight: "bold",
@@ -22,10 +22,10 @@ customTheme = createTheme(customTheme, {
     },
     h2: {
       [customTheme.breakpoints.up("md")]: {
-        fontSize: "4rem", // 20px
+        fontSize: "4rem",
       },
       [customTheme.breakpoints.down("sm")]: {
-        fontSize: "2.5rem", // 20px
+        fontSize: "2.5rem",
       },
       fontFamily: "Montserrat",
       fontWeight: "bold",
@@ -33,34 +33,35 @@ customTheme = createTheme(customTheme, {
     },
     p: {
       [customTheme.breakpoints.up("sm")]: {
-        fontSize: "1.2rem", // 20px
+        fontSize: "1.2rem",
       },
       [customTheme.breakpoints.down("xs")]: {
-        fontSize: "1rem", // 20px
+        fontSize: "1rem",
       },
       fontFamily: "Noto serif",
       color: "white",
     },
     span: {
       [customTheme.breakpoints.up("sm")]: {
-        fontSize: "1.2rem", // 20px
+        fontSize: "1.2rem",
       },
       [customTheme.breakpoints.down("xs")]: {
-        fontSize: "1rem", // 20px
+        fontSize: "1rem",
       },
       fontFamily: "Noto serif",
       color: "white",
     },
     button: {
+      textTransform: "none",
       fontFamily: "Noto serif",
       [customTheme.breakpoints.down("xs")]: {
-        fontSize: ".5rem", // 20px
+        fontSize: ".5rem",
       },
       [customTheme.breakpoints.up("sm")]: {
-        fontSize: ".9rem", // 20px
+        fontSize: ".9rem",
       },
       [customTheme.breakpoints.up("lg")]: {
-        fontSize: "1.2rem", // 20px
+        fontSize: "1.2rem",
       },
     },
   },
