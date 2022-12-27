@@ -4,16 +4,16 @@ import styles from "../styles/AboutUs.module.css";
 const AboutUs = () => {
   const aboutUSMediaQueries = {
     display: { xs: "flex", sm: "flex" },
-    alignItems: { xs: "center", sm: "flex-start" },
+    alignItems: { xs: "center", sm: "center", md: "flex-start" },
+    width: { xs: "100%", md: "85%", lg: "%" },
     flexDirection: { xs: "column", sm: "column" },
+    marginLeft: { xs: 0, md: "3rem", lg: "3rem" },
+    paddingLeft: { xs: "1rem", md: "0" },
+    paddingRight: { xs: "1rem", md: "0" },
   };
 
-  const titleMediaQueries = {
-    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
-  };
-
-  const titleBoxMediaQueries = {
-    marginLeft: { xs: 0, sm: "1.5rem", md: "3rem", lg: "6rem" },
+  const imageMediaQueries = {
+    paddingLeft: { xs: "0", md: "5rem" },
   };
 
   const lastTitleMediaQueries = {
@@ -24,7 +24,7 @@ const AboutUs = () => {
     display: "flex",
     flexDirection: {
       xs: "column",
-      sm: "row-reverse",
+      sm: "column",
       md: "row-reverse",
       lg: "row-reverse",
     },
@@ -34,18 +34,17 @@ const AboutUs = () => {
 
   const descriptionMediaQueries = {
     marginTop: { xs: "1rem", sm: "0" },
-    width: { xs: "75%", sm: "75%", md: "50%" },
-    fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
+    textAlign: { xs: "center", sm: "center", md: "left" },
   };
 
   return (
     <Box sx={aboutUSMediaQueries}>
-      <Box sx={titleBoxMediaQueries} className={styles.titleBox}>
-        <Typography sx={titleMediaQueries} component="h2" variant="h2">
+      <Box className={styles.titleBox}>
+        <Typography component="h2" variant="h2">
           ABOUT
         </Typography>
         <Typography
-          sx={[titleMediaQueries, lastTitleMediaQueries]}
+          sx={lastTitleMediaQueries}
           className={styles.us}
           component="h2"
           variant="h2"
@@ -54,7 +53,14 @@ const AboutUs = () => {
         </Typography>
       </Box>
       <Box sx={contentMediaQueries}>
-        <img className={styles.image} src="./CLIMAXMUSICLOGO-bigger.png" />
+        <Box sx={imageMediaQueries}>
+          <img
+            className={styles.image}
+            src="./bigLogo.png"
+            alt="Climax Music Empire Logo"
+          />
+        </Box>
+
         <Typography
           sx={descriptionMediaQueries}
           className={styles.description}
@@ -65,7 +71,7 @@ const AboutUs = () => {
           from our differences. Music saved us and made us realize who we are.
           So, music belongs to us as much as it does to anyone in our family, as
           well as to anyone who loves music. And as Climax Music Empire, we
-          don't want to tell artists who to be. we want to create a space for
+          don't want to tell artists who to be. We want to create a space for
           them to share themselves with the world on their terms irrespective of
           who you are or where you’re from. As we are the next big thing
           competing with the global leading music company, our goal is to make
@@ -75,7 +81,11 @@ const AboutUs = () => {
           represent. Therefore, our responsibility of nurturing music creation,
           promoting artistry, and making use of talent is ours. As it guided us
           to create this platform, making good music with the power to heal,
-          inspire and guide is a priority.   That is who we are! And that...
+          inspire and guide is a priority.
+          <br />
+          <br />
+          That is who we are! And that...
+          <br />
           That's Climax Music Empire.
         </Typography>
       </Box>

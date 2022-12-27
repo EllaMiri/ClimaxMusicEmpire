@@ -1,28 +1,29 @@
 .us {
-    color: #E2B945;
+  color: #e2b945;
 }
 
 .titleBox {
-    display: flex;
-    margin-bottom: 1rem;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .image {
-    width: 20rem;
-    height: 23rem;
+  width: 20rem;
+  height: 23rem;
 }
 
-@media  screen and (max-width: 900px) {
-    .image {
-        width: 8rem;
-        height: 10rem;
-    }
+@media screen and (max-width: 900px) {
+  .image {
+    width: 8.5rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .image {
-        width: 4rem;
-        height: 5rem;
-    }
-    
+  .image {
+    width: 8.5rem;
+    height: 10rem;
+    margin-bottom: 0.5rem;
+  }
 }

@@ -10,10 +10,6 @@ const Layout = () => {
     flexDirection: { xs: "column", sm: "row" },
   };
 
-  const titleMediaQueries = {
-    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
-  };
-
   const lastTitleMediaQueries = {
     marginLeft: { xs: "0.5rem", sm: "0.5rem", md: "0.5rem", lg: "1.5rem" },
   };
@@ -32,8 +28,8 @@ const Layout = () => {
     fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
   };
 
-  const contactBtnMediaQueries = {
-    fontSize: { xs: ".5rem", sm: ".9rem", md: ".9rem", lg: "1.2rem" },
+  const titleMediaQueries = {
+    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
   };
 
   return (
@@ -51,7 +47,7 @@ const Layout = () => {
               CLIMAX MUSIC
             </Typography>
             <Typography
-              sx={[titleMediaQueries, lastTitleMediaQueries]}
+              sx={[lastTitleMediaQueries, titleMediaQueries]}
               variant="h2"
               component="h2"
               className={styles.empire}
@@ -65,7 +61,6 @@ const Layout = () => {
               Swedens aspiring music label
             </Typography>
             <Button
-              sx={contactBtnMediaQueries}
               className={styles.contactBtn}
               variant="contained"
               color="primary"
