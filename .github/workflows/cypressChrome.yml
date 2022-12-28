@@ -1,12 +1,21 @@
-name: E2E on Chrome
-on: [push]
+name: Cypress tests in Chrome
+on:
+  push:
+    branches:
+      - 'main'
+  workflow_dispatch:
+
 jobs:
-  cypress-run:
-    runs-on: ubuntu-20.04
-    # let's make sure our tests pass on Chrome browser
-    name: E2E on Chrome
+  checkout-and-test:
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: cypress-io/github-action@v5
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
+
+      - name: Check out repository code
+        uses: actions/checkout@v2
+
+      - name: run cypress tests with chrome
+        uses: cypress-io/github-action@v5
+        timeout-minutes: 10
         with:
           browser: chrome
