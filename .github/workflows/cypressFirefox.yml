@@ -1,22 +1,12 @@
-name: Cypress E2E Tests
-on:
-  push:
-    branches:
-      - 'main'
-  workflow_dispatch:
-
+name: End-to-end tests
+on: [push]
 jobs:
   cypress-run:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
-
       - name: Checkout
-        uses: actions/checkout@v2
-
+        uses: actions/checkout@v3
+      # Install NPM dependencies, cache them correctly
+      # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v4
-        timeout-minutes: 10
-        with:
-          start: npm run dev
-          browser: chrome
+        uses: cypress-io/github-action@v5
