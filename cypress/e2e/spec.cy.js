@@ -2,7 +2,7 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
   beforeEach(() => {
     //Visit the website
     cy.visit("http://localhost:3000/");
-  })
+  });
   //goes to Climax Music Empire and clicks on the links in the header
   it("click the links in the header", () => {
     cy.contains("News").click();
@@ -53,4 +53,3 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
     cy.url().should("include", "/Artists");
   });
 });
-
