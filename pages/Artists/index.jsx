@@ -96,7 +96,7 @@ const Artists = () => {
               DS
             </Typography>
           </Box>
-          <Link href="/Artists/IcekidDS">
+          <Link href="/Artists/IcekidDs">
             <Box className={styles.imageContainer}>
               <img
                 src="./icekid-ds.png"
@@ -128,7 +128,7 @@ const Artists = () => {
               GEE
             </Typography>
           </Box>
-          <Link href="/Artists/FreshGee">
+          <Link href="/Artists/Freshgee">
             <Box className={styles.imageContainer}>
               <img
                 src="./freshgee.png"
