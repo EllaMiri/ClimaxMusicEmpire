@@ -6,7 +6,6 @@ import styles from "../../styles/Artists.module.css";
 const Artists = () => {
   const artistsBoxMediaQueries = {
     paddingTop: { xs: "6rem" },
-    marginLeft: { xs: 0, md: "3rem", lg: "3rem" },
   };
 
   const artistBoxMediaQueries = {
@@ -31,6 +30,7 @@ const Artists = () => {
 
   const titleBox = {
     justifyContent: { xs: "center", lg: "flex-start" },
+    marginLeft: { xs: "0", lg: "5rem" },
   };
 
   return (
@@ -134,7 +134,7 @@ const Artists = () => {
                 src="./freshgee.png"
                 alt="Artist Freshgee"
                 className={styles.image}
-                style={{ height: "auto", width: "23rem" }}
+                style={{ height: "auto", width: "18rem" }}
               />
               <Box className={styles.overlay}>
                 <Typography className={styles.text}>READ MORE</Typography>
