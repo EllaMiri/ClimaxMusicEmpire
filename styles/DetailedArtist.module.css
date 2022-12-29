@@ -1,0 +1,42 @@
+.detailedArtistBox {
+  display: flex;
+  padding-top: 6rem;
+  flex-direction: column;
+}
+
+.artistBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.yellowNamePart {
+  margin-left: 1rem;
+  color: #e2b945;
+}
+
+.flex {
+  display: flex;
+}
+
+@media screen and (max-width: 1200px) {
+  .artistImage {
+    width: 110%;
+    height: auto;
+  }
+  .artistImageFreshgee {
+    width: 110%;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .artistImage {
+    width: 115%;
+    height: auto;
+  }
+  .artistImageFreshgee {
+    width: 115%;
+    height: auto;
+  }
+}
