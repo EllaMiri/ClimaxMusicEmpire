@@ -5,8 +5,8 @@ import { Radio } from "@mui/material";
 const ContactForm = () => {
 
   return (
-    <Box>
-      <div style={{ display: "flex", flexDirection: "column" }}>
+    <Box component="form" noValidate style={{ marginTop: '3rem', border: '1rem solid #e2b945'}}>
+      <div style={{ display: "flex", flexDirection: "column", alignItems: 'center' }}>
 
         <FormControl>
           <RadioGroup style={{ display: "flex", flexDirection: "row", color: "white" }}>
@@ -25,10 +25,10 @@ const ContactForm = () => {
                      label="Email" />
           <TextField style={{ backgroundColor: "white", marginBottom: '.5rem' }}
                      id="outlined-multiline-static"
-                     label="Multiline"
+                     label="Description"
                      multiline
                      rows={4}
-                     defaultValue="Default Value"
+                     defaultValue="Description"
           />
           <Button style={{backgroundColor: "#e2b945", color: 'white'}}>Send</Button>
         </Box>
