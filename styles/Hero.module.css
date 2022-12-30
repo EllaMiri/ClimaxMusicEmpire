@@ -52,3 +52,62 @@
   display: flex;
   /* align-items: flex-end; */
 }
+
+@media screen and (min-width: 320px) {
+  .heading {
+    font-size: 1.5rem;
+  }
+  .paragraph {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 370px) {
+  .heading {
+    font-size: 1.8rem;
+  }
+  .paragraph {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 430px) {
+  .heading {
+    font-size: 2.1rem;
+  }
+}
+@media screen and (min-width: 460px) {
+  .heading {
+    font-size: 2.3rem;
+  }
+  .paragraph {
+    font-size: 1.1rem;
+  }
+}
+@media screen and (min-width: 530px) {
+  .heading {
+    font-size: 2.6rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .paragraph {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (min-width: 900px) {
+  .heading {
+    font-size: 4rem;
+  }
+  .paragraph {
+    font-size: 1.3rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .heading {
+    font-size: 5rem;
+  }
+  .paragraph {
+    font-size: 1.5rem;
+  }
+}

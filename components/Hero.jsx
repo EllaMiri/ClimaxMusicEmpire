@@ -24,38 +24,63 @@ const Hero = () => {
     },
   };
 
-  const paragraphMediaQueries = {
-    fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
+  // const paragraphMediaQueries = {
+  //   fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
+  // };
+
+  // const titleMediaQueries = {
+  //   fontSize: { xs: "1.6rem", sm: "3rem", md: "4rem", lg: "5rem" },
+  // };
+
+  const desktopVideoMediaQueries = {
+    display: { xs: "none", sm: "block" },
   };
 
-  const titleMediaQueries = {
-    fontSize: { xs: "1.3rem", sm: "2.3rem", md: "4rem", lg: "5rem" },
+  const mobileVideoMediaQueries = {
+    display: { xs: "block", sm: "none" },
   };
 
   return (
     <Box id="hero" className={styles.container}>
-      <Box>
+      <Box sx={desktopVideoMediaQueries}>
         <video autoPlay muted loop className={styles.video}>
           <source src="./rollingWEB.mp4" type="video/mp4" />
+        </video>
+      </Box>
+      <Box sx={mobileVideoMediaQueries}>
+        <video autoPlay muted loop className={styles.video}>
+          <source src="./heroVideoMobile.mp4" type="video/mp4" />
         </video>
       </Box>
       <Box className={styles.heroText} sx={textContentMediaQueries}>
         <Box className={styles.titleBox} sx={titleBoxMediaQueries}>
           <Box className={styles.headingContainer}>
-            <Typography sx={titleMediaQueries} variant="h1" component="h1">
+            <Typography
+              className={styles.heading}
+              // sx={titleMediaQueries}
+              variant="h1"
+              component="h1"
+            >
               CLIMAX MUSIC
             </Typography>
             <Typography
-              sx={[lastTitleMediaQueries, titleMediaQueries]}
+              className={styles.heading}
+              sx={[lastTitleMediaQueries]}
+              // titleMediaQueries]}
               variant="h2"
               component="h2"
-              className={styles.empire}
+              style={{ color: "#e2b945" }}
             >
               EMPIRE
             </Typography>
           </Box>
           <Box sx={descriptionMediaQueries} className={styles.description}>
-            <Typography sx={paragraphMediaQueries} variant="p" component="p">
+            <Typography
+              className={styles.paragraph}
+              // sx={paragraphMediaQueries}
+              variant="p"
+              component="p"
+            >
               Swedens aspiring music label
             </Typography>
             <Button

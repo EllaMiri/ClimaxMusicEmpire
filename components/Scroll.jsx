@@ -5,7 +5,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 const ScrollToTop = () => {
   return (
-    <Link to="hero" spy={true} smooth={true} offset={50} duration={500}>
+    <Link to="hero" spy={true} smooth={true} duration={500}>
       <button className={styles.scrollBtn}>
         <FontAwesomeIcon
           style={{ fontSize: "1.5rem", color: "black" }}
