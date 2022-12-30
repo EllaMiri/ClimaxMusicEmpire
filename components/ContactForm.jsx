@@ -1,6 +1,7 @@
 import { Box, Button, FormControl, FormControlLabel, RadioGroup, TextField } from "@mui/material";
 import { Radio } from "@mui/material";
-import { useState } from "react";
+import { useState, useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 
 const ContactForm = () => {
@@ -11,22 +12,37 @@ const ContactForm = () => {
   const [lastNameErrorText, setLastNameErrorText] = useState("")
   const [emailErrorText, setEmailErrorText] = useState("")
 
+  const form = useRef();
+
   const onSubmit = (e) => {
     e.preventDefault()
 
+    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+
     if (!firstName) {
       setFirstNameErrorText("Please enter your firstname")
-    } else { setFirstNameErrorText("") }
+    } else {
+      setFirstNameErrorText("")
+    }
     if (!lastName) {
       setLastNameErrorText("Please enter your lastname")
-    } else { setLastNameErrorText("") }
-    if (!email) {
+    } else {
+      setLastNameErrorText("")
+    }
+    if (!email || !value) {
       setEmailErrorText("Please enter your email")
-    } else { setEmailErrorText("") }
+
+      // } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) { setEmailErrorText("Invalid email") }
+    } else { setEmail("") }
   }
 
   return (
-    <Box component="form" noValidate style={{
+    <Box component="form" ref={form} onSubmit={onSubmit} noValidate style={{
       borderTop: "6rem solid #e2b945",
       borderBottom: "6rem solid #e2b945",
       borderLeft: "2rem solid #e2b945",
