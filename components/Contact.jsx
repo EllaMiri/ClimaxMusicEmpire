@@ -7,7 +7,7 @@ const Contact = () => {
 
   return (
     <Box style={{display: 'flex', justifyContent: 'space-around'}}>
-      <Box>
+      <Box style={{ display: 'flex', alignItems: 'center'}}>
         <Box style={{ display: 'flex', flexDirection: 'column'}}>
           <Box style={{ display: 'flex', marginBottom: '1rem' }}>
             <Typography variant="h2" component="h2">CONTACT</Typography>
@@ -28,7 +28,7 @@ const Contact = () => {
         </Box>
       </Box>
 
-      <Box style={{width: '50%'}}>
+      <Box style={{width: '40%'}}>
         <ContactForm />
       </Box>
 
