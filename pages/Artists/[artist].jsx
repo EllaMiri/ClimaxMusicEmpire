@@ -2,6 +2,13 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import styles from "../../styles/DetailedArtist.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faSpotify } from "@fortawesome/free-brands-svg-icons";
+import Link from "next/link";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -15,6 +22,24 @@ const DetailedArtist = () => {
       name1: "OUS",
 
       image: "/boi-ous.png",
+      instagram: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faInstagram}
+        />
+      ),
+      spotify: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faSpotify}
+        />
+      ),
+      youtube: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faYoutube}
+        />
+      ),
     },
   ];
   const icekidDsMockData = [
@@ -25,6 +50,24 @@ const DetailedArtist = () => {
       name1: "DS",
 
       image: "/icekid-ds.png",
+      instagram: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faInstagram}
+        />
+      ),
+      spotify: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faSpotify}
+        />
+      ),
+      youtube: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faYoutube}
+        />
+      ),
     },
   ];
   const freshgeeMockData = [
@@ -35,6 +78,24 @@ const DetailedArtist = () => {
       name1: "GEE",
 
       image: "/freshgee1.png",
+      instagram: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faInstagram}
+        />
+      ),
+      spotify: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faSpotify}
+        />
+      ),
+      youtube: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faYoutube}
+        />
+      ),
     },
   ];
   const principalOfMindsMockData = [
@@ -45,6 +106,24 @@ const DetailedArtist = () => {
       name1: "MINDS",
 
       image: "/PrincipalOfMinds.png",
+      instagram: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faInstagram}
+        />
+      ),
+      spotify: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faSpotify}
+        />
+      ),
+      youtube: (
+        <FontAwesomeIcon
+          style={{ fontSize: "2rem", color: "#e2b945" }}
+          icon={faYoutube}
+        />
+      ),
     },
   ];
 
@@ -112,6 +191,33 @@ const DetailedArtist = () => {
                 {principalOfMinds.description}
               </Typography>
             </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "32%",
+                marginTop: "1rem",
+              }}
+            >
+              <Link
+                href="https://www.instagram.com/principalofminds/"
+                target="_blank"
+              >
+                {principalOfMinds.instagram}
+              </Link>
+              <Link
+                href="https://open.spotify.com/artist/4IyQi8biIOt8i8AgXAnXqX?si=5GZeyqdkQdeteInIeuplZw"
+                target="_blank"
+              >
+                {principalOfMinds.spotify}
+              </Link>
+              <Link
+                href="https://www.youtube.com/@principalofminds"
+                target="_blank"
+              >
+                {principalOfMinds.youtube}
+              </Link>
+            </Box>
           </Box>
         ))}
       {artist === "BoiOus" &&
@@ -143,6 +249,30 @@ const DetailedArtist = () => {
               >
                 {boiOus.description}
               </Typography>
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "32%",
+                marginTop: "1rem",
+              }}
+            >
+              <Link
+                href="https://www.instagram.com/boi0usgram/"
+                target="_blank"
+              >
+                {boiOus.instagram}
+              </Link>
+              <Link
+                href="https://open.spotify.com/artist/7wtxsPSvGlsHqTyrNzc44t?si=WfmzAPD8Ryiwd_6fEU5uhg"
+                target="_blank"
+              >
+                {boiOus.spotify}
+              </Link>
+              <Link href="https://www.youtube.com/@boious1836" target="_blank">
+                {boiOus.youtube}
+              </Link>
             </Box>
           </Box>
         ))}
@@ -176,6 +306,30 @@ const DetailedArtist = () => {
                 {icekidDs.description}
               </Typography>
             </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "32%",
+                marginTop: "1rem",
+              }}
+            >
+              <Link href="https://www.instagram.com/icekid_ds/" target="_blank">
+                {icekidDs.instagram}
+              </Link>
+              <Link
+                href="https://open.spotify.com/artist/6g0Bm71efm8afdMscw0VjQ?si=C6YLhhY6Rn-aSvsXbqzdsA"
+                target="_blank"
+              >
+                {icekidDs.spotify}
+              </Link>
+              <Link
+                href="https://www.youtube.com/@icekidds6432"
+                target="_blank"
+              >
+                {icekidDs.youtube}
+              </Link>
+            </Box>
           </Box>
         ))}
       {artist === "Freshgee" &&
@@ -207,6 +361,33 @@ const DetailedArtist = () => {
               >
                 {freshgee.description}
               </Typography>
+            </Box>
+            <Box
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                width: "32%",
+                marginTop: "1rem",
+              }}
+            >
+              <Link
+                href="https://www.instagram.com/official_freshgee/"
+                target="_blank"
+              >
+                {freshgee.instagram}
+              </Link>
+              <Link
+                href="https://open.spotify.com/artist/2hL87QpNV2ZkJbUV33HtIC?si=PbH2SWXUTrGX-oHR0cfNFA"
+                target="_blank"
+              >
+                {freshgee.spotify}
+              </Link>
+              <Link
+                href="https://www.youtube.com/channel/UCxb0KUin9UA84j-RYE1ILKg"
+                target="_blank"
+              >
+                {freshgee.youtube}
+              </Link>
             </Box>
           </Box>
         ))}
