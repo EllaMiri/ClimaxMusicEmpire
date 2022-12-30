@@ -14,6 +14,6 @@ jobs:
         with:
           project: ./cypress
           browser: chrome
-          build: npm build
+         
           start: npm run dev
           wait-on: "http://localhost:3000"
