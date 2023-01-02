@@ -45,26 +45,35 @@ const ContactForm = () => {
   });
 
   const {
-    register, handleSubmit, formState: { errors }
+    register,
+    handleSubmit,
+    formState: { errors },
   } = useForm({
-    resolver: yupResolver(validationSchema)
+    resolver: yupResolver(validationSchema),
   });
 
   return (
-    <Box component="form" ref={form} onSubmit={onSubmit} noValidate style={{
-      borderTop: "6rem solid #e2b945",
-      borderBottom: "6rem solid #e2b945",
-      borderLeft: "2rem solid #e2b945",
-      borderRight: "2rem solid #e2b945"
-    }}>
-      <div style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        paddingTop: "3rem",
-        paddingBottom: "3rem"
-      }}>
-
+    <Box
+      component="form"
+      ref={form}
+      onSubmit={onSubmit}
+      noValidate
+      style={{
+        borderTop: "6rem solid #e2b945",
+        borderBottom: "6rem solid #e2b945",
+        borderLeft: "2rem solid #e2b945",
+        borderRight: "2rem solid #e2b945",
+      }}
+    >
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          paddingTop: "3rem",
+          paddingBottom: "3rem",
+        }}
+      >
         <FormControl>
           <RadioGroup defaultChecked="showArtist" style={{ display: "flex", flexDirection: "row", color: "white" }}>
             <FormControlLabel name="artist" value="showArtist" checked={showHide === "showArtist"} onClick={handleShow}
