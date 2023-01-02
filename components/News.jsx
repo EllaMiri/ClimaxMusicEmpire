@@ -109,24 +109,6 @@ const News = () => {
             More news
           </Button>
         </Box>
-        {/* <Link
-          style={{ textDecoration: "none" }}
-          href="https://distrokid.com/hyperfollow/icekidds1/she-don-dey"
-          target="_blank"
-        >
-          <Typography
-            variant="p"
-            component="p"
-            style={{
-              fontFamily: "Montserrat",
-              fontSize: "1rem",
-              marginBottom: "1rem",
-              marginTop: "1rem",
-            }}
-          >
-            CLICK HERE TO LISTEN
-          </Typography>
-        </Link> */}
       </Box>
     </Box>
   );
