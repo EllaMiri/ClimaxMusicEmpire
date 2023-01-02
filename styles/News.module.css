@@ -1,0 +1,6 @@
+.moreNewsBtn {
+  border: 1px solid #e2b945;
+}
+.moreNewsBtn:hover {
+  background-color: #9e8335;
+}

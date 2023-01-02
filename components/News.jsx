@@ -1,5 +1,7 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
+import Link from "next/link";
+import styles from "../styles/News.module.css";
 
 const News = () => {
   return (
@@ -52,6 +54,24 @@ const News = () => {
             out now!
           </Typography>
         </Box>
+        <Link
+          style={{ textDecoration: "none" }}
+          href="https://distrokid.com/hyperfollow/icekidds1/she-don-dey"
+          target="_blank"
+        >
+          <Typography
+            variant="p"
+            component="p"
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "1rem",
+              marginBottom: "1rem",
+              color: "#e2b945",
+            }}
+          >
+            CLICK HERE TO LISTEN
+          </Typography>
+        </Link>
         <Typography
           style={{ marginLeft: "5rem", marginRight: "5rem" }}
           component="p"
@@ -60,6 +80,53 @@ const News = () => {
           She Don Dey, made by Icekid Ds is his latest song, bringing afrobeat
           and amapiano vibes with a beat produced by WavvyBeatz.
         </Typography>
+
+        {/* <Link
+          style={{ textDecoration: "none" }}
+          href="https://distrokid.com/hyperfollow/icekidds1/she-don-dey"
+          target="_blank"
+        >
+          <Typography
+            variant="p"
+            component="p"
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "1rem",
+              marginBottom: "1rem",
+              marginTop: "1rem",
+            }}
+          >
+            CLICK HERE TO LISTEN
+          </Typography>
+        </Link> */}
+        <Box>
+          <Button
+            className={styles.moreNewsBtn}
+            variant="contained"
+            color="secondary"
+            style={{ marginLeft: "25rem" }}
+          >
+            More news
+          </Button>
+        </Box>
+        {/* <Link
+          style={{ textDecoration: "none" }}
+          href="https://distrokid.com/hyperfollow/icekidds1/she-don-dey"
+          target="_blank"
+        >
+          <Typography
+            variant="p"
+            component="p"
+            style={{
+              fontFamily: "Montserrat",
+              fontSize: "1rem",
+              marginBottom: "1rem",
+              marginTop: "1rem",
+            }}
+          >
+            CLICK HERE TO LISTEN
+          </Typography>
+        </Link> */}
       </Box>
     </Box>
   );
