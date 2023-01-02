@@ -38,8 +38,12 @@ const ContactForm = () => {
       .min(2, "Lastname must be at least 2 characters"),
     email: Yup.string()
       .required("Email is required")
-      .email("Email is invalid")
+      .email("Email is invalid"),
+    description: Yup.string()
+      .required("Description is required")
+      .min(10, "Description must be at lease 10 characters")
   });
+
   const {
     register, handleSubmit, formState: { errors }
   } = useForm({
@@ -114,11 +118,16 @@ const ContactForm = () => {
             borderRadius: "10px",
             width: "400px"
           }}
-                     id="outlined-multiline-static"
+                     required
+                     id="description"
+                     name="description"
                      label="Description"
+                     {...register("description")}
+                     error={!!errors.description}
                      multiline
                      rows={4}
           />
+          <Typography variant="p" color="red">{errors.description?.message}</Typography>
           <Button type="submit" onClick={handleSubmit(onSubmit)}
                   style={{ backgroundColor: "#e2b945", color: "white", width: "10rem" }}>Send</Button>
         </Box>
