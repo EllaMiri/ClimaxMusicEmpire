@@ -21,7 +21,7 @@ const ContactForm = () => {
 
   const onSubmit = () => {
 
-    emailjs.sendForm("service_vqgf5ju", "template_j3baep9", form.current, "r7c1qbMIYNb2TL0Ry")
+    emailjs.sendForm("service_a62px2m", "template_5u6kgik", form.current, "xBwMCYQyB3YvK0lkv")
       .then((result) => {
         console.log(result.text);
       }, (error) => {
