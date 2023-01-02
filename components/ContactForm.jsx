@@ -1,45 +1,50 @@
-import { Box, Button, FormControl, FormControlLabel, RadioGroup, TextField } from "@mui/material";
+import { Box, Button, FormControl, FormControlLabel, RadioGroup, TextField, Typography } from "@mui/material";
 import { Radio } from "@mui/material";
 import { useState, useRef } from "react";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
+import * as Yup from "yup";
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
 
 
 const ContactForm = () => {
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [email, setEmail] = useState("")
-  const [firstNameErrorText, setFirstNameErrorText] = useState("")
-  const [lastNameErrorText, setLastNameErrorText] = useState("")
-  const [emailErrorText, setEmailErrorText] = useState("")
+  const [showHide, setShowHide] = useState("showArtist");
+  const [_, setShowRole] = useState("showArtist");
 
   const form = useRef();
 
-  const onSubmit = (e) => {
-    e.preventDefault()
+  const handleShow = (e) => {
+    const getShow = e.target.value;
+    setShowHide(getShow);
+    setShowRole(getShow);
+  };
 
-    emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
+  const onSubmit = () => {
+
+    emailjs.sendForm("service_vqgf5ju", "template_j3baep9", form.current, "r7c1qbMIYNb2TL0Ry")
       .then((result) => {
         console.log(result.text);
       }, (error) => {
         console.log(error.text);
       });
+  };
 
-    if (!firstName) {
-      setFirstNameErrorText("Please enter your firstname")
-    } else {
-      setFirstNameErrorText("")
-    }
-    if (!lastName) {
-      setLastNameErrorText("Please enter your lastname")
-    } else {
-      setLastNameErrorText("")
-    }
-    if (!email || !value) {
-      setEmailErrorText("Please enter your email")
-
-      // } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) { setEmailErrorText("Invalid email") }
-    } else { setEmail("") }
-  }
+  const validationSchema = Yup.object().shape({
+    firstname: Yup.string()
+      .required("Firstname is required")
+      .min(2, "Firstname must be at least 2 characters"),
+    lastname: Yup.string()
+      .required("Lastname is required")
+      .min(2, "Lastname must be at least 2 characters"),
+    email: Yup.string()
+      .required("Email is required")
+      .email("Email is invalid")
+  });
+  const {
+    register, handleSubmit, formState: { errors }
+  } = useForm({
+    resolver: yupResolver(validationSchema)
+  });
 
   return (
     <Box component="form" ref={form} onSubmit={onSubmit} noValidate style={{
@@ -57,53 +62,51 @@ const ContactForm = () => {
       }}>
 
         <FormControl>
-          <RadioGroup style={{ display: "flex", flexDirection: "row", color: "white" }}>
-            <FormControlLabel value="Artist" control={<Radio />} label="l'm an Artist" />
-            <FormControlLabel value="Eventplanner" control={<Radio />} label="l'm an Eventplanner" />
-            <FormControlLabel value="Other" control={<Radio />} label="Other" />
+          <RadioGroup defaultChecked="showArtist" style={{ display: "flex", flexDirection: "row", color: "white" }}>
+            <FormControlLabel name="artist" value="showArtist" checked={showHide === "showArtist"} onClick={handleShow}
+                              control={<Radio />} label="l'm an Artist" />
+            <FormControlLabel name="eventplanner" value="showCompany" checked={showHide === "showCompany"}
+                              onClick={handleShow} control={<Radio />} label="l'm an Eventplanner" />
+            <FormControlLabel name="other" value="showOther" checked={showHide === "showOther"} onClick={handleShow}
+                              control={<Radio />} label="Other" />
           </RadioGroup>
         </FormControl>
 
         <Box style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
           <TextField style={{ backgroundColor: "white", marginBottom: ".5rem", borderRadius: "10px", width: "70%" }}
-                     id="outlined-error-firstname"
-                     label="Firstname"
                      required
-                     type="firstName"
+                     id="firstname"
                      name="firstName"
-                     value={firstName}
-                     error={!!firstNameErrorText}
-                     helperText={!!firstNameErrorText}
-                     onChange={e => setFirstName(e.target.value)}
-                    />
+                     label="Firstname"
+                     {...register("firstname")}
+                     error={!!errors.firstname}
+          />
+          <Typography variant="p" color="red">{errors.firstname?.message}</Typography>
           <TextField style={{ backgroundColor: "white", marginBottom: ".5rem", borderRadius: "10px", width: "70%" }}
-                     id="outlined-error-lastname"
-                     label="Lastname"
                      required
-                     type="lastName"
+                     id="lastname"
                      name="lastName"
-                     value={lastName}
-                     error={!!lastNameErrorText}
-                     helperText={!!lastNameErrorText}
-                     onChange={e => setLastName(e.target.value)} />
-          {/*{value === "Eventplanner" ?*/}
+                     label="Lastname"
+                     {...register("lastname")}
+                     error={!!errors.lastname}
+          />
+          <Typography variant="p" color="red">{errors.lastname?.message}</Typography>
+          {showHide === "showCompany" ?
             <TextField style={{ backgroundColor: "white", marginBottom: ".5rem", borderRadius: "10px", width: "70%" }}
-                       id="outlined-error-company"
+                       id="company"
                        label="Company" />
-             {/*: "" }*/}
+            : ""}
 
           <TextField style={{ backgroundColor: "white", marginBottom: ".5rem", borderRadius: "10px", width: "70%" }}
-                     id="outlined-error-email"
-                     label="Email"
                      required
-                     type="email"
+                     id="email"
                      name="email"
-                     value={email}
-                     error={!!emailErrorText}
-                     helperText={!!emailErrorText}
-                     onChange={e => setEmail(e.target.value)}
+                     label="Email"
+                     {...register("email")}
+                     error={!!errors.email}
+          />
+          <Typography variant="p" color="red">{errors.email?.message}</Typography>
 
-                />
           <TextField style={{
             backgroundColor: "white",
             marginBottom: ".5rem",
@@ -116,7 +119,8 @@ const ContactForm = () => {
                      multiline
                      rows={4}
           />
-          <Button type="submit" onClick={onSubmit} style={{ backgroundColor: "#e2b945", color: "white", width: "10rem" }}>Send</Button>
+          <Button type="submit" onClick={handleSubmit(onSubmit)}
+                  style={{ backgroundColor: "#e2b945", color: "white", width: "10rem" }}>Send</Button>
         </Box>
 
       </div>
