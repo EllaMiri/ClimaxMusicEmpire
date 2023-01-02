@@ -41,7 +41,7 @@ const ContactForm = () => {
       .email("Email is invalid"),
     description: Yup.string()
       .required("Description is required")
-      .min(10, "Description must be at lease 10 characters")
+      .min(10, "Description must be at lease 10 character")
   });
 
   const {
