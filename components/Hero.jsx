@@ -1,5 +1,6 @@
 import { Button, Typography, Box } from "@mui/material";
 import styles from "../styles/Hero.module.css";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const textContentMediaQueries = {
@@ -83,13 +84,21 @@ const Hero = () => {
             >
               Swedens aspiring music label
             </Typography>
-            <Button
-              className={styles.contactBtn}
-              variant="contained"
-              color="primary"
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
             >
-              Contact us
-            </Button>
+              <Button
+                className={styles.contactBtn}
+                variant="contained"
+                color="primary"
+              >
+                Contact us
+              </Button>
+            </Link>
           </Box>
         </Box>
       </Box>
