@@ -6,74 +6,67 @@ import styles from "../styles/News.module.css";
 const News = () => {
   return (
     <Box
-      style={{
-        display: "flex",
-        justifyContent: "space-around",
-        marginTop: "5rem",
-        marginLeft: "3rem",
-      }}
+      className={styles.container}
+      //   style={{
+      //     display: "flex",
+      //     justifyContent: "space-around",
+      //     marginTop: "5rem",
+      //     marginLeft: "3rem",
+      //   }}
     >
       <img
         src="./shedondey.png"
         alt=""
-        style={{ width: "50%", height: "auto" }}
+        className={styles.newsImage}
+        // style={{ width: "50%", height: "auto" }}
       />
       <Box
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
+        className={styles.textContainer}
+        // style={{
+        //   display: "flex",
+        //   flexDirection: "column",
+        //   alignItems: "center",
+        // }}
       >
-        <Box style={{ display: "flex" }}>
+        <Box className={styles.titleContainer}>
           <Typography variant="h2" component="h2">
             NEW
           </Typography>
-          <Typography style={{ color: "#e2b945" }} variant="h2" component="h2">
+          <Typography className={styles.s} variant="h2" component="h2">
             S
           </Typography>
         </Box>
-        <Box style={{ display: "flex", marginBottom: "1rem" }}>
+        <Box className={styles.secondTitleBox}>
           <Typography
-            variant="p"
-            component="p"
-            style={{ fontFamily: "Montserrat", fontSize: "1.5rem" }}
+            variant="span"
+            component="span"
+            className={styles.secondTitle1}
           >
             Icekid Ds new song She Don Dey is
           </Typography>
           <Typography
-            variant="p"
-            component="p"
-            style={{
-              fontFamily: "Montserrat",
-              fontSize: "1.5rem",
-              marginLeft: ".5rem",
-              color: "#e2b945",
-            }}
+            variant="span"
+            component="span"
+            className={styles.secondTitle2}
           >
             out now!
           </Typography>
         </Box>
         <Link
-          style={{ textDecoration: "none" }}
+          className={styles.link}
           href="https://distrokid.com/hyperfollow/icekidds1/she-don-dey"
           target="_blank"
         >
           <Typography
             variant="p"
             component="p"
-            style={{
-              fontFamily: "Montserrat",
-              fontSize: "1rem",
-              marginBottom: "1rem",
-              color: "#e2b945",
-            }}
+            className={styles.clickToListen}
           >
             CLICK HERE TO LISTEN
           </Typography>
         </Link>
         <Typography
-          style={{ marginLeft: "5rem", marginRight: "5rem" }}
+          className={styles.newsDescription}
           component="p"
           variant="p"
         >
@@ -104,7 +97,6 @@ const News = () => {
             className={styles.moreNewsBtn}
             variant="contained"
             color="secondary"
-            style={{ marginLeft: "25rem" }}
           >
             More news
           </Button>
