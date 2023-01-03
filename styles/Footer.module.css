@@ -1,6 +1,13 @@
 .links {
-  font-family: "Montserrat";
   color: white;
+}
+
+.contactLink {
+  color: white;
+}
+
+.contactLink:hover {
+  cursor: pointer;
 }
 
 .lower {

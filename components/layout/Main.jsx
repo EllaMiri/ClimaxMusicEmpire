@@ -2,7 +2,7 @@ import Hero from "../Hero";
 import ScrollToTop from "../Scroll";
 import AboutUs from "../AboutUs";
 import Artist from "../Artist";
-import Contact from "../Contact";
+import Contact from "../contact/Contact";
 
 const Main = () => {
   return (

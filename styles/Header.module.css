@@ -27,7 +27,6 @@
 }
 
 .listItems {
-  /* color: white; */
   list-style-type: none;
   padding-left: 1rem;
   cursor: pointer;
@@ -39,6 +38,7 @@
 
 .linkStyle {
   text-decoration: none;
+  font-family: "Montserrat";
 }
 
 .headerOpen {
