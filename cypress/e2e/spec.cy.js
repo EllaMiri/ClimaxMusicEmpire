@@ -1,4 +1,4 @@
-describe("Go To Climax Music Empire and Check Links In Header", () => {
+describe("Go To Climax Music Empire and Check Links and buttons", () => {
   beforeEach(() => {
     //Visit the website
     cy.visit("http://localhost:3000/");
@@ -16,6 +16,7 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
 
   it("Click Contact in header", () => {
     cy.contains("Contact").click();
+    cy.url().should("include", "/");
   });
 
   it("Click Events in header", () => {
@@ -34,14 +35,16 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
     cy.url().should("include", "/News");
   });
 
-  it("Click Artists in header", () => {
+  it("Click Artists in footer", () => {
     cy.contains("Artists").click();
     cy.url().should("include", "/Artists");
   });
 
   it("Clicks CONTACT US in footer", () => {
-    cy.contains("CONTACT US").click();
+    cy.contains("CONTACT").click();
+    cy.url().should("include", "/");
   });
+
   it("Clicks EVENTS in footer", () => {
     cy.contains("EVENTS").click();
     cy.url().should("include", "/Events");
@@ -51,5 +54,10 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
   it("Clicks Out artists button on the page", () => {
     cy.contains("Our artists").click();
     cy.url().should("include", "/Artists");
+  });
+
+  it("Clicks Contact us button on the page", () => {
+    cy.contains("Contact us").click();
+    cy.url().should("include", "/");
   });
 });
