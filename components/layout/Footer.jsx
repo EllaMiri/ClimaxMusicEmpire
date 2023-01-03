@@ -67,7 +67,6 @@ const Footer = () => {
             id="footerNews"
             variant="p"
             component="p"
-
             sx={lowerMediaQueries}
             className={styles.links}
           >
