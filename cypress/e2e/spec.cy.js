@@ -30,8 +30,12 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
 
   //goes to Climax Music Empire and clicks on the links in the footer
   it("Clicks NEWS in footer", () => {
-    cy.contains("NEWS").click();
-    cy.location("pathname").should("eq", `/News`);
+    cy.get("footer").within(() => {
+      cy.get("#footerNews").click();
+    });
+    cy.url().should("include", "/News");
+    // cy.contains("NEWS").click();
+    // cy.location("pathname").should("eq", `/News`);
     // cy.url().should("include", "/News");
   });
 

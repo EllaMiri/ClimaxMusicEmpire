@@ -62,7 +62,11 @@ const Footer = () => {
       </Box>
       <Box className={styles.lower}>
         <Link style={{ textDecoration: "none" }} href="/News">
-          <Typography sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            id="footerNews"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             NEWS
           </Typography>
         </Link>
