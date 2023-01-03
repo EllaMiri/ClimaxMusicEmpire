@@ -59,7 +59,13 @@ const Hero = () => {
             <Typography sx={paragraphMediaQueries} variant="p" component="p">
               Swedens aspiring music label
             </Typography>
-            <Link to="contact">
+            <Link
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+            >
               <Button
                 className={styles.contactBtn}
                 variant="contained"
