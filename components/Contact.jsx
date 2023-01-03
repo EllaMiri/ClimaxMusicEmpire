@@ -4,10 +4,10 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <Box style={{ display: "flex", justifyContent: "space-around" }}>
-      <Box style={{ display: "flex", alignItems: "center" }}>
+    <Box style={{ display: "flex",  }}>
+      <Box style={{ display: "flex", justifyContent: "center", alignItems: 'center', width: '50%' }}>
         <Box style={{ display: "flex", flexDirection: "column" }}>
-          <Box style={{ display: "flex", marginBottom: "1rem" }}>
+          <Box style={{ display: "flex", marginBottom: "1rem", justifyContent: 'center' }}>
             <Typography variant="h2" component="h2">
               CONTACT
             </Typography>
@@ -57,7 +57,7 @@ const Contact = () => {
               show?
             </Typography>
           </Box>
-          <Box>
+          <Box style={{display: 'flex', justifyContent: 'center'}}>
             <Typography
               variant="p"
               component="p"
@@ -98,7 +98,7 @@ const Contact = () => {
         </Box>
       </Box>
 
-      <Box style={{ width: "40%" }}>
+      <Box style={{ width: "50%" }}>
         <ContactForm />
       </Box>
     </Box>
