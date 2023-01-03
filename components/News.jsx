@@ -2,8 +2,10 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
 import styles from "../styles/News.module.css";
+import { useRouter } from "next/router";
 
 const News = () => {
+  const router = useRouter();
   return (
     <Box
       className={styles.container}
@@ -94,6 +96,7 @@ const News = () => {
         </Link> */}
         <Box>
           <Button
+            onClick={() => router.push("/News")}
             className={styles.moreNewsBtn}
             variant="contained"
             color="secondary"
