@@ -64,6 +64,7 @@ const Footer = () => {
       <Box className={styles.lower}>
         <Link style={{ textDecoration: "none" }} href="/News">
           <Typography
+            id="footerNews"
             variant="p"
             component="p"
             sx={lowerMediaQueries}
@@ -74,6 +75,7 @@ const Footer = () => {
         </Link>
         <Link style={{ textDecoration: "none" }} href="/Artists">
           <Typography
+            id="footerArtists"
             variant="p"
             component="p"
             sx={lowerMediaQueries}
