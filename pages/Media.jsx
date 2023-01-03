@@ -1,5 +1,8 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
+import GallerySlideShow from "../components/GallerySlideShow";
 
 const Media = () => {
   return (
@@ -30,7 +33,10 @@ const Media = () => {
             culpa qui officia deserunt mollit anim id est laborum.</Typography>
         </Box>
       </Box>
-
+      <Box style={{display: 'flex', justifyContent: 'center'}}>
+        <FontAwesomeIcon icon={faAngleDown} style={{color: '#e2b945', fontSize: '10rem'}} />
+      </Box>
+      <GallerySlideShow />
     </Box>
 
   );
