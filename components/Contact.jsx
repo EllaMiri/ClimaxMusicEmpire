@@ -3,9 +3,23 @@ import { Box, Typography } from "@mui/material";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
+  const contactPageMediaQueries = {
+    flexDirection: {xs: 'column', lg: 'row'},
+    alignItems: {xs: 'center'}
+  }
+
+  const textBoxMediaQueries = {
+    width: {xs: '100%', lg: '50%'},
+    marginBottom: {xs: '3rem', lg: '0'}
+  }
+
+  const formBoxMediaQueries = {
+    width: {xs: '100%', lg: '50%'}
+  }
+
   return (
-    <Box style={{ display: "flex",  }}>
-      <Box style={{ display: "flex", justifyContent: "center", alignItems: 'center', width: '50%' }}>
+    <Box sx={contactPageMediaQueries} style={{ display: "flex"}}>
+      <Box sx={textBoxMediaQueries} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
         <Box style={{ display: "flex", flexDirection: "column" }}>
           <Box style={{ display: "flex", marginBottom: "1rem", justifyContent: 'center' }}>
             <Typography variant="h2" component="h2">
@@ -98,7 +112,7 @@ const Contact = () => {
         </Box>
       </Box>
 
-      <Box style={{ width: "50%" }}>
+      <Box sx={formBoxMediaQueries}>
         <ContactForm />
       </Box>
     </Box>
