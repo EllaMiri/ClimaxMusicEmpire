@@ -48,8 +48,14 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
   });
 
   //goes to Climax Music Empire and click buttons to navigate
-  it("Clicks Out artists button on the page", () => {
+  it("Clicks Our artists button on the page", () => {
     cy.contains("Our artists").click();
     cy.url().should("include", "/Artists");
+  });
+
+  //goes to Climax Music Empire and clicks on the more news button
+  it("Clicks More news button on the page", () => {
+    cy.contains("More news").click();
+    cy.url().should("include", "/News");
   });
 });
