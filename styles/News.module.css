@@ -1,7 +1,6 @@
 .moreNewsBtn {
   border: 1px solid #e2b945;
   margin-top: 0.7rem;
-  /* margin-left: 25rem; */
 }
 .moreNewsBtn:hover {
   background-color: #9e8335;
@@ -59,7 +58,6 @@
 .newsDescription {
   margin-left: 5rem;
   margin-right: 5rem;
-  /* text-align: center; */
 }
 
 .s {
@@ -80,8 +78,6 @@
 }
 
 .mobileNewsDescription {
-  /* margin-left: 5rem;
-  margin-right: 5rem; */
   text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
