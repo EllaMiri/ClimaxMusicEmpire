@@ -8,7 +8,7 @@ import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import ContactLinkFooter from "../contact/ContactLinkFooter";
+import { Link as Scroll } from "react-scroll";
 
 const Footer = () => {
   const lowerMediaQueries = {
@@ -82,7 +82,16 @@ const Footer = () => {
             ARTISTS
           </Typography>
         </Link>
-        <ContactLinkFooter />
+        <Scroll to="contact" spy={true} smooth={true} offset={0} duration={500}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.contactLink}
+          >
+            CONTACT
+          </Typography>
+        </Scroll>
         <Link style={{ textDecoration: "none" }} href="/Events">
           <Typography
             variant="p"
