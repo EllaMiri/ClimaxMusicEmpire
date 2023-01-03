@@ -6,6 +6,8 @@ import Link from "next/link";
 import BurgerMenu from "../../assets/BurgerMenu.png";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import ContactLink from "../ContactLink";
+
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -71,13 +73,7 @@ const Header = () => {
                 </li>
                 <li className={styles.listItems}>
                   {/* REACT SCROLL LINK TO CONTACTS HERE */}
-                  <Typography
-                    sx={navLinksBreakpoints}
-                    variant="p"
-                    component="p"
-                  >
-                    Contact
-                  </Typography>
+                  <ContactLink />
                 </li>
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Events">

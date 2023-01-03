@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   return (
-    <Box style={{ display: "flex", justifyContent: "space-around" }}>
+    <Box id="contact" style={{ display: "flex", justifyContent: "space-around" }}>
       <Box style={{ display: "flex", alignItems: "center" }}>
         <Box style={{ display: "flex", flexDirection: "column" }}>
           <Box style={{ display: "flex", marginBottom: "1rem" }}>
