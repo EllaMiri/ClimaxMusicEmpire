@@ -72,9 +72,11 @@ describe("Go To Climax Music Empire and Check Links and buttons", () => {
   it("Clicks More news button on the page", () => {
     cy.contains("More news").click();
     cy.url().should("include", "/News");
+  })
 
   it("Clicks Contact us button on the page", () => {
     cy.contains("Contact us").click();
     cy.url().should("include", "/");
   });
-});
+
+})
