@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import styles from "../styles/Contact.module.css";
+import styles from "../../styles/Contact.module.css";
 
 import ContactForm from "./ContactForm";
 
