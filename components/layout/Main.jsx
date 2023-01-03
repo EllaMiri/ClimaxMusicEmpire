@@ -2,7 +2,7 @@ import Hero from "../Hero";
 import ScrollToTop from "../Scroll";
 import AboutUs from "../AboutUs";
 import Artist from "../Artist";
-import News from "../News";
+import News from "../NewsStartPage";
 
 const Main = () => {
   return (
