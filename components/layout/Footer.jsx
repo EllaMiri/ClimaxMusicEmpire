@@ -8,11 +8,11 @@ import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import ContactLinkFooter from "../contact/ContactLinkFooter";
+import { Link as Scroll } from "react-scroll";
 
 const Footer = () => {
   const lowerMediaQueries = {
-    fontSize: { xs: ".7rem", sm: ".8rem", md: "1rem" }
+    fontSize: { xs: ".7rem", sm: ".8rem", md: "1rem" },
   };
   return (
     <footer>
@@ -36,7 +36,7 @@ const Footer = () => {
               color: "white",
               fontSize: "2rem",
               paddingLeft: "3rem",
-              paddingRight: "3rem"
+              paddingRight: "3rem",
             }}
           />
         </Link>
@@ -63,18 +63,42 @@ const Footer = () => {
       </Box>
       <Box className={styles.lower}>
         <Link style={{ textDecoration: "none" }} href="/News">
-          <Typography variant="p" component="p" sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             NEWS
           </Typography>
         </Link>
         <Link style={{ textDecoration: "none" }} href="/Artists">
-          <Typography variant="p" component="p" sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             ARTISTS
           </Typography>
         </Link>
-        <ContactLinkFooter />
+        <Scroll to="contact" spy={true} smooth={true} offset={0} duration={500}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.contactLink}
+          >
+            CONTACT
+          </Typography>
+        </Scroll>
         <Link style={{ textDecoration: "none" }} href="/Events">
-          <Typography variant="p" component="p" sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             EVENTS
           </Typography>
         </Link>
