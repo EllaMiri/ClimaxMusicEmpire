@@ -40,9 +40,12 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
   });
 
   it("Click Artists in footer", () => {
-    cy.contains("ARTISTS").click();
-    cy.location("pathname").should("eq", `/Artists`);
-    // cy.url().should("include", "/Artists");
+    cy.get("footer").within(() => {
+      cy.get("#footerArtists").click();
+    });
+    cy.url().should("include", "/Artists");
+    // cy.contains("ARTISTS").click();
+    // cy.location("pathname").should("eq", `/Artists`);
   });
 
   it("Clicks CONTACT US in footer", () => {

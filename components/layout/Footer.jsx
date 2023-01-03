@@ -71,7 +71,11 @@ const Footer = () => {
           </Typography>
         </Link>
         <Link style={{ textDecoration: "none" }} href="/Artists">
-          <Typography sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            id="footerArtists"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             ARTISTS
           </Typography>
         </Link>
