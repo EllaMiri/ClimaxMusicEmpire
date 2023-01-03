@@ -22,6 +22,7 @@ const Contact = () => {
     <Box sx={contactPageMediaQueries} className={styles.contactPageBox}>
       <Box sx={textBoxMediaQueries} className={styles.textBox}>
         <Box className={styles.innerTextBox}>
+
           <Box className={styles.titleBox}>
             <Typography variant="h2" component="h2">
               CONTACT
