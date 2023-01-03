@@ -1,5 +1,6 @@
 import { Button, Typography, Box } from "@mui/material";
 import styles from "../styles/Hero.module.css";
+import { Link } from "react-scroll";
 
 const Hero = () => {
   const textContentMediaQueries = {
@@ -58,6 +59,7 @@ const Hero = () => {
             <Typography sx={paragraphMediaQueries} variant="p" component="p">
               Swedens aspiring music label
             </Typography>
+            <Link to="contact">
             <Button
               className={styles.contactBtn}
               variant="contained"
@@ -65,6 +67,7 @@ const Hero = () => {
             >
               Contact us
             </Button>
+            </Link>
           </Box>
         </Box>
       </Box>

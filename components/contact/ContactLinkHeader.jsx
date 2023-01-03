@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { Link } from "react-scroll";
 
-export const ContactLink = () => {
+export const ContactLinkHeader = () => {
   const navLinksBreakpoints = {
     display: {
       xs: "none",
@@ -27,4 +27,4 @@ export const ContactLink = () => {
   )
 }
 
-export default ContactLink;
+export default ContactLinkHeader;
