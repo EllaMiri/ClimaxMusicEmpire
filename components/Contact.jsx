@@ -1,28 +1,27 @@
 import { Box, Typography } from "@mui/material";
-import styles from '../styles/Contact.module.css'
+import styles from "../styles/Contact.module.css";
 
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const contactPageMediaQueries = {
-    flexDirection: {xs: 'column', lg: 'row'},
-    alignItems: {xs: 'center'}
-  }
+    flexDirection: { xs: "column", lg: "row" },
+    alignItems: { xs: "center" },
+  };
 
   const textBoxMediaQueries = {
-    width: {xs: '100%', lg: '50%'},
-    marginBottom: {xs: '3rem', lg: '0'}
-  }
+    width: { xs: "100%", lg: "50%" },
+    marginBottom: { xs: "3rem", lg: "0" },
+  };
 
   const formBoxMediaQueries = {
-    width: {xs: '100%', lg: '50%'}
-  }
+    width: { xs: "100%", lg: "50%" },
+  };
 
   return (
     <Box sx={contactPageMediaQueries} className={styles.contactPageBox}>
       <Box sx={textBoxMediaQueries} className={styles.textBox}>
         <Box className={styles.innerTextBox}>
-
           <Box className={styles.titleBox}>
             <Typography variant="h2" component="h2">
               CONTACT
