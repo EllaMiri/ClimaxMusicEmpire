@@ -27,7 +27,8 @@ const eventsMockData = [
 const eventPageContainer = {
   display: {xs: 'flex'},
   flexDirection: {xs: 'column'},
-  alignItems: {xs: 'center', md: 'flex-start'}
+  alignItems: {xs: 'center', md: 'flex-start'},
+  marginLeft: {md: '2rem'}
 }
 
 const eventInformationContainer = {
