@@ -13,18 +13,12 @@ export const ContactLinkHeader = () => {
   };
 
   return (
-
-      <Link to="contact">
-        <Typography
-          sx={navLinksBreakpoints}
-          variant="p"
-          component="p"
-        >
-          Contact
-        </Typography>
-      </Link>
-
-  )
-}
+    <Link to="contact">
+      <Typography sx={navLinksBreakpoints} variant="p" component="p">
+        Contact
+      </Typography>
+    </Link>
+  );
+};
 
 export default ContactLinkHeader;

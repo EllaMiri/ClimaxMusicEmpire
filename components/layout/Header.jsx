@@ -8,7 +8,6 @@ import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import ContactLinkHeader from "../contact/ContactLinkHeader";
 
-
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

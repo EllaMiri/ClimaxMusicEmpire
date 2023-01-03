@@ -60,13 +60,13 @@ const Hero = () => {
               Swedens aspiring music label
             </Typography>
             <Link to="contact">
-            <Button
-              className={styles.contactBtn}
-              variant="contained"
-              color="primary"
-            >
-              Contact us
-            </Button>
+              <Button
+                className={styles.contactBtn}
+                variant="contained"
+                color="primary"
+              >
+                Contact us
+              </Button>
             </Link>
           </Box>
         </Box>
