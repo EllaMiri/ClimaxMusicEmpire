@@ -34,8 +34,8 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
     cy.url().should("include", "/News");
   });
 
-  it("Click Artists in header", () => {
-    cy.contains("Artists").click();
+  it("Click Artists in footer", () => {
+    cy.contains("ARTISTS").click();
     cy.url().should("include", "/Artists");
   });
 
