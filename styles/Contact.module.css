@@ -1,0 +1,36 @@
+.contactPageBox {
+    display: flex;
+}
+
+.textBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.innerTextBox {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleBox {
+    display: flex;
+    margin-bottom: 1rem;
+    justify-content: center;
+}
+
+.contactDescription {
+    display: inline;
+    margin-right: .4rem;
+}
+
+.yellowContactDescription {
+    color: #e2b945;
+    display: inline;
+    margin-right: .4rem;
+}
+
+.secondVerse {
+    display: flex;
+    justify-content: center;
+}

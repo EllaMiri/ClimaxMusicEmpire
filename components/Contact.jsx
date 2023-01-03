@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import styles from '../styles/Contact.module.css'
 
 import ContactForm from "./ContactForm";
 
@@ -18,10 +19,10 @@ const Contact = () => {
   }
 
   return (
-    <Box sx={contactPageMediaQueries} style={{ display: "flex"}}>
-      <Box sx={textBoxMediaQueries} style={{ display: "flex", justifyContent: "center", alignItems: 'center' }}>
-        <Box style={{ display: "flex", flexDirection: "column" }}>
-          <Box style={{ display: "flex", marginBottom: "1rem", justifyContent: 'center' }}>
+    <Box sx={contactPageMediaQueries} className={styles.contactPageBox}>
+      <Box sx={textBoxMediaQueries} className={styles.textBox}>
+        <Box className={styles.innerTextBox}>
+          <Box className={styles.titleBox}>
             <Typography variant="h2" component="h2">
               CONTACT
             </Typography>
@@ -37,74 +38,58 @@ const Contact = () => {
             <Typography
               variant="p"
               component="p"
-              style={{ display: "inline", marginRight: ".4rem" }}
+              className={styles.contactDescription}
             >
               Are you an
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{
-                color: "#e2b945",
-                display: "inline",
-                marginRight: ".4rem",
-              }}
+              className={styles.yellowContactDescription}
             >
               eventplanner
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{ display: "inline", marginRight: ".4rem" }}
+              className={styles.contactDescription}
             >
               and want to book us for a
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{
-                color: "#e2b945",
-                display: "inline",
-                marginRight: ".4rem",
-              }}
+              className={styles.yellowContactDescription}
             >
               show?
             </Typography>
           </Box>
-          <Box style={{display: 'flex', justifyContent: 'center'}}>
+          <Box className={styles.secondVerse}>
             <Typography
               variant="p"
               component="p"
-              style={{ display: "inline", marginRight: ".4rem" }}
+              className={styles.contactDescription}
             >
               Or are you a
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{
-                color: "#e2b945",
-                display: "inline",
-                marginRight: ".4rem",
-              }}
+              className={styles.yellowContactDescription}
             >
               future music star
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{ display: "inline", marginRight: ".4rem" }}
+              className={styles.contactDescription}
             >
               and want to get
             </Typography>
             <Typography
               variant="p"
               component="p"
-              style={{
-                color: "#e2b945",
-                display: "inline",
-                marginRight: ".4rem",
-              }}
+              className={styles.yellowContactDescription}
             >
               signed?
             </Typography>
