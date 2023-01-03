@@ -31,12 +31,14 @@ describe("Go To Climax Music Empire and Check Links In Header", () => {
   //goes to Climax Music Empire and clicks on the links in the footer
   it("Clicks NEWS in footer", () => {
     cy.contains("NEWS").click();
-    cy.url().should("include", "/News");
+    cy.location("pathname").should("eq", `/News`);
+    // cy.url().should("include", "/News");
   });
 
   it("Click Artists in footer", () => {
     cy.contains("ARTISTS").click();
-    cy.url().should("include", "/Artists");
+    cy.location("pathname").should("eq", `/Artists`);
+    // cy.url().should("include", "/Artists");
   });
 
   it("Clicks CONTACT US in footer", () => {
