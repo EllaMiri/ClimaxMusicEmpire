@@ -2,21 +2,21 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {faAngleDown} from "@fortawesome/free-solid-svg-icons";
-import GallerySlideShow from "../components/GallerySlideShow";
+import MediaSlideShow from "../components/GallerySlideShow";
 
 const Media = () => {
   return (
     <Box style={{paddingTop: '6rem', marginLeft: '2rem'}}>
       <Box style={{display: 'flex'}}>
         <Typography component="h2" variant="h2">
-          GALLER
+          MEDI
         </Typography>
         <Typography
           style={{color: '#e2b945'}}
           component="h2"
           variant="h2"
         >
-          Y
+          A
         </Typography>
       </Box>
       <Box style={{display: 'flex', flexDirection: 'row-reverse'}}>
@@ -36,7 +36,7 @@ const Media = () => {
       <Box style={{display: 'flex', justifyContent: 'center'}}>
         <FontAwesomeIcon icon={faAngleDown} style={{color: '#e2b945', fontSize: '10rem'}} />
       </Box>
-      <GallerySlideShow />
+      <MediaSlideShow />
     </Box>
 
   );

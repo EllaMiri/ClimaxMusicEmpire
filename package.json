@@ -27,9 +27,11 @@
     "prettier": "^2.8.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-hook-form": "^7.41.3",
     "react-material-ui-carousel": "^3.4.2",
     "react-scroll": "^1.8.9",
-    "react-hook-form": "^7.41.3",
+    "react-slideshow-image": "^4.1.1",
+    "react-swipeable-views-utils": "^0.14.0",
     "yup": "^0.32.11"
   },
   "devDependencies": {
