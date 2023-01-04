@@ -1,0 +1,13 @@
+@media screen and (min-width: 900px) {
+    .image {
+        width: 25rem;
+        height: auto;
+    }
+}
+@media screen and (min-width: 1200px) {
+    .image {
+        width: 25rem;
+        height: auto;
+    }
+}
+
