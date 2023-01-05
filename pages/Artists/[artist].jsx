@@ -9,6 +9,7 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import IcekidDsDiscography from "../../components/IcekidDsDiscography";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -330,6 +331,7 @@ const DetailedArtist = () => {
                 {icekidDs.youtube}
               </Link>
             </Box>
+            <IcekidDsDiscography />
           </Box>
         ))}
       {artist === "Freshgee" &&
