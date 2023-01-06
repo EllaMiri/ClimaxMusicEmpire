@@ -8,6 +8,7 @@ import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
+import { Link as Scroll } from "react-scroll";
 
 const Footer = () => {
   const lowerMediaQueries = {
@@ -62,25 +63,44 @@ const Footer = () => {
       </Box>
       <Box className={styles.lower}>
         <Link style={{ textDecoration: "none" }} href="/News">
-          <Typography sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            id="footerNews"
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             NEWS
           </Typography>
         </Link>
         <Link style={{ textDecoration: "none" }} href="/Artists">
-          <Typography sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            id="footerArtists"
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             ARTISTS
           </Typography>
         </Link>
-        {/* INSERT REACT SCROLL LINK HERE */}
-        <Typography
-          style={{ textDecoration: "none" }}
-          sx={lowerMediaQueries}
-          className={styles.links}
-        >
-          CONTACT US
-        </Typography>
+        <Scroll to="contact" spy={true} smooth={true} offset={0} duration={500}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.contactLink}
+          >
+            CONTACT
+          </Typography>
+        </Scroll>
         <Link style={{ textDecoration: "none" }} href="/Events">
-          <Typography sx={lowerMediaQueries} className={styles.links}>
+          <Typography
+            variant="p"
+            component="p"
+            sx={lowerMediaQueries}
+            className={styles.links}
+          >
             EVENTS
           </Typography>
         </Link>
