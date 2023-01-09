@@ -1,0 +1,61 @@
+.desktopImageContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.imageMediaQueries {
+    height: auto;
+    width: 23rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+}
+
+.imageMobileContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.imageMobileMediaQueries {
+    width: 20rem;
+    height: auto;
+}
+
+.modalImageContainer {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: auto;
+}
+
+.modalImage {
+    height: auto;
+    width: 50%;
+}
+
+.arrowIconsContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrowIcons {
+    font-size: 2rem;
+    color: #e2b945;
+}
+
+@media screen and (max-width: 1200px) {
+    .imageMediaQueries {
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .imageMediaQueries {
+        width: 15rem;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .imageMobileMediaQueries {
+        width: 15rem;
+    }
+}
