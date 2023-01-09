@@ -49,7 +49,13 @@ const IcekidDsDiscography = () => {
 
   return (
     <Box>
-      <Box style={{ display: "flex", justifyContent: "flex-end" }}>
+      <Box
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          marginRight: "3rem",
+        }}
+      >
         <Typography variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
@@ -62,7 +68,7 @@ const IcekidDsDiscography = () => {
           display: "flex",
           justifyContent: "space-evenly",
           flexWrap: "wrap",
-          marginTop: "10rem",
+          marginTop: "3rem",
         }}
       >
         {songs.map((song) => (
