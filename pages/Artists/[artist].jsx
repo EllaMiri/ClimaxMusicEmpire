@@ -12,6 +12,7 @@ import Link from "next/link";
 import IcekidDsDiscography from "../../components/IcekidDsDiscography";
 import BoiOusDiscography from "../../components/BoiOusDiscography";
 import PrincipalOfMindsDiscography from "../../components/PrincipalOfMindsDiscography";
+import FreshgeeDiscography from "../../components/FreshgeeDiscography";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -395,6 +396,7 @@ const DetailedArtist = () => {
                 {freshgee.youtube}
               </Link>
             </Box>
+            <FreshgeeDiscography />
           </Box>
         ))}
 
