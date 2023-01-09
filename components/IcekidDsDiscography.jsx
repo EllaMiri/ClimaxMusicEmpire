@@ -2,6 +2,51 @@ import { Box, getAutocompleteUtilityClass, Typography } from "@mui/material";
 import Spotify from "react-spotify-embed";
 
 const IcekidDsDiscography = () => {
+  let songs = [
+    {
+      url: "https://open.spotify.com/embed/track/35tqPlW2KuQ77JtA1jDxIL?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/album/5ke4vbdg2gV4PPXq8r7LzB?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/0qAJwzWRsSCGxg4M7WMApr?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/0KYcjcbw3tfXxlbeI7uvwK?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/4VgOdHJmvtOCybJ7kU2SuC?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/5xoSN9WJMwOj7kIYafoZdQ?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/2Qwi25eJYEJQkgsC6L3pE2?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/2GhrttcKjet5HKRIXhcx1p?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/album/5gLaTey1hvb3b3Mb4tT09J?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/3InF4n2PUIa9lQwQzRO6Ly?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/3QCcEIKy87k855rZWpfkhm?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/5sOXZG8nIZqZ7V9wyfT777?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/75uvzFOvBLGiMiPRDIri7e?utm_source=generator",
+    },
+    {
+      url: "https://open.spotify.com/embed/track/6T8YstfzUg8vRuS5OYtb42?utm_source=generator",
+    },
+  ];
+
   return (
     <Box style={{ display: "flex", justifyContent: "flex-end" }}>
       <Box style={{ display: "flex" }}>
@@ -12,41 +57,19 @@ const IcekidDsDiscography = () => {
           Y
         </Typography>
         <Box>
-          {/* <Spotify link="https://open.spotify.com/track/35tqPlW2KuQ77JtA1jDxIL?si=dccde9e6eaa84f2b"></Spotify> */}
-          <Box>
-            <iframe
-              src="https://open.spotify.com/embed/album/43LBs5VnAYmKjO4xyZts7w?utm_source=generator"
-              //   width="100%"
-              //   height="380"
-              frameBorder="0"
-              allowFullScreen=""
-              //   allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              //   loading="lazy"
-            ></iframe>
-          </Box>
-          <Box>
-            <iframe
-              src="https://open.spotify.com/embed/album/5ke4vbdg2gV4PPXq8r7LzB?utm_source=generator"
-              width="100%"
-              height="380"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </Box>
-          {/* <Box>
-            <iframe
-            
-              src="https://open.spotify.com/embed/album/5ke4vbdg2gV4PPXq8r7LzB?utm_source=generator"
-              width="100%"
-              height="380"
-              frameBorder="0"
-              allowfullscreen=""
-              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-              loading="lazy"
-            ></iframe>
-          </Box> */}
+          {songs.map((song) => (
+            <Box key={song.url}>
+              <iframe
+                src={song.url}
+                width="100%"
+                height="352"
+                frameBorder="0"
+                allowfullscreen=""
+                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                loading="lazy"
+              ></iframe>
+            </Box>
+          ))}
         </Box>
       </Box>
     </Box>
