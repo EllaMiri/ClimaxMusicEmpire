@@ -48,29 +48,36 @@ const IcekidDsDiscography = () => {
   ];
 
   return (
-    <Box style={{ display: "flex", justifyContent: "flex-end" }}>
-      <Box style={{ display: "flex" }}>
+    <Box>
+      <Box style={{ display: "flex", justifyContent: "flex-end" }}>
         <Typography variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
         <Typography style={{ color: "#e2b945" }} variant="h2" component="h2">
           Y
         </Typography>
-        <Box>
-          {songs.map((song) => (
-            <Box key={song.url}>
-              <iframe
-                src={song.url}
-                width="100%"
-                height="352"
-                frameBorder="0"
-                allowfullscreen=""
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                loading="lazy"
-              ></iframe>
-            </Box>
-          ))}
-        </Box>
+      </Box>
+      <Box
+        style={{
+          display: "flex",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+          marginTop: "10rem",
+        }}
+      >
+        {songs.map((song) => (
+          <Box style={{ marginBottom: "3rem" }} key={song.url}>
+            <iframe
+              src={song.url}
+              width="100%"
+              height="352"
+              frameBorder="0"
+              allowfullscreen=""
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </Box>
+        ))}
       </Box>
     </Box>
   );
