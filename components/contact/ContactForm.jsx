@@ -193,6 +193,23 @@ const ContactForm = () => {
             {errors.email?.message}
           </Typography>
 
+          {showHide === "showArtist" ? (
+            <TextField
+              style={{
+                backgroundColor: "white",
+                marginBottom: ".5rem",
+                borderRadius: "10px",
+                width: "70%",
+              }}
+              type="file"
+              id="file"
+              name="file"
+              {...register("file")}
+
+            />
+          ): '' }
+
+
           <TextField
             style={{
               backgroundColor: "white",
