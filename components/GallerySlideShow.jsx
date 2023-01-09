@@ -17,7 +17,7 @@ const style = {
   width: { xs: "90%", xl: "60%" },
   border: "2px solid #e2b945",
   boxShadow: 24,
-  p: 4
+  p: 4,
 };
 
 const MediaSlideShow = () => {
@@ -30,7 +30,6 @@ const MediaSlideShow = () => {
     setOpen(true);
     setCurrentIndex(index);
     setClickedImage(item.image);
-
   };
   const handleClose = () => setOpen(false);
 
@@ -79,10 +78,9 @@ const MediaSlideShow = () => {
     };
   }, []);
 
-
   return (
     <div>
-      {!isMobile &&
+      {!isMobile && (
         <div style={{ margin: "auto" }}>
           <Fade>
             <div className={styles.desktopImageContainer}>
@@ -99,33 +97,39 @@ const MediaSlideShow = () => {
             </div>
             <div className={styles.desktopImageContainer}>
               {images.images2.map((item, index) => (
-                  <div key={index}>
-                    <img src={item.image} className={styles.imageMediaQueries} alt=""
-                         onClick={() => handleOpen(item, index)} />
-                  </div>
-                )
-              )}
+                <div key={index}>
+                  <img
+                    src={item.image}
+                    className={styles.imageMediaQueries}
+                    alt=""
+                    onClick={() => handleOpen(item, index)}
+                  />
+                </div>
+              ))}
             </div>
           </Fade>
         </div>
-      }
+      )}
       <div />
 
-      {isMobile &&
+      {isMobile && (
         <div className="slide-container">
           <Fade>
             {images.images2.map((item, index) => (
-                <div key={index} className={styles.imageMobileContainer}>
-                  <img src={item.image} className={styles.imageMobileMediaQueries} alt=""
-                       onClick={() => handleOpen(item, index)} />
-                </div>
-              )
-            )}
+              <div key={index} className={styles.imageMobileContainer}>
+                <img
+                  src={item.image}
+                  className={styles.imageMobileMediaQueries}
+                  alt=""
+                  onClick={() => handleOpen(item, index)}
+                />
+              </div>
+            ))}
           </Fade>
         </div>
-      }
+      )}
 
-      {!isMobile && clickedImage &&
+      {!isMobile && clickedImage && (
         <Modal
           open={open}
           clickedImg={clickedImage}
@@ -138,18 +142,30 @@ const MediaSlideShow = () => {
         >
           <Box sx={style}>
             <div className="slide-container">
-              <div key={images.images.id} className={styles.modalImageContainer}
+              <div
+                key={images.images.id}
+                className={styles.modalImageContainer}
               >
-                <img src={clickedImage} alt="bigger picture" className={styles.modalImage} />
+                <img
+                  src={clickedImage}
+                  alt="bigger picture"
+                  className={styles.modalImage}
+                />
               </div>
               <div className={styles.arrowIconsContainer}>
-                <div onClick={handelRotationLeft} className="overlay-arrows_left">
+                <div
+                  onClick={handelRotationLeft}
+                  className="overlay-arrows_left"
+                >
                   <FontAwesomeIcon
                     className={styles.arrowIcons}
                     icon={faArrowLeft}
                   />
                 </div>
-                <div onClick={handelRotationRight} className="overlay-arrows_right">
+                <div
+                  onClick={handelRotationRight}
+                  className="overlay-arrows_right"
+                >
                   <FontAwesomeIcon
                     className={styles.arrowIcons}
                     icon={faArrowRight}
@@ -159,10 +175,8 @@ const MediaSlideShow = () => {
             </div>
           </Box>
         </Modal>
-      }
+      )}
     </div>
-
   );
 };
 export default MediaSlideShow;
-
