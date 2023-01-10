@@ -53,7 +53,7 @@ const IcekidDsDiscography = () => {
         <Typography variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
-        <Typography style={{ color: "#e2b945" }} variant="h2" component="h2">
+        <Typography className={styles.goldColor} variant="h2" component="h2">
           Y
         </Typography>
       </Box>

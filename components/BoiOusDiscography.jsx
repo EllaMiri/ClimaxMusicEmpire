@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import styles from "../styles/Discography.module.css";
 
 const BoiOusDiscography = () => {
   let songs = [
@@ -12,30 +13,17 @@ const BoiOusDiscography = () => {
 
   return (
     <Box>
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginRight: "3rem",
-        }}
-      >
+      <Box className={styles.title}>
         <Typography variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
-        <Typography style={{ color: "#e2b945" }} variant="h2" component="h2">
+        <Typography className={styles.goldColor} variant="h2" component="h2">
           Y
         </Typography>
       </Box>
-      <Box
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-          marginTop: "3rem",
-        }}
-      >
+      <Box className={styles.songsContainer}>
         {songs.map((song) => (
-          <Box style={{ marginBottom: "3rem" }} key={song.url}>
+          <Box className={styles.iframeContainer} key={song.url}>
             <iframe
               src={song.url}
               width="100%"
