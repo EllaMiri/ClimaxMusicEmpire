@@ -49,14 +49,7 @@ const IcekidDsDiscography = () => {
 
   return (
     <Box>
-      <Box
-        className={styles.title}
-        // style={{
-        //   display: "flex",
-        //   justifyContent: "flex-end",
-        //   marginRight: "3rem",
-        // }}
-      >
+      <Box className={styles.title}>
         <Typography variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
@@ -64,21 +57,9 @@ const IcekidDsDiscography = () => {
           Y
         </Typography>
       </Box>
-      <Box
-        className={styles.songsContainer}
-        // style={{
-        //   display: "flex",
-        //   justifyContent: "space-evenly",
-        //   flexWrap: "wrap",
-        //   marginTop: "3rem",
-        // }}
-      >
+      <Box className={styles.songsContainer}>
         {songs.map((song) => (
-          <Box
-            className={styles.iframeContainer}
-            // style={{ marginBottom: "3rem" }}
-            key={song.url}
-          >
+          <Box className={styles.iframeContainer} key={song.url}>
             <iframe
               src={song.url}
               width="100%"
