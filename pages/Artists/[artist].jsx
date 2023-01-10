@@ -165,7 +165,7 @@ const DetailedArtist = () => {
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography variant="h1" component="h1" style={{fontSize: '4rem'}}>
                 {principalOfMinds.name}
               </Typography>
               <Typography
@@ -224,7 +224,7 @@ const DetailedArtist = () => {
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography variant="h1" component="h1" style={{fontSize: '4rem'}}>
                 {boiOus.name}
               </Typography>
               <Typography
@@ -280,7 +280,7 @@ const DetailedArtist = () => {
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography variant="h1" component="h1" style={{fontSize: '4rem'}}>
                 {icekidDs.name}
               </Typography>
               <Typography
@@ -336,7 +336,7 @@ const DetailedArtist = () => {
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography variant="h1" component="h1" style={{fontSize: '4rem'}}>
                 {freshgee.name}
               </Typography>
               <Typography
