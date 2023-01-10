@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material";
+import styles from "../styles/Discography.module.css";
 
 const IcekidDsDiscography = () => {
   let songs = [
@@ -49,11 +50,12 @@ const IcekidDsDiscography = () => {
   return (
     <Box>
       <Box
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          marginRight: "3rem",
-        }}
+        className={styles.title}
+        // style={{
+        //   display: "flex",
+        //   justifyContent: "flex-end",
+        //   marginRight: "3rem",
+        // }}
       >
         <Typography variant="h2" component="h2">
           DISCOGRAPH
@@ -63,15 +65,20 @@ const IcekidDsDiscography = () => {
         </Typography>
       </Box>
       <Box
-        style={{
-          display: "flex",
-          justifyContent: "space-evenly",
-          flexWrap: "wrap",
-          marginTop: "3rem",
-        }}
+        className={styles.songsContainer}
+        // style={{
+        //   display: "flex",
+        //   justifyContent: "space-evenly",
+        //   flexWrap: "wrap",
+        //   marginTop: "3rem",
+        // }}
       >
         {songs.map((song) => (
-          <Box style={{ marginBottom: "3rem" }} key={song.url}>
+          <Box
+            className={styles.iframeContainer}
+            // style={{ marginBottom: "3rem" }}
+            key={song.url}
+          >
             <iframe
               src={song.url}
               width="100%"
