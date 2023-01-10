@@ -32,7 +32,11 @@ const Media = () => {
                 marginLeft: "3rem",
               }}
             >
-              <Typography component="h1" variant="h1" style={{fontSize: '4rem'}}>
+              <Typography
+                component="h1"
+                variant="h1"
+                style={{ fontSize: "4rem" }}
+              >
                 MEDI
               </Typography>
               <Typography
