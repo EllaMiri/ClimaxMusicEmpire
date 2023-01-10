@@ -1,0 +1,24 @@
+.title {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 3rem;
+}
+
+.songsContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.iframeContainer {
+  margin-bottom: 3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .title {
+    margin-top: 3rem;
+    justify-content: center;
+    margin-right: 0;
+  }
+}
