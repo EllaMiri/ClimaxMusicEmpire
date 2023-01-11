@@ -29,10 +29,10 @@ const ContactForm = () => {
   const onSubmit = () => {
     emailjs
       .sendForm(
-        "service_a62px2m",
-        "template_5u6kgik",
+        process.env.NEXT_PUBLIC_SERVICE_ID,
+        process.env.NEXT_PUBLIC_TEMPLATE_ID,
         form.current,
-        "xBwMCYQyB3YvK0lkv"
+        process.env.NEXT_PUBLIC_PUBLIC_KEY
       )
       .then(
         (result) => {
