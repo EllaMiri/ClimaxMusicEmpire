@@ -169,11 +169,7 @@ const DetailedArtist = () => {
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography
-                variant="h1"
-                component="h1"
-                style={{ fontSize: "4rem" }}
-              >
+              <Typography variant="h2" component="h2">
                 {principalOfMinds.name}
               </Typography>
               <Typography
@@ -233,11 +229,7 @@ const DetailedArtist = () => {
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography
-                variant="h1"
-                component="h1"
-                style={{ fontSize: "4rem" }}
-              >
+              <Typography variant="h2" component="h2">
                 {boiOus.name}
               </Typography>
               <Typography
@@ -294,11 +286,7 @@ const DetailedArtist = () => {
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography
-                variant="h1"
-                component="h1"
-                style={{ fontSize: "4rem" }}
-              >
+              <Typography variant="h2" component="h2">
                 {icekidDs.name}
               </Typography>
               <Typography
@@ -355,11 +343,7 @@ const DetailedArtist = () => {
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography
-                variant="h1"
-                component="h1"
-                style={{ fontSize: "4rem" }}
-              >
+              <Typography variant="h2" component="h2">
                 {freshgee.name}
               </Typography>
               <Typography
