@@ -9,6 +9,10 @@ import { faYoutube } from "@fortawesome/free-brands-svg-icons";
 import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import IcekidDsDiscography from "../../components/IcekidDsDiscography";
+import BoiOusDiscography from "../../components/BoiOusDiscography";
+import PrincipalOfMindsDiscography from "../../components/PrincipalOfMindsDiscography";
+import FreshgeeDiscography from "../../components/FreshgeeDiscography";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -222,6 +226,7 @@ const DetailedArtist = () => {
                 {principalOfMinds.youtube}
               </Link>
             </Box>
+            <PrincipalOfMindsDiscography />
           </Box>
         ))}
       {artist === "BoiOus" &&
@@ -282,6 +287,7 @@ const DetailedArtist = () => {
                 {boiOus.youtube}
               </Link>
             </Box>
+            <BoiOusDiscography />
           </Box>
         ))}
       {artist === "IcekidDs" &&
@@ -342,6 +348,7 @@ const DetailedArtist = () => {
                 {icekidDs.youtube}
               </Link>
             </Box>
+            <IcekidDsDiscography />
           </Box>
         ))}
       {artist === "Freshgee" &&
@@ -405,6 +412,7 @@ const DetailedArtist = () => {
                 {freshgee.youtube}
               </Link>
             </Box>
+            <FreshgeeDiscography />
           </Box>
         ))}
 
