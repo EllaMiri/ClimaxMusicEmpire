@@ -36,7 +36,7 @@ const Artists = () => {
   return (
     <Box sx={artistsBoxMediaQueries}>
       <Box sx={titleBox} className={styles.titleBox}>
-        <Typography component="h1" variant="h1" style={{ fontSize: "4rem" }}>
+        <Typography component="h2" variant="h2">
           ARTIST
         </Typography>
         <Typography component="h2" variant="h2" className={styles.yellowText}>

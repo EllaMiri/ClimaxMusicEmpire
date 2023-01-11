@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import styles from "../styles/AllNews.module.css";
 import Link from "next/link";
@@ -23,7 +23,7 @@ const News = () => {
       {isMobile && (
         <>
           <Box className={styles.mobileTitleContainer}>
-            <Typography variant="h1" component="h1">
+            <Typography variant="h2" component="h2">
               NEW
             </Typography>
             <Typography className={styles.s} variant="h2" component="h2">
