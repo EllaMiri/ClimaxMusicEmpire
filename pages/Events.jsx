@@ -60,7 +60,7 @@ const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
       <Box className={styles.titleBox}>
-        <Typography variant="h2" component="h2">
+        <Typography variant="h1" component="h1" style={{ fontSize: "4rem" }}>
           EVENT
         </Typography>
         <Typography variant="h2" component="h2" style={{ color: "#e2b945" }}>
