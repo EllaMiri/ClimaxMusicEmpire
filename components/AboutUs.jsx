@@ -72,7 +72,7 @@ const AboutUs = () => {
           from our differences. Music saved us and made us realize who we are.
           So, music belongs to us as much as it does to anyone in our family, as
           well as to anyone who loves music. And as Climax Music Empire, we
-          don't want to tell artists who to be. We want to create a space for
+          don’t want to tell artists who to be. We want to create a space for
           them to share themselves with the world on their terms irrespective of
           who you are or where you’re from. As we are the next big thing
           competing with the global leading music company, our goal is to make
@@ -87,7 +87,7 @@ const AboutUs = () => {
           <br />
           That is who we are! And that...
           <br />
-          That's Climax Music Empire.
+          That’s Climax Music Empire.
         </Typography>
       </Box>
     </Box>

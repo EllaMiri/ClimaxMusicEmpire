@@ -1,16 +1,14 @@
 import { Link } from "react-scroll";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "../styles/Scroll.module.css";
-import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 
 const ScrollToTop = () => {
   return (
     <Link to="hero" spy={true} smooth={true} duration={500}>
       <button className={styles.scrollBtn}>
-        <FontAwesomeIcon
-          style={{ fontSize: "1.5rem", color: "black" }}
-          icon={faArrowUp}
-        ></FontAwesomeIcon>
+        <i>
+          <ArrowUpwardIcon style={{ fontSize: "3rem", color: "black" }} />
+        </i>
       </button>
     </Link>
   );
