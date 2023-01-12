@@ -82,6 +82,7 @@ const Media = () => {
           <MediaSlideShow />
         </Box>
       )}
+
       {isMobile && (
         <Box className={styles.mediaContainer}>
           <Box
