@@ -6,8 +6,8 @@
 .imageMediaQueries {
     height: auto;
     width: 23rem;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 1rem !important;
+    padding-left: 1rem !important;
 }
 
 .imageMobileContainer {
@@ -38,8 +38,8 @@
 }
 
 .arrowIcons {
-    font-size: 2rem;
-    color: #e2b945;
+    font-size: 2rem !important;
+    color: #e2b945 !important;
 }
 
 @media screen and (max-width: 1200px) {

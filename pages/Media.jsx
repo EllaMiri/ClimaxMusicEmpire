@@ -20,23 +20,29 @@ const Media = () => {
     };
   }, []);
 
+  const h1TitleMediaQueries = {
+    fontSize: {xs: '2.5rem', md: '4rem'}
+  }
+
+  const h2TitleMediaQueries = {
+    fontSize: {sm: '2.5rem', md: '4rem'}
+  }
+
+
   return (
     <>
       {!isMobile && (
-        <Box style={{ paddingTop: "6rem" }}>
-          <Box style={{ display: "flex" }}>
+        <Box className={styles.mediaContainer}>
+          <Box className={styles.titleBox}>
             <Box
-              style={{
-                display: "flex",
-                marginBottom: "1rem",
-                marginLeft: "3rem",
-              }}
+             className={styles.mediaBox}
             >
-              <Typography component="h1" variant="h1" style={{fontSize: '4rem'}}>
+              <Typography component="h1" variant="h1" sx={h1TitleMediaQueries}>
                 MEDI
               </Typography>
               <Typography
-                style={{ color: "#e2b945" }}
+               className={styles.h2Title}
+               sx={h2TitleMediaQueries}
                 component="h2"
                 variant="h2"
               >
@@ -44,10 +50,10 @@ const Media = () => {
               </Typography>
             </Box>
           </Box>
-          <Box style={{ display: "flex", justifyContent: "center" }}>
-            <Box style={{ width: "50%" }}>
+          <Box className={styles.contentBox}>
+            <Box className={styles.textBox}>
               <Typography
-                style={{ marginLeft: "3rem" }}
+                className={styles.text}
                 variant="p"
                 component="p"
               >
@@ -61,11 +67,7 @@ const Media = () => {
               </Typography>
             </Box>
             <Box
-              style={{
-                width: "50%",
-                display: "flex",
-                justifyContent: "center",
-              }}
+              className={styles.imageBox}
             >
               <img
                 className={styles.image}
@@ -75,31 +77,27 @@ const Media = () => {
             </Box>
           </Box>
 
-          <Box style={{ display: "flex", justifyContent: "center" }}>
+          <Box className={styles.iconBox}>
             <FontAwesomeIcon
               icon={faAngleDown}
-              style={{ color: "#e2b945", fontSize: "10rem" }}
+              className={styles.icon}
             />
           </Box>
           <MediaSlideShow />
         </Box>
       )}
       {isMobile && (
-        <Box style={{ paddingTop: "6rem" }}>
+        <Box className={styles.mediaContainer}>
           <Box
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              justifyContent: "center",
-            }}
+           className={styles.mobileTitleBox}
           >
-            <Box style={{ display: "flex", marginBottom: "1rem" }}>
-              <Typography component="h2" variant="h2">
+            <Box className={styles.h1TitleMobile}>
+              <Typography component="h1" variant="h1" sx={h1TitleMediaQueries}>
                 MEDI
               </Typography>
               <Typography
-                style={{ color: "#e2b945" }}
+                className={styles.h2Title}
+                sx={h2TitleMediaQueries}
                 component="h2"
                 variant="h2"
               >
@@ -107,11 +105,7 @@ const Media = () => {
               </Typography>
             </Box>
             <Box
-              style={{
-                width: "80%",
-                display: "flex",
-                justifyContent: "center",
-              }}
+             className={styles.imageBoxMobile}
             >
               <Image
                 layout="intrinsic"
@@ -122,10 +116,10 @@ const Media = () => {
               />
             </Box>
           </Box>
-          <Box style={{ display: "flex", justifyContent: "center" }}>
-            <Box style={{ width: "90%", marginTop: "1rem" }}>
+          <Box className={styles.contentBoxMobile}>
+            <Box className={styles.textBoxMobile}>
               <Typography
-                style={{ textAlign: "center" }}
+                className={styles.textMobile}
                 variant="p"
                 component="p"
               >
@@ -140,10 +134,10 @@ const Media = () => {
             </Box>
           </Box>
 
-          <Box style={{ display: "flex", justifyContent: "center" }}>
+          <Box className={styles.iconBox}>
             <FontAwesomeIcon
               icon={faAngleDown}
-              style={{ color: "#e2b945", fontSize: "10rem" }}
+              className={styles.icon}
             />
           </Box>
           <MediaSlideShow />

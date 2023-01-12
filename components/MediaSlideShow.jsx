@@ -2,8 +2,8 @@ import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Modal, Box } from "@mui/material";
 import { useState, useEffect } from "react";
-import styles from "../styles/GallerySlideShow.module.css";
-import images from "./data/data.json";
+import styles from "../styles/MediaSlideShow.module.css";
+import { images } from "./data/data";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -17,7 +17,7 @@ const style = {
   width: { xs: "90%", xl: "60%" },
   border: "2px solid #e2b945",
   boxShadow: 24,
-  p: 4,
+  p: 4
 };
 
 const MediaSlideShow = () => {
@@ -34,16 +34,16 @@ const MediaSlideShow = () => {
   const handleClose = () => setOpen(false);
 
   const handelRotationRight = () => {
-    const totalLength = images.images.length;
+    const totalLength = images.length;
     if (currentIndex + 1 >= totalLength) {
       setCurrentIndex(0);
-      const newUrl = images.images[0].image;
+      const newUrl = images[0].image;
       setClickedImage(newUrl);
       return;
     }
     const newIndex = currentIndex + 1;
-    const newUrl = images.images.filter((item) => {
-      return images.images.indexOf(item) === newIndex;
+    const newUrl = images.filter((item) => {
+      return images.indexOf(item) === newIndex;
     });
     const newItem = newUrl[0].image;
     setClickedImage(newItem);
@@ -51,16 +51,16 @@ const MediaSlideShow = () => {
   };
 
   const handelRotationLeft = () => {
-    const totalLength = images.images.length;
+    const totalLength = images.length;
     if (currentIndex === 0) {
       setCurrentIndex(totalLength - 1);
-      const newUrl = images.images[totalLength - 1].image;
+      const newUrl = images[totalLength - 1].image;
       setClickedImage(newUrl);
       return;
     }
     const newIndex = currentIndex - 1;
-    const newUrl = images.images.filter((item) => {
-      return images.images.indexOf(item) === newIndex;
+    const newUrl = images.filter((item) => {
+      return images.indexOf(item) === newIndex;
     });
     const newItem = newUrl[0].image;
     setClickedImage(newItem);
@@ -84,28 +84,73 @@ const MediaSlideShow = () => {
         <div style={{ margin: "auto" }}>
           <Fade>
             <div className={styles.desktopImageContainer}>
-              {images.images.map((item, index) => (
-                <div key={index}>
-                  <img
-                    className={styles.imageMediaQueries}
-                    src={item.image}
-                    alt={item.id}
-                    onClick={() => handleOpen(item, index)}
-                  />
-                </div>
-              ))}
+
+              {images.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      {item.id === 1 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                      {item.id === 2 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                      {item.id === 3 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                    </div>
+
+                  );
+                }
+              )}
             </div>
+
             <div className={styles.desktopImageContainer}>
-              {images.images2.map((item, index) => (
-                <div key={index}>
-                  <img
-                    src={item.image}
-                    className={styles.imageMediaQueries}
-                    alt=""
-                    onClick={() => handleOpen(item, index)}
-                  />
-                </div>
-              ))}
+              {images.map((item, index) => {
+                  return (
+                    <div key={index}>
+                      {item.id === 4 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                      {item.id === 5 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                      {item.id === 6 &&
+                        <img
+                          className={styles.imageMediaQueries}
+                          src={item.image}
+                          alt={item.id}
+                          onClick={() => handleOpen(item, index)}
+                        />
+                      }
+                    </div>
+                  );
+                }
+              )}
             </div>
           </Fade>
         </div>
@@ -115,7 +160,7 @@ const MediaSlideShow = () => {
       {isMobile && (
         <div className="slide-container">
           <Fade>
-            {images.images2.map((item, index) => (
+            {images.map((item, index) => (
               <div key={index} className={styles.imageMobileContainer}>
                 <img
                   src={item.image}
@@ -141,9 +186,9 @@ const MediaSlideShow = () => {
           aria-describedby="modal-modal-description"
         >
           <Box sx={style}>
-            <div className="slide-container">
+            <div>
               <div
-                key={images.images.id}
+                key={images.id}
                 className={styles.modalImageContainer}
               >
                 <img

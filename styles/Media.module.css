@@ -1,3 +1,83 @@
+.mediaContainer {
+    padding-top: 6rem !important;
+}
+
+.mobileTitleBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mediaBox {
+    display: flex;
+    margin-bottom: 1rem !important;
+    margin-left: 3rem !important;
+}
+
+.titleBox {
+    display: flex;
+}
+
+
+.h1TitleMobile {
+    display: flex;
+    margin-bottom: 1rem !important;
+}
+
+.h2Title {
+    color: #e2b945;
+}
+
+.contentBox {
+    display: flex;
+    justify-content: center;
+}
+
+.contentBoxMobile {
+    display: flex;
+    justify-content: center;
+}
+
+.textBox {
+    width: 50%;
+}
+
+.textBoxMobile {
+    width: 90%;
+    margin-top: 1rem;
+}
+
+.textMobile {
+    text-align: center;
+}
+
+.text {
+    margin-left: 3rem !important;
+}
+
+.imageBox {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imageBoxMobile {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
+
+.iconBox {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    color: #e2b945;
+    font-size: 10rem;
+}
+
 @media screen and (min-width: 900px) {
     .image {
         width: 25rem;
