@@ -26,17 +26,17 @@
   flex-direction: column;
 }
 
-.titleBox {
+/* .titleBox {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .contactBtn {
-  margin-top: 1rem;
+  margin-top: 1rem !important;
 }
 
 .contactBtn:hover {
-  background-color: #9e8335;
+  background-color: #9e8335 !important;
 }
 
 .empire {
@@ -48,66 +48,66 @@
 }
 
 .description {
-  flex-direction: column;
-  display: flex;
+  flex-direction: column !important;
+  display: flex !important;
   /* align-items: flex-end; */
 }
 
 @media screen and (min-width: 320px) {
   .heading {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
   .paragraph {
-    font-size: 0.9rem;
+    font-size: 0.9rem !important;
   }
 }
 @media screen and (min-width: 370px) {
   .heading {
-    font-size: 1.8rem;
+    font-size: 1.8rem !important;
   }
   .paragraph {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 }
 @media screen and (min-width: 430px) {
   .heading {
-    font-size: 2.1rem;
+    font-size: 2.1rem !important;
   }
 }
 @media screen and (min-width: 460px) {
   .heading {
-    font-size: 2.3rem;
+    font-size: 2.3rem !important;
   }
   .paragraph {
-    font-size: 1.1rem;
+    font-size: 1.1rem !important;
   }
 }
 @media screen and (min-width: 530px) {
   .heading {
-    font-size: 2.6rem;
+    font-size: 2.6rem !important;
   }
 }
 @media screen and (min-width: 600px) {
   .heading {
-    font-size: 3rem;
+    font-size: 3rem !important;
   }
   .paragraph {
-    font-size: 1.2rem;
+    font-size: 1.2rem !important;
   }
 }
 @media screen and (min-width: 900px) {
   .heading {
-    font-size: 4rem;
+    font-size: 4rem !important;
   }
   .paragraph {
-    font-size: 1.3rem;
+    font-size: 1.3rem !important;
   }
 }
 @media screen and (min-width: 1200px) {
   .heading {
-    font-size: 5rem;
+    font-size: 5rem !important;
   }
   .paragraph {
-    font-size: 1.5rem;
+    font-size: 1.5rem !important;
   }
 }

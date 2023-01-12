@@ -1,36 +1,36 @@
 .contactPageBox {
-    display: flex;
+  display: flex;
 }
 
 .textBox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .innerTextBox {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleBox {
-    display: flex;
-    margin-bottom: 1rem;
-    justify-content: center;
+  display: flex;
+  margin-bottom: 1rem !important;
+  justify-content: center;
 }
 
 .contactDescription {
-    display: inline;
-    margin-right: .4rem;
+  display: inline;
+  margin-right: 0.4rem;
 }
 
 .yellowContactDescription {
-    color: #e2b945;
-    display: inline;
-    margin-right: .4rem;
+  color: #e2b945 !important;
+  display: inline !important;
+  margin-right: 0.4rem !important;
 }
 
-.secondVerse {
-    display: flex;
-    justify-content: center;
-}
+/* .secondVerse {
+  display: flex;
+  justify-content: center;
+} */
