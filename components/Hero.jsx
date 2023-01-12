@@ -8,7 +8,8 @@ const Hero = () => {
   };
 
   const titleBoxMediaQueries = {
-    flexDirection: { xs: "column", sm: "row" },
+    flexDirection: { xs: "column" },
+    display: "flex",
   };
 
   const lastTitleMediaQueries = {

@@ -22,7 +22,7 @@ const Footer = () => {
           target="_blank"
         >
           <FontAwesomeIcon
-            style={{ color: "white", fontSize: "2rem" }}
+            style={{ color: "white !important", fontSize: "2rem !important" }}
             icon={faInstagram}
           />
         </Link>
@@ -33,17 +33,21 @@ const Footer = () => {
           <FontAwesomeIcon
             icon={faFacebook}
             style={{
-              color: "white",
-              fontSize: "2rem",
-              paddingLeft: "3rem",
-              paddingRight: "3rem",
+              color: "white !important",
+              fontSize: "2rem !important",
+              paddingLeft: "3rem !important",
+              paddingRight: "3rem !important",
             }}
           />
         </Link>
         <Link href="https://twitter.com/Climaxmusicemp" target="_blank">
           <FontAwesomeIcon
             icon={faTwitter}
-            style={{ color: "white", fontSize: "2rem", paddingRight: "3rem" }}
+            style={{
+              color: "white !important",
+              fontSize: "2rem !important",
+              paddingRight: "3rem !important",
+            }}
           />
         </Link>
         <Link
@@ -52,7 +56,7 @@ const Footer = () => {
         >
           <FontAwesomeIcon
             icon={faYoutube}
-            style={{ color: "white", fontSize: "2rem" }}
+            style={{ color: "white !important", fontSize: "2rem !important" }}
           />
         </Link>
       </Box>
