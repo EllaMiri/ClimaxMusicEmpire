@@ -2,17 +2,13 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import { useRouter } from "next/router";
 import styles from "../../styles/DetailedArtist.module.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faSpotify } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
 import IcekidDsDiscography from "../../components/IcekidDsDiscography";
 import BoiOusDiscography from "../../components/BoiOusDiscography";
 import PrincipalOfMindsDiscography from "../../components/PrincipalOfMindsDiscography";
 import FreshgeeDiscography from "../../components/FreshgeeDiscography";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import YouTubeIcon from "@mui/icons-material/YouTube";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -27,23 +23,10 @@ const DetailedArtist = () => {
 
       image: "/boi-ous.png",
       instagram: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faInstagram}
-        />
+        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
-      spotify: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faSpotify}
-        />
-      ),
-      youtube: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faYoutube}
-        />
-      ),
+      spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
     },
   ];
   const icekidDsMockData = [
@@ -55,23 +38,10 @@ const DetailedArtist = () => {
 
       image: "/icekid-ds.png",
       instagram: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faInstagram}
-        />
+        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
-      spotify: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faSpotify}
-        />
-      ),
-      youtube: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faYoutube}
-        />
-      ),
+      spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
     },
   ];
   const freshgeeMockData = [
@@ -83,23 +53,10 @@ const DetailedArtist = () => {
 
       image: "/freshgee1.png",
       instagram: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faInstagram}
-        />
+        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
-      spotify: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faSpotify}
-        />
-      ),
-      youtube: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faYoutube}
-        />
-      ),
+      spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
     },
   ];
   const principalOfMindsMockData = [
@@ -111,45 +68,16 @@ const DetailedArtist = () => {
 
       image: "/PrincipalOfMinds.png",
       instagram: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faInstagram}
-        />
+        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
-      spotify: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faSpotify}
-        />
-      ),
-      youtube: (
-        <FontAwesomeIcon
-          style={{ fontSize: "2rem", color: "#e2b945" }}
-          icon={faYoutube}
-        />
-      ),
+      spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
     },
   ];
 
   const ArtistBoxMediaQueries = {
     flexDirection: { xs: "column", md: "row" },
   };
-
-  // const DescriptionBoxMediaQueries = {
-  //   width: { xs: "90%", md: "50%" },
-  //   textAlign: { xs: "center", md: "left" },
-  // };
-
-  // const TitleImageBoxMediaQueries = {
-  //   display: { xs: "flex" },
-  //   flexDirection: { xs: "column" },
-  //   alignItems: { xs: "center", md: "flex-start" },
-  //   marginBottom: { xs: "2rem", md: "0" },
-  // };
-
-  // const titleBoxMediaQueries = {
-  //   marginBottom: { xs: "1rem", md: "0" },
-  // };
 
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
@@ -399,211 +327,6 @@ const DetailedArtist = () => {
             <FreshgeeDiscography />
           </Box>
         ))}
-
-      {/* {artist === "BoiOus" &&
-        boiOusMockData.map((boiOus) => (
-          <Box
-            key={boiOus.name}
-            style={{
-              display: "flex",
-              paddingTop: "5rem",
-              flexDirection: "column",
-              // marginLeft: "3rem",
-            }}
-          >
-            <Box
-              sx={ArtistBoxMediaQueries}
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <Box>
-                <Box sx={TitleImageBoxMediaQueries}>
-                  <Box sx={titleBoxMediaQueries} style={{ display: "flex" }}>
-                    <Typography
-                      style={{ marginRight: ".5rem" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {boiOus.name}
-                    </Typography>
-                    <Typography
-                      style={{ color: "#e2b945" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {boiOus.name1}
-                    </Typography>
-                  </Box>
-                  <img
-                    className={styles.artistImage}
-                    src={boiOus.image}
-                    alt="Boi Ous Image"
-                  />
-                </Box>
-              </Box>
-              <Box sx={DescriptionBoxMediaQueries}>
-                <Typography variant="p" component="p">
-                  {boiOus.description}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        ))}
-      {artist === "IcekidDs" &&
-        icekidDsMockData.map((IcekidDs) => (
-          <Box
-            key={IcekidDs.name}
-            style={{
-              display: "flex",
-              paddingTop: "5rem",
-              flexDirection: "column",
-              // marginLeft: "3rem",
-            }}
-          >
-            <Box
-              sx={ArtistBoxMediaQueries}
-              style={{
-                display: "flex",
-
-                alignItems: "center",
-              }}
-            >
-              <Box>
-                <Box sx={TitleImageBoxMediaQueries}>
-                  <Box sx={titleBoxMediaQueries} style={{ display: "flex" }}>
-                    <Typography
-                      style={{ marginRight: ".5rem" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {IcekidDs.name}
-                    </Typography>
-                    <Typography
-                      style={{ color: "#e2b945" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {IcekidDs.name1}
-                    </Typography>
-                  </Box>
-                  <img
-                    className={styles.artistImage}
-                    src={IcekidDs.image}
-                    alt="Icekid Ds image"
-                  />
-                </Box>
-              </Box>
-              <Box sx={DescriptionBoxMediaQueries}>
-                <Typography variant="p" component="p">
-                  {IcekidDs.description}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        ))}
-
-      {artist === "Freshgee" &&
-        freshgeeMockData.map((freshgee) => (
-          <Box
-            key={freshgee.name}
-            style={{
-              display: "flex",
-              paddingTop: "5rem",
-              flexDirection: "column",
-              // marginLeft: "3rem",
-            }}
-          >
-            <Box
-              sx={ArtistBoxMediaQueries}
-              style={{
-                display: "flex",
-                alignItems: "center",
-              }}
-            >
-              <Box>
-                <Box sx={TitleImageBoxMediaQueries}>
-                  <Box sx={titleBoxMediaQueries} style={{ display: "flex" }}>
-                    <Typography variant="h2" component="h2">
-                      {freshgee.name}
-                    </Typography>
-                    <Typography
-                      style={{ color: "#e2b945" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {freshgee.name1}
-                    </Typography>
-                  </Box>
-                  <img
-                    className={styles.artistImageFreshgee}
-                    src={freshgee.image}
-                    alt="Freshgee Image"
-                  />
-                </Box>
-              </Box>
-              <Box sx={DescriptionBoxMediaQueries}>
-                <Typography variant="p" component="p">
-                  {freshgee.description}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        ))}
-
-      {artist === "PrincipalOfMinds" &&
-        principalOfMindsMockData.map((principalOfMinds) => (
-          <Box
-            key={principalOfMinds.name}
-            style={{
-              display: "flex",
-              paddingTop: "5rem",
-              flexDirection: "column",
-              // marginLeft: "3rem",
-            }}
-          >
-            <Box
-              sx={ArtistBoxMediaQueries}
-              style={{
-                display: "flex",
-
-                alignItems: "center",
-              }}
-            >
-              <Box>
-                <Box sx={TitleImageBoxMediaQueries}>
-                  <Box sx={titleBoxMediaQueries} style={{ display: "flex" }}>
-                    <Typography
-                      style={{ marginRight: ".5rem" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {principalOfMinds.name}
-                    </Typography>
-                    <Typography
-                      style={{ color: "#e2b945" }}
-                      variant="h2"
-                      component="h2"
-                    >
-                      {principalOfMinds.name1}
-                    </Typography>
-                  </Box>
-                  <img
-                    className={styles.artistImagePrincipalOfMinds}
-                    src={principalOfMinds.image}
-                    alt="Princible of Minds image"
-                  />
-                </Box>
-              </Box>
-              <Box sx={DescriptionBoxMediaQueries}>
-                <Typography variant="p" component="p">
-                  {principalOfMinds.description}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        ))} */}
     </Box>
   );
 };
