@@ -16,7 +16,7 @@
 }
 
 .goldColor {
-  color: #e2b945;
+  color: #e2b945 !important;
 }
 
 @media screen and (max-width: 900px) {

@@ -11,8 +11,8 @@
 }
 
 .yellowNamePart {
-  margin-left: 1rem;
-  color: #e2b945;
+  margin-left: 1rem !important;
+  color: #e2b945 !important;
 }
 
 .flex {
