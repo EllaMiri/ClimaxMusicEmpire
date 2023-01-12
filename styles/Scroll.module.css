@@ -1,14 +1,14 @@
 .scrollBtn {
-  position: fixed;
-  right: 10px;
-  bottom: 10px;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #e2b945;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
-  color: white;
-  outline: none;
-  cursor: pointer;
-  border: none;
+  position: fixed !important;
+  right: 10px !important;
+  bottom: 10px !important;
+  width: 50px !important;
+  height: 50px !important;
+  border-radius: 50% !important;
+  background-color: #e2b945 !important;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25) !important;
+  color: white !important;
+  outline: none !important;
+  cursor: pointer !important;
+  border: none !important;
 }
