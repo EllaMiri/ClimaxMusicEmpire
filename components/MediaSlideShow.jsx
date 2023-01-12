@@ -4,9 +4,8 @@ import { Modal, Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import styles from "../styles/MediaSlideShow.module.css";
 import { images } from "./data/data";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
 const style = {
   position: "absolute",
@@ -202,19 +201,13 @@ const MediaSlideShow = () => {
                   onClick={handelRotationLeft}
                   className="overlay-arrows_left"
                 >
-                  <FontAwesomeIcon
-                    className={styles.arrowIcons}
-                    icon={faArrowLeft}
-                  />
+                 <ArrowBackIosIcon className={styles.arrowIcons} />
                 </div>
                 <div
                   onClick={handelRotationRight}
                   className="overlay-arrows_right"
                 >
-                  <FontAwesomeIcon
-                    className={styles.arrowIcons}
-                    icon={faArrowRight}
-                  />
+                <ArrowForwardIosIcon className={styles.arrowIcons} />
                 </div>
               </div>
             </div>

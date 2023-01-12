@@ -1,10 +1,9 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import MediaSlideShow from "../components/MediaSlideShow";
 import { useState, useEffect } from "react";
 import styles from "../styles/Media.module.css";
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Media = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -78,10 +77,7 @@ const Media = () => {
           </Box>
 
           <Box className={styles.iconBox}>
-            <FontAwesomeIcon
-              icon={faAngleDown}
-              className={styles.icon}
-            />
+           <KeyboardArrowDownIcon className={styles.icon} />
           </Box>
           <MediaSlideShow />
         </Box>
@@ -135,10 +131,7 @@ const Media = () => {
           </Box>
 
           <Box className={styles.iconBox}>
-            <FontAwesomeIcon
-              icon={faAngleDown}
-              className={styles.icon}
-            />
+          <KeyboardArrowDownIcon className={styles.icon} />
           </Box>
           <MediaSlideShow />
         </Box>

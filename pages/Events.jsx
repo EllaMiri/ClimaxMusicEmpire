@@ -1,8 +1,4 @@
 import { Typography, Box } from "@mui/material";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faClock } from "@fortawesome/free-solid-svg-icons";
-// import { faCalendar } from "@fortawesome/free-solid-svg-icons";
-// import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Events.module.css";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
