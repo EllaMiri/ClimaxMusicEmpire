@@ -3,7 +3,7 @@ import Image from "next/image";
 import MediaSlideShow from "../components/MediaSlideShow";
 import { useState, useEffect } from "react";
 import styles from "../styles/Media.module.css";
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
 const Media = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -20,28 +20,25 @@ const Media = () => {
   }, []);
 
   const h1TitleMediaQueries = {
-    fontSize: {xs: '2.5rem', md: '4rem'}
-  }
+    fontSize: { xs: "2.5rem", md: "4rem" },
+  };
 
   const h2TitleMediaQueries = {
-    fontSize: {sm: '2.5rem', md: '4rem'}
-  }
-
+    fontSize: { sm: "2.5rem", md: "4rem" },
+  };
 
   return (
     <>
       {!isMobile && (
         <Box className={styles.mediaContainer}>
           <Box className={styles.titleBox}>
-            <Box
-             className={styles.mediaBox}
-            >
+            <Box className={styles.mediaBox}>
               <Typography component="h1" variant="h1" sx={h1TitleMediaQueries}>
                 MEDI
               </Typography>
               <Typography
-               className={styles.h2Title}
-               sx={h2TitleMediaQueries}
+                className={styles.h2Title}
+                sx={h2TitleMediaQueries}
                 component="h2"
                 variant="h2"
               >
@@ -51,11 +48,7 @@ const Media = () => {
           </Box>
           <Box className={styles.contentBox}>
             <Box className={styles.textBox}>
-              <Typography
-                className={styles.text}
-                variant="p"
-                component="p"
-              >
+              <Typography className={styles.text} variant="p" component="p">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
                 enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -65,9 +58,7 @@ const Media = () => {
                 sunt in culpa qui officia deserunt mollit anim id est laborum.
               </Typography>
             </Box>
-            <Box
-              className={styles.imageBox}
-            >
+            <Box className={styles.imageBox}>
               <img
                 className={styles.image}
                 src="/galleryImage.png"
@@ -77,7 +68,7 @@ const Media = () => {
           </Box>
 
           <Box className={styles.iconBox}>
-           <KeyboardArrowDownIcon className={styles.icon} />
+            <KeyboardArrowDownIcon className={styles.icon} />
           </Box>
           <MediaSlideShow />
         </Box>
@@ -85,9 +76,7 @@ const Media = () => {
 
       {isMobile && (
         <Box className={styles.mediaContainer}>
-          <Box
-           className={styles.mobileTitleBox}
-          >
+          <Box className={styles.mobileTitleBox}>
             <Box className={styles.h1TitleMobile}>
               <Typography component="h1" variant="h1" sx={h1TitleMediaQueries}>
                 MEDI
@@ -101,9 +90,7 @@ const Media = () => {
                 A
               </Typography>
             </Box>
-            <Box
-             className={styles.imageBoxMobile}
-            >
+            <Box className={styles.imageBoxMobile}>
               <Image
                 layout="intrinsic"
                 src="/galleryImage.png"
@@ -132,7 +119,7 @@ const Media = () => {
           </Box>
 
           <Box className={styles.iconBox}>
-          <KeyboardArrowDownIcon className={styles.icon} />
+            <KeyboardArrowDownIcon className={styles.icon} />
           </Box>
           <MediaSlideShow />
         </Box>

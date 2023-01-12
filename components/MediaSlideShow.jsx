@@ -4,8 +4,8 @@ import { Modal, Box } from "@mui/material";
 import { useState, useEffect } from "react";
 import styles from "../styles/MediaSlideShow.module.css";
 import { images } from "./data/data";
-import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
-import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 
 const style = {
   position: "absolute",
@@ -16,7 +16,7 @@ const style = {
   width: { xs: "90%", xl: "60%" },
   border: "2px solid #e2b945",
   boxShadow: 24,
-  p: 4
+  p: 4,
 };
 
 const MediaSlideShow = () => {
@@ -83,73 +83,69 @@ const MediaSlideShow = () => {
         <div style={{ margin: "auto" }}>
           <Fade>
             <div className={styles.desktopImageContainer}>
-
               {images.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      {item.id === 1 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                      {item.id === 2 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                      {item.id === 3 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                    </div>
-
-                  );
-                }
-              )}
+                return (
+                  <div key={index}>
+                    {item.id === 1 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 2 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 3 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
 
             <div className={styles.desktopImageContainer}>
               {images.map((item, index) => {
-                  return (
-                    <div key={index}>
-                      {item.id === 4 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                      {item.id === 5 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                      {item.id === 6 &&
-                        <img
-                          className={styles.imageMediaQueries}
-                          src={item.image}
-                          alt={item.id}
-                          onClick={() => handleOpen(item, index)}
-                        />
-                      }
-                    </div>
-                  );
-                }
-              )}
+                return (
+                  <div key={index}>
+                    {item.id === 4 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 5 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 6 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </Fade>
         </div>
@@ -186,10 +182,7 @@ const MediaSlideShow = () => {
         >
           <Box sx={style}>
             <div>
-              <div
-                key={images.id}
-                className={styles.modalImageContainer}
-              >
+              <div key={images.id} className={styles.modalImageContainer}>
                 <img
                   src={clickedImage}
                   alt="bigger picture"
@@ -201,13 +194,13 @@ const MediaSlideShow = () => {
                   onClick={handelRotationLeft}
                   className="overlay-arrows_left"
                 >
-                 <ArrowBackIosIcon className={styles.arrowIcons} />
+                  <ArrowBackIosIcon className={styles.arrowIcons} />
                 </div>
                 <div
                   onClick={handelRotationRight}
                   className="overlay-arrows_right"
                 >
-                <ArrowForwardIosIcon className={styles.arrowIcons} />
+                  <ArrowForwardIosIcon className={styles.arrowIcons} />
                 </div>
               </div>
             </div>
