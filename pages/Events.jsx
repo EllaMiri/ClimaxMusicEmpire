@@ -1,10 +1,13 @@
 import { Typography, Box } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faClock } from "@fortawesome/free-solid-svg-icons";
-import { faCalendar } from "@fortawesome/free-solid-svg-icons";
-import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faClock } from "@fortawesome/free-solid-svg-icons";
+// import { faCalendar } from "@fortawesome/free-solid-svg-icons";
+// import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 import styles from "../styles/Events.module.css";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import WatchLaterIcon from "@mui/icons-material/WatchLater";
 
 const events1MockData = [
   {
@@ -99,25 +102,19 @@ const Events = () => {
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  className={styles.eventIcons}
-                  icon={faLocationDot}
-                />
+                <LocationOnIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.location}
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon className={styles.eventIcons} icon={faClock} />
+                <WatchLaterIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.time}
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  className={styles.eventIcons}
-                  icon={faCalendar}
-                />
+                <CalendarTodayIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.date}
                 </Typography>
@@ -156,25 +153,19 @@ const Events = () => {
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  className={styles.eventIcons}
-                  icon={faLocationDot}
-                />
+                <LocationOnIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.location}
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon className={styles.eventIcons} icon={faClock} />
+                <WatchLaterIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.time}
                 </Typography>
               </Box>
               <Box style={{ display: "flex" }}>
-                <FontAwesomeIcon
-                  className={styles.eventIcons}
-                  icon={faCalendar}
-                />
+                <CalendarTodayIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.date}
                 </Typography>
