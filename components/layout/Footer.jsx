@@ -1,14 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faInstagram } from "@fortawesome/free-brands-svg-icons";
-import { faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { faYoutube } from "@fortawesome/free-brands-svg-icons";
-import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
 import { Link as Scroll } from "react-scroll";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import YouTubeIcon from "@mui/icons-material/YouTube";
+import TwitterIcon from "@mui/icons-material/Twitter";
 
 const Footer = () => {
   const lowerMediaQueries = {
@@ -18,41 +17,43 @@ const Footer = () => {
     <footer>
       <Box className={styles.upper}>
         <Link
+          href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
+          target="_blank"
+        >
+          <YouTubeIcon style={{ color: "white", fontSize: "2.4rem" }} />
+        </Link>
+        <Link
           href="https://www.instagram.com/climaxmusicempire/"
           target="_blank"
         >
-          <FontAwesomeIcon
-            style={{ color: "white", fontSize: "2rem" }}
-            icon={faInstagram}
+          <InstagramIcon
+            style={{
+              color: "white",
+              fontSize: "2rem",
+              marginLeft: "3rem",
+              marginRight: "rem",
+            }}
           />
         </Link>
         <Link
           href="https://www.facebook.com/profile.php?id=100085416694420"
           target="_blank"
         >
-          <FontAwesomeIcon
-            icon={faFacebook}
+          <FacebookIcon
             style={{
               color: "white",
               fontSize: "2rem",
-              paddingLeft: "3rem",
-              paddingRight: "3rem",
+              marginLeft: "3rem",
+              marginRight: "3rem",
             }}
           />
         </Link>
         <Link href="https://twitter.com/Climaxmusicemp" target="_blank">
-          <FontAwesomeIcon
-            icon={faTwitter}
-            style={{ color: "white", fontSize: "2rem", paddingRight: "3rem" }}
-          />
-        </Link>
-        <Link
-          href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
-          target="_blank"
-        >
-          <FontAwesomeIcon
-            icon={faYoutube}
-            style={{ color: "white", fontSize: "2rem" }}
+          <TwitterIcon
+            style={{
+              color: "white",
+              fontSize: "2rem",
+            }}
           />
         </Link>
       </Box>

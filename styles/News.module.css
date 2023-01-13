@@ -1,9 +1,9 @@
 .moreNewsBtn {
-  border: 1px solid #e2b945;
-  margin-top: 0.7rem;
+  border: 1px solid #e2b945 !important;
+  margin-top: 0.7rem !important;
 }
 .moreNewsBtn:hover {
-  background-color: #9e8335;
+  background-color: #9e8335 !important;
 }
 
 .container {
@@ -33,15 +33,15 @@
 }
 
 .secondTitle1 {
-  font-family: Montserrat;
-  font-size: 1.5rem;
+  font-family: Montserrat !important;
+  font-size: 1.5rem !important;
 }
 
 .secondTitle2 {
-  font-family: Montserrat;
-  font-size: 1.5rem;
-  margin-left: 0.5rem;
-  color: #e2b945;
+  font-family: Montserrat !important;
+  font-size: 1.5rem !important;
+  margin-left: 0.5rem !important;
+  color: #e2b945 !important;
 }
 
 .link {
@@ -49,19 +49,19 @@
 }
 
 .clickToListen {
-  font-family: Montserrat;
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  color: #e2b945;
+  font-family: Montserrat !important;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+  color: #e2b945 !important;
 }
 
 .newsDescription {
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 .s {
-  color: #e2b945;
+  color: #e2b945 !important;
 }
 
 .mobileContainer {
@@ -74,31 +74,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 2rem !important;
 }
 
 .mobileNewsDescription {
   text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .mobileMoreNewsBtn {
-  border: 1px solid #e2b945;
+  border: 1px solid #e2b945 !important;
 }
 
 .mobileMoreNewsBtn:hover {
-  background-color: #9e8335;
+  background-color: #9e8335 !important;
 }
 
 @media screen and (min-width: 320px) {
   .secondTitle1 {
     font-size: 1rem;
+    text-align: center;
   }
   .secondTitle2 {
     font-size: 1rem;
+    text-align: center;
   }
   .clickToListen {
     font-size: 0.7rem;

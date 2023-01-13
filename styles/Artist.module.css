@@ -1,14 +1,14 @@
 .s {
-  color: #e2b945;
+  color: #e2b945 !important;
 }
 
 .ourArtistsBtn {
-  border: 1px solid #e2b945;
-  margin-top: 1rem;
+  border: 1px solid #e2b945 !important;
+  margin-top: 1rem !important;
 }
 
 .ourArtistsBtn:hover {
-  background-color: #9e8335;
+  background-color: #9e8335 !important;
 }
 
 .titleBox {

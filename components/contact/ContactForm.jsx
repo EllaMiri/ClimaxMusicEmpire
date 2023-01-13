@@ -13,6 +13,7 @@ import emailjs from "@emailjs/browser";
 import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import styles from "../../styles/ContactForm.module.css";
 
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
@@ -65,18 +66,21 @@ const ContactForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
+  const descriptionMediaQueries = {
+    width: { xs: "15rem", sm: "20rem", md: "23rem" },
+  };
+
+  const radioGroup = {
+    flexDirection: { xs: "column", lg: "row" },
+  };
+
   return (
     <Box
+      className={styles.contactForm}
       component="form"
       ref={form}
       onSubmit={onSubmit}
       noValidate
-      style={{
-        borderTop: "6rem solid #e2b945",
-        borderBottom: "6rem solid #e2b945",
-        borderLeft: "2rem solid #e2b945",
-        borderRight: "2rem solid #e2b945",
-      }}
     >
       <div
         style={{
@@ -89,8 +93,9 @@ const ContactForm = () => {
       >
         <FormControl>
           <RadioGroup
+            sx={radioGroup}
+            className={styles.radioGroup}
             defaultChecked="showArtist"
-            style={{ display: "flex", flexDirection: "row", color: "white" }}
           >
             <FormControlLabel
               name="artist"
@@ -119,20 +124,9 @@ const ContactForm = () => {
           </RadioGroup>
         </FormControl>
 
-        <Box
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-          }}
-        >
+        <Box className={styles.formBox}>
           <TextField
-            style={{
-              backgroundColor: "white",
-              marginBottom: ".5rem",
-              borderRadius: "10px",
-              width: "70%",
-            }}
+            className={styles.text}
             required
             id="firstname"
             name="firstName"
@@ -144,12 +138,7 @@ const ContactForm = () => {
             {errors.firstname?.message}
           </Typography>
           <TextField
-            style={{
-              backgroundColor: "white",
-              marginBottom: ".5rem",
-              borderRadius: "10px",
-              width: "70%",
-            }}
+            className={styles.text}
             required
             id="lastname"
             name="lastName"
@@ -161,27 +150,13 @@ const ContactForm = () => {
             {errors.lastname?.message}
           </Typography>
           {showHide === "showCompany" ? (
-            <TextField
-              style={{
-                backgroundColor: "white",
-                marginBottom: ".5rem",
-                borderRadius: "10px",
-                width: "70%",
-              }}
-              id="company"
-              label="Company"
-            />
+            <TextField className={styles.text} id="company" label="Company" />
           ) : (
             ""
           )}
 
           <TextField
-            style={{
-              backgroundColor: "white",
-              marginBottom: ".5rem",
-              borderRadius: "10px",
-              width: "70%",
-            }}
+            className={styles.text}
             required
             id="email"
             name="email"
@@ -194,13 +169,7 @@ const ContactForm = () => {
           </Typography>
 
           <TextField
-            style={{
-              backgroundColor: "white",
-              marginBottom: ".5rem",
-              marginTop: ".5rem",
-              borderRadius: "10px",
-              width: "400px",
-            }}
+            sx={descriptionMediaQueries}
             required
             id="description"
             name="description"
@@ -209,6 +178,7 @@ const ContactForm = () => {
             error={!!errors.description}
             multiline
             rows={4}
+            className={styles.description}
           />
           <Typography variant="p" color="red">
             {errors.description?.message}
@@ -216,11 +186,7 @@ const ContactForm = () => {
           <Button
             type="submit"
             onClick={handleSubmit(onSubmit)}
-            style={{
-              backgroundColor: "#e2b945",
-              color: "white",
-              width: "10rem",
-            }}
+            className={styles.btn}
           >
             Send
           </Button>

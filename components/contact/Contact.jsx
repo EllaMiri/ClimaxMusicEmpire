@@ -4,7 +4,7 @@ import ContactForm from "./ContactForm";
 
 const Contact = () => {
   const contactPageMediaQueries = {
-    flexDirection: { xs: "column", lg: "row" },
+    flexDirection: { xs: "column", md: "row" },
     alignItems: { xs: "center" },
   };
 
@@ -15,6 +15,12 @@ const Contact = () => {
 
   const formBoxMediaQueries = {
     width: { xs: "100%", lg: "50%" },
+  };
+
+  const descriptionBoxMediaQueries = {
+    textAlign: { xs: "center" },
+    // marginLeft: "1.3rem",
+    // marginRight: "auto",
   };
 
   return (
@@ -37,7 +43,10 @@ const Contact = () => {
               US
             </Typography>
           </Box>
-          <Box style={{ marginBottom: ".5rem" }}>
+          <Box
+            sx={descriptionBoxMediaQueries}
+            style={{ marginBottom: ".5rem" }}
+          >
             <Typography
               variant="p"
               component="p"
@@ -67,7 +76,7 @@ const Contact = () => {
               show?
             </Typography>
           </Box>
-          <Box className={styles.secondVerse}>
+          <Box sx={descriptionBoxMediaQueries} className={styles.secondVerse}>
             <Typography
               variant="p"
               component="p"
