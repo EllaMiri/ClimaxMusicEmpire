@@ -51,6 +51,7 @@ const Header = () => {
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/News">
                     <Typography
+                      id="headerNews"
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
@@ -62,6 +63,7 @@ const Header = () => {
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Media">
                     <Typography
+                      id="headerMedia"
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
@@ -90,6 +92,7 @@ const Header = () => {
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Events">
                     <Typography
+                      id="headerEvents"
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
@@ -101,6 +104,7 @@ const Header = () => {
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Artists">
                     <Typography
+                      id="headerArtists"
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
