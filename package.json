@@ -29,6 +29,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.41.3",
     "react-scroll": "^1.8.9",
+    "sitemap": "^7.1.1",
     "yup": "^0.32.11"
   },
   "devDependencies": {
