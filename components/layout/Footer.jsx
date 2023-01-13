@@ -97,6 +97,7 @@ const Footer = () => {
         </Scroll>
         <Link style={{ textDecoration: "none" }} href="/Events">
           <Typography
+            id="footerEvents"
             variant="p"
             component="p"
             sx={lowerMediaQueries}

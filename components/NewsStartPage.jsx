@@ -143,6 +143,7 @@ const News = () => {
             </Typography>
             <Box>
               <Button
+                id="moreNewsBtn"
                 onClick={() => router.push("/News")}
                 className={styles.moreNewsBtn}
                 variant="contained"
