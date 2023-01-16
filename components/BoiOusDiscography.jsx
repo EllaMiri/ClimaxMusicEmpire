@@ -14,12 +14,12 @@ const BoiOusDiscography = () => {
 
   let videos = [
     {
-      url: "https://www.youtube.com/embed/6EY1vhSnhFo"
+      url: "https://www.youtube.com/embed/6EY1vhSnhFo",
     },
     {
-      url: "https://www.youtube.com/embed/ZKIE0OKmSIU"
-    }
-  ]
+      url: "https://www.youtube.com/embed/ZKIE0OKmSIU",
+    },
+  ];
 
   return (
     <Box>
@@ -49,13 +49,15 @@ const BoiOusDiscography = () => {
       <Box className={styles.videoContainer}>
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
-            <Iframe url={video.url}
-                    width="100%"
-                    height="320px"
-                    id=""
-                    className=""
-                    display="block"
-                    position="relative" />
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              className=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>

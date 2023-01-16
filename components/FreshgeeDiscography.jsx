@@ -17,12 +17,12 @@ const FreshgeeDiscography = () => {
 
   let videos = [
     {
-      url: "https://www.youtube.com/embed/E5fMwwtMQE8"
+      url: "https://www.youtube.com/embed/E5fMwwtMQE8",
     },
     {
-      url: "https://www.youtube.com/embed/dL_QIZN0vVk"
-    }
-  ]
+      url: "https://www.youtube.com/embed/dL_QIZN0vVk",
+    },
+  ];
   return (
     <Box>
       <Box className={styles.title}>
@@ -51,12 +51,14 @@ const FreshgeeDiscography = () => {
       <Box className={styles.videoContainer}>
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
-            <Iframe url={video.url}
-                    width="100%"
-                    height="320px"
-                    id=""
-                    display="block"
-                    position="relative" />
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>

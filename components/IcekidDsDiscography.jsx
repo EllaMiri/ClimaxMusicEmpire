@@ -50,12 +50,12 @@ const IcekidDsDiscography = () => {
 
   let videos = [
     {
-      url: "https://www.youtube.com/embed/b0hPwFZIyWo"
+      url: "https://www.youtube.com/embed/b0hPwFZIyWo",
     },
     {
-      url: "https://www.youtube.com/embed/KMDuiJ0NiA4"
-    }
-  ]
+      url: "https://www.youtube.com/embed/KMDuiJ0NiA4",
+    },
+  ];
 
   return (
     <Box>
@@ -85,13 +85,15 @@ const IcekidDsDiscography = () => {
       <Box className={styles.videoContainer}>
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
-            <Iframe url={video.url}
-                    width="100%"
-                    height="320px"
-                    id=""
-                    className=""
-                    display="block"
-                    position="relative" />
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              className=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>
