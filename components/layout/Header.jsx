@@ -6,13 +6,32 @@ import Link from "next/link";
 import BurgerMenu from "../../assets/BurgerMenu.png";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link as Scroll } from "react-scroll";
+import { Link as Scroll, scroller } from "react-scroll";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const router = useRouter();
+
+  const scrollTarget = (target) =>
+    scroller.scrollTo(target, {
+      smooth: true,
+      duration: 700,
+      offset: 670,
+      spy: true,
+    });
+
+  const scrollToPage = async (target) => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+      scrollTarget(target);
+    }
+    scrollTarget(target);
   };
 
   const burgerMenuBreakpoints = {
@@ -72,13 +91,10 @@ const Header = () => {
                     </Typography>
                   </Link>
                 </li>
-                <li className={styles.listItems}>
-                  <Scroll
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
+                {router.pathname !== "/" && (
+                  <li
+                    onClick={() => scrollToPage("contact")}
+                    className={styles.listItems}
                   >
                     <Typography
                       sx={navLinksBreakpoints}
@@ -87,8 +103,28 @@ const Header = () => {
                     >
                       Contact
                     </Typography>
-                  </Scroll>
-                </li>
+                  </li>
+                )}
+                {router.pathname === "/" && (
+                  <li className={styles.listItems}>
+                    <Scroll
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={700}
+                    >
+                      <Typography
+                        sx={navLinksBreakpoints}
+                        variant="p"
+                        component="p"
+                      >
+                        Contact
+                      </Typography>
+                    </Scroll>
+                  </li>
+                )}
+
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Events">
                     <Typography
