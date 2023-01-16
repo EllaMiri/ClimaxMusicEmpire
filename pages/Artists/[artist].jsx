@@ -91,13 +91,17 @@ const DetailedArtist = () => {
     marginTop: { xs: "1rem" },
   };
 
+  const h1MediaQueries = {
+    fontSize: {xs: '2.5rem', sm: '3.75rem'}
+  }
+
   return (
     <Box>
       {artist === "PrincipalOfMinds" &&
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {principalOfMinds.name}
               </Typography>
               <Typography
@@ -157,7 +161,7 @@ const DetailedArtist = () => {
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {boiOus.name}
               </Typography>
               <Typography
@@ -214,7 +218,7 @@ const DetailedArtist = () => {
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {icekidDs.name}
               </Typography>
               <Typography
@@ -271,7 +275,7 @@ const DetailedArtist = () => {
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
-              <Typography variant="h2" component="h2">
+              <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {freshgee.name}
               </Typography>
               <Typography

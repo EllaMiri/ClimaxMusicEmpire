@@ -33,10 +33,14 @@ const Artists = () => {
     marginLeft: { xs: "0", lg: "5rem" },
   };
 
+  const h1MediaQueries = {
+    fontSize: {xs: '2.5rem', sm: '3.75rem'}
+  }
+
   return (
     <Box sx={artistsBoxMediaQueries}>
       <Box sx={titleBox} className={styles.titleBox}>
-        <Typography component="h2" variant="h2">
+        <Typography sx={h1MediaQueries} component="h1" variant="h1">
           ARTIST
         </Typography>
         <Typography component="h2" variant="h2" className={styles.yellowText}>

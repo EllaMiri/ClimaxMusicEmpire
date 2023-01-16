@@ -18,12 +18,16 @@ const News = () => {
     };
   }, []);
 
+  const h1MediaQueries = {
+    fontSize: {xs: '2.5rem', sm: '3.75rem'}
+  }
+
   return (
     <Box>
       {isMobile && (
         <>
           <Box className={styles.mobileTitleContainer}>
-            <Typography variant="h2" component="h2">
+            <Typography sx={h1MediaQueries} variant="h1" component="h1">
               NEW
             </Typography>
             <Typography className={styles.s} variant="h2" component="h2">
