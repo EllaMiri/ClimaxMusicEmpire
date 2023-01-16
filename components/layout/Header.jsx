@@ -18,7 +18,7 @@ const Header = () => {
 
   const router = useRouter();
 
-  const scrollTarget = (target) =>
+  const scrollTargetDesktop = (target) =>
     scroller.scrollTo(target, {
       smooth: true,
       duration: 700,
@@ -26,12 +26,27 @@ const Header = () => {
       spy: true,
     });
 
-  const scrollToPage = async (target) => {
+  const scrollToPageDesktop = async (target) => {
     if (router.pathname !== "/") {
       await router.push("/");
-      scrollTarget(target);
     }
-    scrollTarget(target);
+    scrollTargetDesktop(target);
+  };
+
+  const scrollTargetMobile = (target) =>
+    scroller.scrollTo(target, {
+      smooth: true,
+      duration: 700,
+      offset: 670,
+      spy: true,
+    });
+
+  const scrollToPageMobile = async (target) => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+    }
+    scrollTargetMobile(target);
+    toggleMenu();
   };
 
   const burgerMenuBreakpoints = {
@@ -93,7 +108,7 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    onClick={() => scrollToPage("contact")}
+                    onClick={() => scrollToPageDesktop("contact")}
                     className={styles.listItems}
                   >
                     <Typography
@@ -190,12 +205,42 @@ const Header = () => {
                     </Typography>
                   </Link>
                 </li>
-                <li className={styles.listItemsOpen}>
-                  {/* REACT SCROLL LINK TO CONTACTS HERE */}
+                {router.pathname !== "/" && (
+                  <li
+                    onClick={() => scrollToPageMobile("contact")}
+                    className={styles.listItemsOpen}
+                  >
+                    <Typography variant="p" component="p">
+                      Contact
+                    </Typography>
+                  </li>
+                )}
+                {router.pathname === "/" && (
+                  <li className={styles.listItemsOpen}>
+                    <Scroll
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={700}
+                    >
+                      <Typography
+                        onClick={toggleMenu}
+                        variant="p"
+                        component="p"
+                      >
+                        Contact
+                      </Typography>
+                    </Scroll>
+                  </li>
+                )}
+
+                {/* <li className={styles.listItemsOpen}>
+                  
                   <Typography variant="p" component="p">
                     Contact
                   </Typography>
-                </li>
+                </li> */}
                 <li className={styles.listItemsOpen}>
                   <Link
                     onClick={toggleMenu}
