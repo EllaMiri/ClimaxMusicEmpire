@@ -34,8 +34,8 @@ const Artists = () => {
   };
 
   const h1MediaQueries = {
-    fontSize: {xs: '2.5rem', sm: '4rem'}
-  }
+    fontSize: { xs: "2.5rem", sm: "4rem" },
+  };
 
   return (
     <Box sx={artistsBoxMediaQueries}>

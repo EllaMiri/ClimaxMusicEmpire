@@ -56,8 +56,8 @@ const informationMediaQueries = {
 };
 
 const h1MediaQueries = {
-  fontSize: {xs: '2.5rem', sm: '4rem'}
-}
+  fontSize: { xs: "2.5rem", sm: "4rem" },
+};
 
 const Events = () => {
   return (
