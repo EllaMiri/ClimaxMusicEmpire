@@ -92,8 +92,8 @@ const DetailedArtist = () => {
   };
 
   const h1MediaQueries = {
-    fontSize: {xs: '2.5rem', sm: '3.75rem'}
-  }
+    fontSize: { xs: "2.5rem", sm: "3.75rem" },
+  };
 
   return (
     <Box>
