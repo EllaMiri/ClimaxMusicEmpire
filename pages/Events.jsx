@@ -55,11 +55,15 @@ const informationMediaQueries = {
   marginBottom: { xs: "1rem", md: "0" },
 };
 
+const h1MediaQueries = {
+  fontSize: { xs: "2.5rem", sm: "4rem" },
+};
+
 const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
       <Box className={styles.titleBox}>
-        <Typography variant="h2" component="h2">
+        <Typography sx={h1MediaQueries} variant="h1" component="h1">
           EVENT
         </Typography>
         <Typography variant="h2" component="h2" style={{ color: "#e2b945" }}>
