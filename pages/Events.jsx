@@ -1,6 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import Image from "next/image";
-import styles from "../styles/Events.module.css";
+import styles from "../styles/AllEvents.module.css";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
