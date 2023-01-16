@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
+import Iframe from "react-iframe";
 
 const PrincipalOfMindsDiscography = () => {
   let songs = [
@@ -32,6 +33,15 @@ const PrincipalOfMindsDiscography = () => {
     },
   ];
 
+  let videos = [
+    {
+      url: "https://www.youtube.com/embed/oLEpNF7m9ZA",
+    },
+    {
+      url: "https://www.youtube.com/embed/7wG-7zPPK20",
+    },
+  ];
+
   return (
     <Box>
       <Box className={styles.title}>
@@ -54,6 +64,21 @@ const PrincipalOfMindsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+          </Box>
+        ))}
+      </Box>
+      <Box className={styles.videoContainer}>
+        {videos.map((video) => (
+          <Box key={video.url} className={styles.videoIframeContainer}>
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              className=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>

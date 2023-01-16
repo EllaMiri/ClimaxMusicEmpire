@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
+import Iframe from "react-iframe";
 
 const FreshgeeDiscography = () => {
   let songs = [
@@ -11,6 +12,15 @@ const FreshgeeDiscography = () => {
     },
     {
       url: "https://open.spotify.com/embed/track/1DPrkb6FqFQlRCZmIw6wnm?utm_source=generator",
+    },
+  ];
+
+  let videos = [
+    {
+      url: "https://www.youtube.com/embed/E5fMwwtMQE8",
+    },
+    {
+      url: "https://www.youtube.com/embed/dL_QIZN0vVk",
     },
   ];
   return (
@@ -35,6 +45,20 @@ const FreshgeeDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+          </Box>
+        ))}
+      </Box>
+      <Box className={styles.videoContainer}>
+        {videos.map((video) => (
+          <Box key={video.url} className={styles.videoIframeContainer}>
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>

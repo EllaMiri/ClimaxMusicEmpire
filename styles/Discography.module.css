@@ -11,8 +11,25 @@
   margin-top: 3rem;
 }
 
+.videoContainer {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+}
+
+.videoIframeContainer {
+  margin-top: 1rem;
+  width: 40rem;
+}
+
 .iframeContainer {
   margin-bottom: 3rem;
+}
+
+.iframe {
+  width: 640px;
+  height: 320px;
 }
 
 .goldColor {
@@ -25,4 +42,22 @@
     justify-content: center;
     margin-right: 0;
   }
+
+  .videoContainer {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .videoIframeContainer {
+    width: 30rem;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+  .videoIframeContainer {
+    width: 20rem;
+  }
+
 }

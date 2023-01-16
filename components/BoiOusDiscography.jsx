@@ -1,5 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
+import Iframe from "react-iframe";
 
 const BoiOusDiscography = () => {
   let songs = [
@@ -8,6 +9,15 @@ const BoiOusDiscography = () => {
     },
     {
       url: "https://open.spotify.com/embed/track/0L0kWpl7LRH2n3CSL3toIM?utm_source=generator",
+    },
+  ];
+
+  let videos = [
+    {
+      url: "https://www.youtube.com/embed/6EY1vhSnhFo",
+    },
+    {
+      url: "https://www.youtube.com/embed/ZKIE0OKmSIU",
     },
   ];
 
@@ -33,6 +43,21 @@ const BoiOusDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+          </Box>
+        ))}
+      </Box>
+      <Box className={styles.videoContainer}>
+        {videos.map((video) => (
+          <Box key={video.url} className={styles.videoIframeContainer}>
+            <Iframe
+              url={video.url}
+              width="100%"
+              height="320px"
+              id=""
+              className=""
+              display="block"
+              position="relative"
+            />
           </Box>
         ))}
       </Box>
