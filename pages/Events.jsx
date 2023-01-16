@@ -1,10 +1,6 @@
 import { Typography, Box } from "@mui/material";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faClock } from "@fortawesome/free-solid-svg-icons";
-// import { faCalendar } from "@fortawesome/free-solid-svg-icons";
-// import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
-import styles from "../styles/Events.module.css";
+import styles from "../styles/AllEvents.module.css";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
@@ -59,11 +55,15 @@ const informationMediaQueries = {
   marginBottom: { xs: "1rem", md: "0" },
 };
 
+const h1MediaQueries = {
+  fontSize: { xs: "2.5rem", sm: "4rem" },
+};
+
 const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
       <Box className={styles.titleBox}>
-        <Typography variant="h2" component="h2">
+        <Typography sx={h1MediaQueries} variant="h1" component="h1">
           EVENT
         </Typography>
         <Typography variant="h2" component="h2" style={{ color: "#e2b945" }}>

@@ -4,14 +4,16 @@ import AboutUs from "../AboutUs";
 import Artist from "../Artist";
 import News from "../NewsStartPage";
 import Contact from "../contact/Contact";
+import EventsStartPage from "../EventsStartPage";
 
 const Main = () => {
   return (
     <div>
       <Hero />
       <AboutUs />
-      <News />
+      <EventsStartPage />
       <Contact />
+      <News />
       <Artist />
       <ScrollToTop />
     </div>
