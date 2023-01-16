@@ -48,14 +48,13 @@ const FreshgeeDiscography = () => {
           </Box>
         ))}
       </Box>
-      <Box className={styles.songsContainer}>
+      <Box className={styles.videoContainer}>
         {videos.map((video) => (
-          <Box key={video.url}>
+          <Box key={video.url} className={styles.videoIframeContainer}>
             <Iframe url={video.url}
-                    width="640px"
+                    width="100%"
                     height="320px"
                     id=""
-                    className=""
                     display="block"
                     position="relative" />
           </Box>
