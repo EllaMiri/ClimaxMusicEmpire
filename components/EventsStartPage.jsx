@@ -50,7 +50,7 @@ const EventsStartPage = () => {
             </Box>
 
             <img
-              src="./event.png"
+              src="./eventStartPage.png"
               alt="event"
               className={styles.eventImage}
             />
@@ -82,7 +82,7 @@ const EventsStartPage = () => {
       {!isMobile && (
         <Box className={styles.container}>
           <img
-            src="./event.png"
+            src="./eventStartPage.png"
             alt="event"
             className={styles.eventImage}
           />
