@@ -78,6 +78,7 @@ const Artist = () => {
             natus?
           </Typography>
           <Button
+            id="ourArtistsBtn"
             onClick={() => router.push("/Artists")}
             className={styles.ourArtistsBtn}
             variant="contained"
