@@ -17,12 +17,14 @@ const Footer = () => {
     <footer>
       <Box className={styles.upper}>
         <Link
+          aria-label="Climax Music Empire youtube channel"
           href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
           target="_blank"
         >
           <YouTubeIcon style={{ color: "white", fontSize: "2.4rem" }} />
         </Link>
         <Link
+          aria-label="Climax Music Empire Instagram account"
           href="https://www.instagram.com/climaxmusicempire/"
           target="_blank"
         >
@@ -36,6 +38,7 @@ const Footer = () => {
           />
         </Link>
         <Link
+          aria-label="Climax Music Empire facebook account"
           href="https://www.facebook.com/profile.php?id=100085416694420"
           target="_blank"
         >
@@ -48,7 +51,7 @@ const Footer = () => {
             }}
           />
         </Link>
-        <Link href="https://twitter.com/Climaxmusicemp" target="_blank">
+        <Link aria-label="Climax Music Empire twitter account" href="https://twitter.com/Climaxmusicemp" target="_blank">
           <TwitterIcon
             style={{
               color: "white",

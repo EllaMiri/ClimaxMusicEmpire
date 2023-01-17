@@ -68,6 +68,7 @@ const EventsStartPage = () => {
             </Typography>
             <Box>
               <Button
+                aria-label="scroll to top"
                 onClick={() => router.push("/Events")}
                 className={styles.mobileMoreEventsBtn}
                 variant="contained"
