@@ -1,4 +1,4 @@
-# Examensarbete Climax Music Empire
+# Examensarbete Climax Music Empire 
 
 ## Getting Started
 Start by installing all the dependencies with:
