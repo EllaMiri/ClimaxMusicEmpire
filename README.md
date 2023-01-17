@@ -1,8 +1,16 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Examensarbete Climax Music Empire
 
 ## Getting Started
 
-First, run the development server:
+Start by installing all the dependencies with:
+
+```
+npm i
+# or
+yarn i
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
@@ -11,12 +19,6 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
 ## Learn More
 
@@ -29,6 +31,20 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
+[Deployed vercel](https://climax-music-empire.vercel.app/)  
+[Deployed domain](https://www.climaxmusicempire.com/)
+
+[Vercel documentation](https://vercel.com/docs)
+
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Design on Figma
+
+[Climax Music Empire mockups](https://www.figma.com/file/dL8h4dsqFYljrdNj5KD43d/Climax-Music-Empire?node-id=1%3A105&t=L4CcIy8kave0CZTd-0)
+
+## Creators
+
+[Ella Larsson](https://github.com/EllaMiri)  
+[Anna Özmehak](https://github.com/A-Ozmehak)
