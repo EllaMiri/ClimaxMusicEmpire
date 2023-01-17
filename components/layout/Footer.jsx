@@ -21,7 +21,7 @@ const Footer = () => {
     scroller.scrollTo(target, {
       smooth: true,
       duration: 700,
-      offset: 670,
+      offset: 0,
       spy: true,
     });
 
@@ -106,7 +106,7 @@ const Footer = () => {
         </Link>
         {router.pathname !== "/" && (
           <Typography
-            onClick={() => scrollToPage("contact")}
+            onClick={() => scrollToPage("contact2")}
             className={styles.contactLink}
             sx={lowerMediaQueries}
             variant="p"

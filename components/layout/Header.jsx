@@ -22,7 +22,7 @@ const Header = () => {
     scroller.scrollTo(target, {
       smooth: true,
       duration: 700,
-      offset: 670,
+      offset: 0,
       spy: true,
     });
 
@@ -37,7 +37,7 @@ const Header = () => {
     scroller.scrollTo(target, {
       smooth: true,
       duration: 700,
-      offset: 670,
+      offset: 0,
       spy: true,
     });
 
@@ -108,7 +108,7 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    onClick={() => scrollToPageDesktop("contact")}
+                    onClick={() => scrollToPageDesktop("contact2")}
                     className={styles.listItems}
                   >
                     <Typography
@@ -207,7 +207,7 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    onClick={() => scrollToPageMobile("contact")}
+                    onClick={() => scrollToPageMobile("contact2")}
                     className={styles.listItemsOpen}
                   >
                     <Typography variant="p" component="p">
