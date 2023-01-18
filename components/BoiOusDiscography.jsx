@@ -35,7 +35,10 @@ const BoiOusDiscography = () => {
         {songs.map((song) => (
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
-              src={song.url}
+              alt="Please accept cookie policy first"
+              data-cookiescript="accepted"
+              data-cookiecategory="functionality"
+              data-src={song.url}
               width="100%"
               height="352"
               frameBorder="0"
@@ -49,8 +52,11 @@ const BoiOusDiscography = () => {
       <Box className={styles.videoContainer}>
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
-            <Iframe
-              url={video.url}
+            <iframe
+              data-cookiecategory="targeting"
+              alt="Please accept cookie policy first"
+              data-cookiescript="accepted"
+              data-src={video.url}
               width="100%"
               height="320px"
               id=""
