@@ -14,8 +14,9 @@
 }
 
 .eventImage {
-    width: 30%;
-    height: auto;
+    height: 35rem;
+    width: 35rem;
+    position: relative;
 }
 
 .textContainer {
@@ -80,8 +81,8 @@
 
 .mobileEventsDescription {
     text-align: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
     margin-top: 1rem !important;
     margin-bottom: 1rem !important;
 }
@@ -125,17 +126,35 @@
         font-size: 1.1rem;
     }
 
-    .eventImage {
-        width: 40%;
-        height: 30%;
-    }
 
 }
+
 @media screen and (min-width: 1100px) {
     .secondTitle1 {
         font-size: 1.3rem;
     }
     .secondTitle2 {
         font-size: 1.3rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .eventImage {
+        height: 30rem;
+        width: 30rem;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .eventImage {
+        height: 20rem;
+        width: 20rem;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .eventImage {
+        height: 15rem;
+        width: 15rem;
     }
 }

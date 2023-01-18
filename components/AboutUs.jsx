@@ -58,8 +58,11 @@ const AboutUs = () => {
       <Box sx={contentMediaQueries}>
         <Box sx={imageMediaQueries} className={styles.imageContainer}>
           <Image
-            layout="fill"
-            objectFit="cover"
+           fill
+           sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+            className={styles.imageContainer}
             src="/bigLogo.png"
             alt="Climax Music Empire Logo"
           />

@@ -18,34 +18,37 @@
 
 .imageContainer {
   display: flex;
+  width: 40rem;
+  height: 40rem;
+  position: relative;
 }
 
 .image {
-  /* width: 120%; */
-  width: 30rem;
   margin-left: 0.5rem;
-  height: auto;
+  width: 30rem;
+  height: 30rem;
 }
 
 .description {
   text-align: left;
 }
 
-@media screen and (min-width: 1200px) {
-  .image {
-    width: 45rem;
-    height: auto;
-    margin-left: 0.5rem;
+@media screen and (max-width: 1200px) {
+  .imageContainer {
+    margin-bottom: 1rem;
+    width: 30rem;
+    height: 30rem;
+    margin-left: 0;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .image {
-    margin-bottom: 1rem;
+  .imageContainer {
     width: 30rem;
-    height: auto;
-    margin-left: 0;
+    height: 30rem;
+    margin: 0 auto 1rem auto;
   }
+
   .ourArtistsBtn {
     width: 40%;
     height: auto;
@@ -56,16 +59,16 @@
 }
 
 @media screen and (max-width: 600px) {
-  .image {
-    margin-bottom: 1rem;
-    width: 16rem;
-    height: auto;
-    margin-left: 0;
+  .imageContainer {
+    width: 20rem;
+    height: 20rem;
   }
+
   .ourArtistsBtn {
     font-size: 0.9rem;
     height: auto;
   }
+
   .description {
     text-align: center;
   }

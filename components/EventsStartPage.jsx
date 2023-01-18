@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import styles from "../styles/Events.module.css";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const EventsStartPage = () => {
   const router = useRouter();
@@ -48,12 +49,17 @@ const EventsStartPage = () => {
                 Live
               </Typography>
             </Box>
-
-            <img
-              src="./eventStartPage.png"
-              alt="event"
+          <Box className={styles.eventImage}>
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
               className={styles.eventImage}
+              src="/eventStartPage.png"
+              alt="event"
             />
+          </Box>
             <Typography
               className={styles.mobileEventsDescription}
               component="p"
@@ -82,11 +88,18 @@ const EventsStartPage = () => {
       )}
       {!isMobile && (
         <Box className={styles.container}>
-          <img
-            src="./eventStartPage.png"
-            alt="event"
-            className={styles.eventImage}
-          />
+          <Box className={styles.eventImage}>
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+              className={styles.eventImage}
+              src="/eventStartPage.png"
+              alt="event"
+            />
+          </Box>
+
           <Box className={styles.textContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
