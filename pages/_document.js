@@ -19,6 +19,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        {/* <Script
+          type="text/javascript"
+          charset="UTF-8"
+          src="//cdn.cookie-script.com/s/5a074dcc1fc1f55fdb1c4a4216f08caa.js"
+        ></Script> */}
       </body>
     </Html>
   );
