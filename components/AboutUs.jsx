@@ -1,5 +1,6 @@
 import { Typography, Box } from "@mui/material";
 import styles from "../styles/AboutUs.module.css";
+import Image from "next/image";
 
 const AboutUs = () => {
   const aboutUSMediaQueries = {
@@ -36,6 +37,7 @@ const AboutUs = () => {
   const descriptionMediaQueries = {
     marginTop: { xs: "1rem", sm: "0" },
     textAlign: { xs: "center", sm: "center", md: "left" },
+    width: {xs: "90%", md: '60%', lg: '70%', xl: '75%'}
   };
 
   return (
@@ -54,10 +56,11 @@ const AboutUs = () => {
         </Typography>
       </Box>
       <Box sx={contentMediaQueries}>
-        <Box sx={imageMediaQueries}>
-          <img
-            className={styles.image}
-            src="./bigLogo.png"
+        <Box sx={imageMediaQueries} className={styles.imageContainer}>
+          <Image
+            layout="fill"
+            objectFit="cover"
+            src="/bigLogo.png"
             alt="Climax Music Empire Logo"
           />
         </Box>
