@@ -51,7 +51,11 @@ const Footer = () => {
             }}
           />
         </Link>
-        <Link aria-label="Climax Music Empire twitter account" href="https://twitter.com/Climaxmusicemp" target="_blank">
+        <Link
+          aria-label="Climax Music Empire twitter account"
+          href="https://twitter.com/Climaxmusicemp"
+          target="_blank"
+        >
           <TwitterIcon
             style={{
               color: "white",

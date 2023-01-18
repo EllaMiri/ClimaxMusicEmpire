@@ -37,7 +37,7 @@ const AboutUs = () => {
   const descriptionMediaQueries = {
     marginTop: { xs: "1rem", sm: "0" },
     textAlign: { xs: "center", sm: "center", md: "left" },
-    width: {xs: "90%", md: '60%', lg: '70%', xl: '75%'}
+    width: { xs: "90%", md: "60%", lg: "70%", xl: "75%" },
   };
 
   return (
@@ -58,8 +58,8 @@ const AboutUs = () => {
       <Box sx={contentMediaQueries}>
         <Box sx={imageMediaQueries} className={styles.imageContainer}>
           <Image
-           fill
-           sizes="(max-width: 768px) 100vw,
+            fill
+            sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
             className={styles.imageContainer}
