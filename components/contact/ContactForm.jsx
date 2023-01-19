@@ -18,6 +18,11 @@ import styles from "../../styles/ContactForm.module.css";
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
+  const [firstname, setFirstName] = useState()
+  const [lastname, setLastName] = useState()
+  const [email, setEmail] = useState()
+  const [company, setCompany] = useState()
+  const [description, setDecsription] = useState()
 
   const form = useRef();
 
@@ -43,6 +48,11 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
+    setFirstName('')
+    setLastName('')
+    setEmail('')
+    setCompany('')
+    setDecsription('')
   };
 
   const validationSchema = Yup.object().shape({
@@ -127,6 +137,8 @@ const ContactForm = () => {
         <Box className={styles.formBox}>
           <TextField
             className={styles.text}
+            value={firstname}
+            onChange={(e) => setFirstName(e.target.value)}
             required
             id="firstname"
             name="firstName"
@@ -139,6 +151,8 @@ const ContactForm = () => {
           </Typography>
           <TextField
             className={styles.text}
+            value={lastname}
+            onChange={(e) => setLastName(e.target.value)}
             required
             id="lastname"
             name="lastName"
@@ -150,13 +164,15 @@ const ContactForm = () => {
             {errors.lastname?.message}
           </Typography>
           {showHide === "showCompany" ? (
-            <TextField className={styles.text} id="company" label="Company" />
+            <TextField className={styles.text} id="company" label="Company" value={company} onChange={(e) => setCompany(e.target.value)} />
           ) : (
             ""
           )}
 
           <TextField
             className={styles.text}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             id="email"
             name="email"
@@ -170,6 +186,8 @@ const ContactForm = () => {
 
           <TextField
             sx={descriptionMediaQueries}
+            value={description}
+            onChange={(e) => setDecsription(e.target.value)}
             required
             id="description"
             name="description"
