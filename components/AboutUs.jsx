@@ -63,7 +63,7 @@ const AboutUs = () => {
               (max-width: 1200px) 50vw,
               33vw"
             className={styles.imageContainer}
-            src="/bigLogo.png"
+            src="/biglogoTest.png"
             alt="Climax Music Empire Logo"
           />
         </Box>
