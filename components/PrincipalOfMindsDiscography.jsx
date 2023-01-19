@@ -56,7 +56,11 @@ const PrincipalOfMindsDiscography = () => {
         {songs.map((song) => (
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
-              src={song.url}
+              data-cookieconsent="marketing"
+              // alt="Please accept cookie policy first"
+              // data-cookiescript="accepted"
+              // data-cookiecategory="functionality"
+              data-cookieblock-src={song.url}
               width="100%"
               height="352"
               frameBorder="0"
@@ -64,14 +68,25 @@ const PrincipalOfMindsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+            <div class="cookieconsent-optout-marketing">
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>
       <Box className={styles.videoContainer}>
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
-            <Iframe
-              url={video.url}
+            <iframe
+              data-cookieconsent="marketing"
+              // data-cookiecategory="targeting"
+              // alt="Please accept cookie policy first"
+              // data-cookiescript="accepted"
+              data-cookieblock-src={video.url}
               width="100%"
               height="320px"
               id=""
@@ -79,6 +94,13 @@ const PrincipalOfMindsDiscography = () => {
               display="block"
               position="relative"
             />
+            <div class="cookieconsent-optout-marketing">
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>
