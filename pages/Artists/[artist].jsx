@@ -27,8 +27,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const icekidDsMockData = [
     {
@@ -42,8 +42,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const freshgeeMockData = [
     {
@@ -57,8 +57,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const principalOfMindsMockData = [
     {
@@ -72,28 +72,28 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
 
   const ArtistBoxMediaQueries = {
-    flexDirection: { xs: "column", md: "row" }
+    flexDirection: { xs: "column", md: "row" },
   };
 
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
     flexWrap: "wrap",
     marginLeft: { xs: "0", md: "3rem" },
-    marginBottom: { xs: ".5rem" }
+    marginBottom: { xs: ".5rem" },
   };
 
   const DescriptionMediaQueries = {
     textAlign: { xs: "center", md: "left" },
-    marginTop: { xs: "1rem" }
+    marginTop: { xs: "1rem" },
   };
 
   const h1MediaQueries = {
-    fontSize: { xs: "2.5rem", sm: "4rem" }
+    fontSize: { xs: "2.5rem", sm: "4rem" },
   };
 
   return (
@@ -101,10 +101,11 @@ const DetailedArtist = () => {
       {artist === "PrincipalOfMinds" &&
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
-            <SEO description="Details about the artist Principal of Minds"
-                 facebook={{
-                   url: "https://www.facebook.com/PrincipalofMinds"
-                 }}
+            <SEO
+              description="Details about the artist Principal of Minds"
+              facebook={{
+                url: "https://www.facebook.com/PrincipalofMinds",
+              }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
@@ -138,7 +139,7 @@ const DetailedArtist = () => {
                 display: "flex",
                 justifyContent: "space-evenly",
                 width: "32%",
-                marginTop: "1rem"
+                marginTop: "1rem",
               }}
             >
               <Link
@@ -166,10 +167,11 @@ const DetailedArtist = () => {
       {artist === "BoiOus" &&
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
-            <SEO description="Details about the artist Boi Ous"
-                 facebook={{
-                   url: "https://www.facebook.com/1ousmacbook"
-                 }}
+            <SEO
+              description="Details about the artist Boi Ous"
+              facebook={{
+                url: "https://www.facebook.com/1ousmacbook",
+              }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
@@ -203,7 +205,7 @@ const DetailedArtist = () => {
                 display: "flex",
                 justifyContent: "space-evenly",
                 width: "32%",
-                marginTop: "1rem"
+                marginTop: "1rem",
               }}
             >
               <Link
@@ -228,10 +230,11 @@ const DetailedArtist = () => {
       {artist === "IcekidDs" &&
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
-            <SEO description="Details about the artist Icekid DS"
-                 facebook={{
-                   url: "https://www.facebook.com/profile.php?id=100064038551838"
-                 }}
+            <SEO
+              description="Details about the artist Icekid DS"
+              facebook={{
+                url: "https://www.facebook.com/profile.php?id=100064038551838",
+              }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
@@ -265,7 +268,7 @@ const DetailedArtist = () => {
                 display: "flex",
                 justifyContent: "space-evenly",
                 width: "32%",
-                marginTop: "1rem"
+                marginTop: "1rem",
               }}
             >
               <Link href="https://www.instagram.com/icekid_ds/" target="_blank">
@@ -290,10 +293,11 @@ const DetailedArtist = () => {
       {artist === "Freshgee" &&
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
-            <SEO description="Details about the artist Freshgee"
-                 facebook={{
-                   url: "https://www.facebook.com/profile.php?id=100066468461859"
-                 }}
+            <SEO
+              description="Details about the artist Freshgee"
+              facebook={{
+                url: "https://www.facebook.com/profile.php?id=100066468461859",
+              }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
@@ -327,7 +331,7 @@ const DetailedArtist = () => {
                 display: "flex",
                 justifyContent: "space-evenly",
                 width: "32%",
-                marginTop: "1rem"
+                marginTop: "1rem",
               }}
             >
               <Link
