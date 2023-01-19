@@ -18,35 +18,57 @@ const Header = () => {
 
   const router = useRouter();
 
-  const scrollTargetDesktop = (target) =>
-    scroller.scrollTo(target, {
-      smooth: true,
-      duration: 700,
-      offset: 0,
-      spy: true,
-    });
+  // const scrollTargetDesktop = (target) =>
+  //   scroller.scrollTo(target, {
+  //     smooth: true,
+  //     duration: 700,
+  //     offset: 0,
+  //     spy: true,
+  //   });
 
-  const scrollToPageDesktop = async (target) => {
+  // const scrollToPageDesktop = async (target) => {
+  //   if (router.pathname !== "/") {
+  //     await router.push("/");
+  //   }
+  //   scrollTargetDesktop(target);
+  // };
+
+  // const scrollTargetMobile = (target) =>
+  //   scroller.scrollTo(target, {
+  //     smooth: true,
+  //     duration: 700,
+  //     offset: 0,
+  //     spy: true,
+  //   });
+
+  // const scrollToPageMobile = async (target) => {
+  //   if (router.pathname !== "/") {
+  //     await router.push("/");
+  //   }
+  //   scrollTargetMobile(target);
+  //   toggleMenu();
+  // };
+
+  function scrollToContact() {
+    window.scrollTo({
+      top: 1900,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  const scrollToPageMobile = async () => {
     if (router.pathname !== "/") {
       await router.push("/");
     }
-    scrollTargetDesktop(target);
-  };
-
-  const scrollTargetMobile = (target) =>
-    scroller.scrollTo(target, {
-      smooth: true,
-      duration: 700,
-      offset: 0,
-      spy: true,
-    });
-
-  const scrollToPageMobile = async (target) => {
-    if (router.pathname !== "/") {
-      await router.push("/");
-    }
-    scrollTargetMobile(target);
+    scrollToContact();
     toggleMenu();
+  };
+  const scrollToPageDesktop = async () => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+    }
+    scrollToContact();
   };
 
   const burgerMenuBreakpoints = {
@@ -108,7 +130,8 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    onClick={() => scrollToPageDesktop("contact2")}
+                    // onClick={() => scrollToPageDesktop("contact2")}
+                    onClick={scrollToPageDesktop}
                     className={styles.listItems}
                   >
                     <Typography
@@ -207,7 +230,7 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    onClick={() => scrollToPageMobile("contact2")}
+                    onClick={scrollToPageMobile}
                     className={styles.listItemsOpen}
                   >
                     <Typography variant="p" component="p">
