@@ -49,17 +49,17 @@ const EventsStartPage = () => {
                 Live
               </Typography>
             </Box>
-          <Box className={styles.eventImage}>
-            <Image
-              fill
-              sizes="(max-width: 768px) 100vw,
+            <Box className={styles.eventImage}>
+              <Image
+                fill
+                sizes="(max-width: 768px) 100vw,
               (max-width: 1200px) 50vw,
               33vw"
-              className={styles.eventImage}
-              src="/eventStartPage.png"
-              alt="event"
-            />
-          </Box>
+                className={styles.eventImage}
+                src="/eventStartPage.png"
+                alt="event"
+              />
+            </Box>
             <Typography
               className={styles.mobileEventsDescription}
               component="p"

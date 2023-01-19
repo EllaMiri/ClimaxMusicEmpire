@@ -24,14 +24,14 @@ const Artist = () => {
   };
 
   const imageContainer = {
-    display: 'flex',
-    alignItems: {sm: 'center'},
-    justifyContent: {sm: 'center'}
+    display: "flex",
+    alignItems: { sm: "center" },
+    justifyContent: { sm: "center" },
   };
 
   const contentMediaQueries = {
     display: "flex",
-    justifyContent: {sm: 'space-between'},
+    justifyContent: { sm: "space-between" },
     flexDirection: {
       xs: "column",
       md: "row-reverse",
@@ -42,7 +42,7 @@ const Artist = () => {
     display: { xs: "flex", md: "block" },
     flexDirection: "column",
     alignItems: { xs: "center" },
-    width: {md: '50%',lg: '50%'}
+    width: { md: "50%", lg: "50%" },
   };
 
   return (
