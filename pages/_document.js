@@ -5,11 +5,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
-        <Script
+        {/* <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="cd30cb3f-4113-4558-b925-643aeeca4705"
+          data-blockingmode="auto"
           type="text/javascript"
-          charset="UTF-8"
-          src="//cdn.cookie-script.com/s/5a074dcc1fc1f55fdb1c4a4216f08caa.js"
-        ></Script>
+        ></Script> */}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"
@@ -24,6 +26,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
+        {/* <Script
+          type="text/javascript"
+          charset="UTF-8"
+          src="//cdn.cookie-script.com/s/5a074dcc1fc1f55fdb1c4a4216f08caa.js"
+        ></Script> */}
       </body>
     </Html>
   );

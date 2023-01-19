@@ -46,7 +46,7 @@ const Artist = () => {
   };
 
   return (
-    <Box sx={artistMediaQueries}>
+    <Box id="contact2" sx={artistMediaQueries}>
       <Box sx={titleBoxMediaQueries} className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ARTIST
