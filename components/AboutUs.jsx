@@ -70,7 +70,6 @@ const AboutUs = () => {
 
         <Typography
           sx={descriptionMediaQueries}
-          className={styles.description}
           component="p"
           variant="p"
         >
