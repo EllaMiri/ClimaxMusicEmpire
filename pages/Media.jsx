@@ -4,6 +4,7 @@ import MediaSlideShow from "../components/MediaSlideShow";
 import { useState, useEffect } from "react";
 import styles from "../styles/Media.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import SEO from "@bradgarropy/next-seo";
 
 const Media = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -29,6 +30,7 @@ const Media = () => {
 
   return (
     <>
+      <SEO description="All images on the artists within Climax Music Empire" />
       {!isMobile && (
         <Box className={styles.mediaContainer}>
           <Box className={styles.titleBox}>

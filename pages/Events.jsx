@@ -4,6 +4,7 @@ import styles from "../styles/AllEvents.module.css";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
+import SEO from "@bradgarropy/next-seo";
 
 const events1MockData = [
   {
@@ -62,6 +63,7 @@ const h1MediaQueries = {
 const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
+      <SEO description="All events that Climax Music Empire and their artists is attending" />
       <Box className={styles.titleBox}>
         <Typography sx={h1MediaQueries} variant="h1" component="h1">
           EVENT

@@ -9,6 +9,7 @@ import PrincipalOfMindsDiscography from "../../components/PrincipalOfMindsDiscog
 import FreshgeeDiscography from "../../components/FreshgeeDiscography";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import SEO from "@bradgarropy/next-seo";
 
 const DetailedArtist = () => {
   const router = useRouter();
@@ -100,6 +101,10 @@ const DetailedArtist = () => {
       {artist === "PrincipalOfMinds" &&
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
+            <SEO description="Details about the artist Principal of Minds"
+          facebook={{
+            url: "https://www.facebook.com/PrincipalofMinds"
+          }}            />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {principalOfMinds.name}
