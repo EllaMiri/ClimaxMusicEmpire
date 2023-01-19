@@ -165,6 +165,10 @@ const DetailedArtist = () => {
       {artist === "BoiOus" &&
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
+            <SEO description="Details about the artist Boi Ous"
+                 facebook={{
+                   url: "https://www.facebook.com/1ousmacbook"
+                 }}            />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {boiOus.name}
@@ -222,6 +226,10 @@ const DetailedArtist = () => {
       {artist === "IcekidDs" &&
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
+            <SEO description="Details about the artist Icekid DS"
+                 facebook={{
+                   url: "https://www.facebook.com/profile.php?id=100064038551838"
+                 }}            />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {icekidDs.name}
@@ -279,6 +287,10 @@ const DetailedArtist = () => {
       {artist === "Freshgee" &&
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
+            <SEO description="Details about the artist Freshgee"
+                 facebook={{
+                   url: "https://www.facebook.com/profile.php?id=100066468461859"
+                 }}            />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
               <Typography sx={h1MediaQueries} variant="h1" component="h1">
                 {freshgee.name}
