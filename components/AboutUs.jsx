@@ -68,11 +68,7 @@ const AboutUs = () => {
           />
         </Box>
 
-        <Typography
-          sx={descriptionMediaQueries}
-          component="p"
-          variant="p"
-        >
+        <Typography sx={descriptionMediaQueries} component="p" variant="p">
           We learned that music has the power to bring us together and heal us
           from our differences. Music saved us and made us realize who we are.
           So, music belongs to us as much as it does to anyone in our family, as
