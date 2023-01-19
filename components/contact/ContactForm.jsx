@@ -14,15 +14,14 @@ import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "../../styles/ContactForm.module.css";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
 
-  const submitNofify = () => toast.success("Email sent" )
-
+  const submitNofify = () => toast.success("Email sent");
 
   const form = useRef();
 
@@ -48,7 +47,7 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    submitNofify()
+    submitNofify();
   };
 
   const validationSchema = Yup.object().shape({
