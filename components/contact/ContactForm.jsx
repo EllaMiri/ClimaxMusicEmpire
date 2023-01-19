@@ -18,11 +18,11 @@ import styles from "../../styles/ContactForm.module.css";
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
-  const [firstname, setFirstName] = useState()
-  const [lastname, setLastName] = useState()
-  const [email, setEmail] = useState()
-  const [company, setCompany] = useState()
-  const [description, setDecsription] = useState()
+  const [firstname, setFirstName] = useState();
+  const [lastname, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [company, setCompany] = useState();
+  const [description, setDecsription] = useState();
 
   const form = useRef();
 
@@ -48,11 +48,11 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    setFirstName('')
-    setLastName('')
-    setEmail('')
-    setCompany('')
-    setDecsription('')
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setCompany("");
+    setDecsription("");
   };
 
   const validationSchema = Yup.object().shape({
@@ -164,7 +164,13 @@ const ContactForm = () => {
             {errors.lastname?.message}
           </Typography>
           {showHide === "showCompany" ? (
-            <TextField className={styles.text} id="company" label="Company" value={company} onChange={(e) => setCompany(e.target.value)} />
+            <TextField
+              className={styles.text}
+              id="company"
+              label="Company"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+            />
           ) : (
             ""
           )}
