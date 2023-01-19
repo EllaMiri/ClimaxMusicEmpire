@@ -9,6 +9,19 @@ import Script from "next/script";
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Script
+        id="Cookiebot"
+        src="https://consent.cookiebot.com/uc.js"
+        data-cbid="cd30cb3f-4113-4558-b925-643aeeca4705"
+        data-blockingmode="auto"
+        type="text/javascript"
+      ></Script>
+      <Script
+        id="CookieDeclaration"
+        src="https://consent.cookiebot.com/cd30cb3f-4113-4558-b925-643aeeca4705/cd.js"
+        type="text/javascript"
+        async
+      ></Script>
       {/* <Script
         type="text/javascript"
         charset="UTF-8"

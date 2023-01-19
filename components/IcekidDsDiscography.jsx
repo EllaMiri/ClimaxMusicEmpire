@@ -71,10 +71,11 @@ const IcekidDsDiscography = () => {
         {songs.map((song) => (
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
+              data-cookieconsent="marketing"
               // alt="Please accept cookie policy first"
               // data-cookiescript="accepted"
               // data-cookiecategory="functionality"
-              src={song.url}
+              data-cookieblock-src={song.url}
               width="100%"
               height="352"
               frameBorder="0"
@@ -89,10 +90,11 @@ const IcekidDsDiscography = () => {
         {videos.map((video) => (
           <Box key={video.url} className={styles.videoIframeContainer}>
             <iframe
+              data-cookieconsent="marketing"
               // data-cookiecategory="targeting"
               // alt="Please accept cookie policy first"
               // data-cookiescript="accepted"
-              src={video.url}
+              data-cookieblock-src={video.url}
               width="100%"
               height="320px"
               id=""
