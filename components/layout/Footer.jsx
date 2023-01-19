@@ -17,19 +17,34 @@ const Footer = () => {
 
   const router = useRouter();
 
-  const scrollTarget = (target) =>
-    scroller.scrollTo(target, {
-      smooth: true,
-      duration: 700,
-      offset: 0,
-      spy: true,
-    });
+  // const scrollTarget = (target) =>
+  //   scroller.scrollTo(target, {
+  //     smooth: true,
+  //     duration: 700,
+  //     offset: 0,
+  //     spy: true,
+  //   });
 
-  const scrollToPage = async (target) => {
+  // const scrollToPage = async (target) => {
+  //   if (router.pathname !== "/") {
+  //     await router.push("/");
+  //   }
+  //   scrollTarget(target);
+  // };
+
+  function scrollToContact() {
+    window.scrollTo({
+      top: 1900,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  const scrollToPage = async () => {
     if (router.pathname !== "/") {
       await router.push("/");
     }
-    scrollTarget(target);
+    scrollToContact();
   };
 
   return (
@@ -106,7 +121,7 @@ const Footer = () => {
         </Link>
         {router.pathname !== "/" && (
           <Typography
-            onClick={() => scrollToPage("contact2")}
+            onClick={scrollToPage}
             className={styles.contactLink}
             sx={lowerMediaQueries}
             variant="p"
