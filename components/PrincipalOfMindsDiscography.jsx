@@ -68,6 +68,13 @@ const PrincipalOfMindsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+            <div class="cookieconsent-optout-marketing">
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>
@@ -87,6 +94,13 @@ const PrincipalOfMindsDiscography = () => {
               display="block"
               position="relative"
             />
+            <div class="cookieconsent-optout-marketing">
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>
