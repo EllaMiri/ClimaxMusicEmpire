@@ -22,9 +22,15 @@ const ContactForm = () => {
   const [lastname, setLastName] = useState();
   const [email, setEmail] = useState();
   const [company, setCompany] = useState();
-  const [description, setDecsription] = useState();
+  const [description, setDescription] = useState();
 
   const form = useRef();
+
+  const handleForm = () => {
+   form.current.reset()
+
+
+  }
 
   const handleShow = (e) => {
     const getShow = e.target.value;
@@ -48,11 +54,7 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    setFirstName("");
-    setLastName("");
-    setEmail("");
-    setCompany("");
-    setDecsription("");
+    handleForm()
   };
 
   const validationSchema = Yup.object().shape({
@@ -89,7 +91,7 @@ const ContactForm = () => {
       className={styles.contactForm}
       component="form"
       ref={form}
-      onSubmit={onSubmit}
+      // onSubmit={e => handleForm(e)}
       noValidate
     >
       <div
@@ -193,7 +195,7 @@ const ContactForm = () => {
           <TextField
             sx={descriptionMediaQueries}
             value={description}
-            onChange={(e) => setDecsription(e.target.value)}
+            onChange={(e) => setDescription(e.target.value)}
             required
             id="description"
             name="description"
