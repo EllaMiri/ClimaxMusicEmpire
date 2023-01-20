@@ -3,6 +3,7 @@ import { Box } from "@mui/system";
 import styles from "../styles/AllNews.module.css";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import SEO from "@bradgarropy/next-seo";
 
 const News = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,6 +25,7 @@ const News = () => {
 
   return (
     <Box>
+      <SEO description="All new things happening with Climax Music Empire" />
       {isMobile && (
         <>
           <Box className={styles.mobileTitleContainer}>

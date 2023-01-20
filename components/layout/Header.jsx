@@ -6,13 +6,69 @@ import Link from "next/link";
 import BurgerMenu from "../../assets/BurgerMenu.png";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link as Scroll } from "react-scroll";
+import { Link as Scroll, scroller } from "react-scroll";
+import { useRouter } from "next/router";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const router = useRouter();
+
+  // const scrollTargetDesktop = (target) =>
+  //   scroller.scrollTo(target, {
+  //     smooth: true,
+  //     duration: 700,
+  //     offset: 0,
+  //     spy: true,
+  //   });
+
+  // const scrollToPageDesktop = async (target) => {
+  //   if (router.pathname !== "/") {
+  //     await router.push("/");
+  //   }
+  //   scrollTargetDesktop(target);
+  // };
+
+  // const scrollTargetMobile = (target) =>
+  //   scroller.scrollTo(target, {
+  //     smooth: true,
+  //     duration: 700,
+  //     offset: 0,
+  //     spy: true,
+  //   });
+
+  // const scrollToPageMobile = async (target) => {
+  //   if (router.pathname !== "/") {
+  //     await router.push("/");
+  //   }
+  //   scrollTargetMobile(target);
+  //   toggleMenu();
+  // };
+
+  function scrollToContact() {
+    window.scrollTo({
+      top: 1900,
+      left: 0,
+      behavior: "smooth",
+    });
+  }
+
+  const scrollToPageMobile = async () => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+    }
+    scrollToContact();
+    toggleMenu();
+  };
+  const scrollToPageDesktop = async () => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+    }
+    scrollToContact();
   };
 
   const burgerMenuBreakpoints = {
@@ -72,13 +128,11 @@ const Header = () => {
                     </Typography>
                   </Link>
                 </li>
-                <li className={styles.listItems}>
-                  <Scroll
-                    to="contact"
-                    spy={true}
-                    smooth={true}
-                    offset={0}
-                    duration={500}
+                {router.pathname !== "/" && (
+                  <li
+                    // onClick={() => scrollToPageDesktop("contact2")}
+                    onClick={scrollToPageDesktop}
+                    className={styles.listItems}
                   >
                     <Typography
                       sx={navLinksBreakpoints}
@@ -87,8 +141,28 @@ const Header = () => {
                     >
                       Contact
                     </Typography>
-                  </Scroll>
-                </li>
+                  </li>
+                )}
+                {router.pathname === "/" && (
+                  <li className={styles.listItems}>
+                    <Scroll
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={700}
+                    >
+                      <Typography
+                        sx={navLinksBreakpoints}
+                        variant="p"
+                        component="p"
+                      >
+                        Contact
+                      </Typography>
+                    </Scroll>
+                  </li>
+                )}
+
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/Events">
                     <Typography
@@ -154,12 +228,42 @@ const Header = () => {
                     </Typography>
                   </Link>
                 </li>
-                <li className={styles.listItemsOpen}>
-                  {/* REACT SCROLL LINK TO CONTACTS HERE */}
+                {router.pathname !== "/" && (
+                  <li
+                    onClick={scrollToPageMobile}
+                    className={styles.listItemsOpen}
+                  >
+                    <Typography variant="p" component="p">
+                      Contact
+                    </Typography>
+                  </li>
+                )}
+                {router.pathname === "/" && (
+                  <li className={styles.listItemsOpen}>
+                    <Scroll
+                      to="contact"
+                      spy={true}
+                      smooth={true}
+                      offset={0}
+                      duration={700}
+                    >
+                      <Typography
+                        onClick={toggleMenu}
+                        variant="p"
+                        component="p"
+                      >
+                        Contact
+                      </Typography>
+                    </Scroll>
+                  </li>
+                )}
+
+                {/* <li className={styles.listItemsOpen}>
+                  
                   <Typography variant="p" component="p">
                     Contact
                   </Typography>
-                </li>
+                </li> */}
                 <li className={styles.listItemsOpen}>
                   <Link
                     onClick={toggleMenu}

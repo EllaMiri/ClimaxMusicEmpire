@@ -7,13 +7,14 @@
   margin-bottom: 1rem;
 }
 
-.image {
+.imageContainer {
   width: 20rem;
-  height: 23rem;
+  height: 24rem;
+  position: relative;
 }
 
 @media screen and (max-width: 900px) {
-  .image {
+  .imageContainer {
     width: 8.5rem;
     height: 10rem;
     margin-bottom: 0.5rem;
@@ -21,7 +22,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .image {
+  .imageContainer {
     width: 8.5rem;
     height: 10rem;
     margin-bottom: 0.5rem;

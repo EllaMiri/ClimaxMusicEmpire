@@ -5,6 +5,13 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="cd30cb3f-4113-4558-b925-643aeeca4705"
+          data-blockingmode="auto"
+          type="text/javascript"
+        ></Script> */}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"

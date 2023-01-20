@@ -14,6 +14,8 @@ import * as Yup from "yup";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "../../styles/ContactForm.module.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
@@ -23,6 +25,8 @@ const ContactForm = () => {
   const [email, setEmail] = useState();
   const [company, setCompany] = useState();
   const [description, setDescription] = useState();
+
+  const submitNofify = () => toast.success("Email sent");
 
   const form = useRef();
 
@@ -55,6 +59,8 @@ const ContactForm = () => {
         }
       );
     handleForm()
+    submitNofify();
+
   };
 
   const validationSchema = Yup.object().shape({
@@ -216,6 +222,7 @@ const ContactForm = () => {
           >
             Send
           </Button>
+          <ToastContainer />
         </Box>
       </div>
     </Box>

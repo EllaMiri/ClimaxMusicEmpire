@@ -14,14 +14,16 @@
 }
 
 .newsImage {
-  width: 50%;
-  height: auto;
+  width: 35rem;
+  height: 35rem;
+  position: relative;
 }
 
 .textContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 70%;
 }
 
 .titleContainer {
@@ -142,5 +144,19 @@
   }
   .secondTitle2 {
     font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .newsImage {
+    width: 25rem;
+    height: 25rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .newsImage {
+    width: 18rem;
+    height: 18rem;
   }
 }
