@@ -25,7 +25,10 @@ const News = () => {
 
   return (
     <Box>
-      <SEO title="News" description="All new things happening with Climax Music Empire" />
+      <SEO
+        title="News"
+        description="All new things happening with Climax Music Empire"
+      />
       {isMobile && (
         <>
           <Box className={styles.mobileTitleContainer}>

@@ -40,7 +40,10 @@ const Artists = () => {
 
   return (
     <Box sx={artistsBoxMediaQueries}>
-      <SEO title="Artists" description="All the artists that Climax Music Empire has signed" />
+      <SEO
+        title="Artists"
+        description="All the artists that Climax Music Empire has signed"
+      />
       <Box sx={titleBox} className={styles.titleBox}>
         <Typography sx={h1MediaQueries} component="h1" variant="h1">
           ARTIST
