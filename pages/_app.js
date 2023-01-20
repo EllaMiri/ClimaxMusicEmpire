@@ -8,7 +8,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { createContext, useEffect, useState } from "react";
 
-export const MobileContext = createContext(null)
+export const MobileContext = createContext(null);
 
 export default function App({ Component, pageProps }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -62,7 +62,6 @@ export default function App({ Component, pageProps }) {
           <Component {...pageProps} />
           <Footer />
         </MobileContext.Provider>
-
       </ThemeProvider>
     </>
   );

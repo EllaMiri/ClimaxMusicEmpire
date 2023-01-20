@@ -9,7 +9,7 @@ import { MobileContext } from "../pages/_app";
 
 const News = () => {
   const router = useRouter();
-  const isMobile = useContext(MobileContext)
+  const isMobile = useContext(MobileContext);
 
   return (
     <>

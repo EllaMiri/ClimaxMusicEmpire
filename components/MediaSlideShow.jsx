@@ -25,7 +25,7 @@ const MediaSlideShow = () => {
   const [currentIndex, setCurrentIndex] = useState(null);
   const [open, setOpen] = useState(false);
 
-  const isMobile = useContext(MobileContext)
+  const isMobile = useContext(MobileContext);
 
   const handleOpen = (item, index) => {
     setOpen(true);

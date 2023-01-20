@@ -8,7 +8,7 @@ import { MobileContext } from "../pages/_app";
 
 const EventsStartPage = () => {
   const router = useRouter();
-  const isMobile = useContext(MobileContext)
+  const isMobile = useContext(MobileContext);
 
   return (
     <>
