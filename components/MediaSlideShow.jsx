@@ -1,11 +1,12 @@
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Modal, Box } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "../styles/MediaSlideShow.module.css";
 import { images } from "./data/data";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { MobileContext } from "../pages/_app";
 
 const style = {
   position: "absolute",
@@ -20,10 +21,11 @@ const style = {
 };
 
 const MediaSlideShow = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [open, setOpen] = useState(false);
+
+  const isMobile = useContext(MobileContext)
 
   const handleOpen = (item, index) => {
     setOpen(true);
@@ -65,17 +67,6 @@ const MediaSlideShow = () => {
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
   };
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   return (
     <div>

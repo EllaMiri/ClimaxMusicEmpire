@@ -2,23 +2,13 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import styles from "../styles/Events.module.css";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import Image from "next/image";
+import { MobileContext } from "../pages/_app";
 
 const EventsStartPage = () => {
   const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const isMobile = useContext(MobileContext)
 
   return (
     <>
