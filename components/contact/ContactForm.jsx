@@ -31,10 +31,8 @@ const ContactForm = () => {
   const form = useRef();
 
   const handleForm = () => {
-   form.current.reset()
-
-
-  }
+    form.current.reset();
+  };
 
   const handleShow = (e) => {
     const getShow = e.target.value;
@@ -58,9 +56,8 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
-    handleForm()
+    handleForm();
     submitNofify();
-
   };
 
   const validationSchema = Yup.object().shape({
