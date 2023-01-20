@@ -63,7 +63,7 @@ const h1MediaQueries = {
 const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
-      <SEO description="All events that Climax Music Empire and their artists is attending" />
+      <SEO title="Events" description="All events that Climax Music Empire and their artists is attending" />
       <Box className={styles.titleBox}>
         <Typography sx={h1MediaQueries} variant="h1" component="h1">
           EVENT
