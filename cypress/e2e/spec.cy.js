@@ -5,6 +5,14 @@ describe("Go To Climax Music Empire and Check Links and buttons", () => {
   });
 
   // Goes to Climax Music Empire and clicks the links in the header
+
+  it("Clicks Home in header", () => {
+    cy.get("header").within(() => {
+      cy.get("#headerHome").click();
+    });
+    cy.url().should("include", "/");
+  });
+
   it("Clicks News in header", () => {
     cy.get("header").within(() => {
       cy.get("#headerNews").click();
