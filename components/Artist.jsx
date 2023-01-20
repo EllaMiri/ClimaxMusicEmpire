@@ -1,6 +1,7 @@
 import { Typography, Box, Button } from "@mui/material";
 import { useRouter } from "next/router";
 import styles from "../styles/Artist.module.css";
+import Image from "next/image";
 
 const Artist = () => {
   const router = useRouter();
@@ -23,11 +24,14 @@ const Artist = () => {
   };
 
   const imageContainer = {
-    margin: { xs: "auto" },
+    display: "flex",
+    alignItems: { sm: "center" },
+    justifyContent: { sm: "center" },
   };
 
   const contentMediaQueries = {
     display: "flex",
+    justifyContent: { sm: "space-between" },
     flexDirection: {
       xs: "column",
       md: "row-reverse",
@@ -38,6 +42,7 @@ const Artist = () => {
     display: { xs: "flex", md: "block" },
     flexDirection: "column",
     alignItems: { xs: "center" },
+    width: { md: "50%", lg: "50%" },
   };
 
   return (
@@ -57,9 +62,13 @@ const Artist = () => {
       </Box>
       <Box sx={contentMediaQueries}>
         <Box className={styles.imageContainer} sx={imageContainer}>
-          <img
+          <Image
+            fill
+            sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
             className={styles.image}
-            src="./IcekidDSAndBoiOus.png"
+            src="/IcekidDSAndBoiOus.png"
             alt="Icekid DS and Boi Ous"
           />
         </Box>

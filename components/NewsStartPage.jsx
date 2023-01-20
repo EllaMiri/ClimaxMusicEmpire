@@ -4,6 +4,7 @@ import Link from "next/link";
 import styles from "../styles/News.module.css";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 const News = () => {
   const router = useRouter();
@@ -62,11 +63,18 @@ const News = () => {
                 CLICK HERE TO LISTEN
               </Typography>
             </Link>
-            <img
-              src="./shedondey.png"
-              alt="She Don Dey song by Icekid Ds"
-              className={styles.newsImage}
-            />
+            <Box className={styles.newsImage}>
+              <Image
+                fill
+                sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+                src="/shedondey.png"
+                alt="She Don Dey song by Icekid Ds"
+                className={styles.newsImage}
+              />
+            </Box>
+
             <Typography
               className={styles.mobileNewsDescription}
               component="p"
@@ -90,11 +98,18 @@ const News = () => {
       )}
       {!isMobile && (
         <Box className={styles.container}>
-          <img
-            src="./shedondey.png"
-            alt="She Don Dey song by Icekid Ds"
-            className={styles.newsImage}
-          />
+          <Box className={styles.newsImage}>
+            <Image
+              fill
+              sizes="(max-width: 768px) 100vw,
+              (max-width: 1200px) 50vw,
+              33vw"
+              src="/shedondey.png"
+              alt="She Don Dey song by Icekid Ds"
+              className={styles.newsImage}
+            />
+          </Box>
+
           <Box className={styles.textContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">

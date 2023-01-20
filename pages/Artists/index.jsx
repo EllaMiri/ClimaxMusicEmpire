@@ -2,6 +2,7 @@ import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
 import styles from "../../styles/Artists.module.css";
+import SEO from "@bradgarropy/next-seo";
 
 const Artists = () => {
   const artistsBoxMediaQueries = {
@@ -39,6 +40,7 @@ const Artists = () => {
 
   return (
     <Box sx={artistsBoxMediaQueries}>
+      <SEO description="All the artists that Climax Music Empire has signed" />
       <Box sx={titleBox} className={styles.titleBox}>
         <Typography sx={h1MediaQueries} component="h1" variant="h1">
           ARTIST
