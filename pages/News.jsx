@@ -2,22 +2,12 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import styles from "../styles/AllNews.module.css";
 import Link from "next/link";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import SEO from "@bradgarropy/next-seo";
+import { MobileContext } from "./_app";
 
 const News = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const isMobile = useContext(MobileContext);
 
   const h1MediaQueries = {
     fontSize: { xs: "2.5rem", sm: "3.75rem" },

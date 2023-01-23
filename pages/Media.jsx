@@ -1,24 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import MediaSlideShow from "../components/MediaSlideShow";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "../styles/Media.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SEO from "@bradgarropy/next-seo";
+import { MobileContext } from "./_app";
 
 const Media = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const isMobile = useContext(MobileContext);
 
   const h1TitleMediaQueries = {
     fontSize: { xs: "2.5rem", md: "4rem" },
