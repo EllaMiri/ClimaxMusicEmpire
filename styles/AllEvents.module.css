@@ -26,7 +26,7 @@
 }
 
 .eventTitleYellow {
-  margin-left: 0.8rem !important;
+  margin-left: 0.7rem !important;
   font-size: 2.5rem !important;
   color: #e2b945 !important;
 }
@@ -36,4 +36,15 @@
   margin-left: 2rem !important;
   margin-right: 0.8rem !important;
   font-size: 1.5rem !important;
+}
+
+@media screen and (max-width: 450px) {
+  .eventTitle {
+    font-size: 2rem !important;
+  }
+
+  .eventTitleYellow {
+    font-size: 2rem !important;
+    margin-left: 0.5rem !important;
+  }
 }

@@ -54,6 +54,7 @@ const informationMediaQueries = {
   flexDirection: { xs: "column" },
   alignItems: "flex-start",
   marginBottom: { xs: "1rem", md: "0" },
+  marginRight: {xs: 0, md: '1rem'}
 };
 
 const h1MediaQueries = {
@@ -138,7 +139,6 @@ const Events = () => {
               alt="event image"
               height={330}
               width={300}
-              style={{ marginLeft: "1rem" }}
             />
             <Box sx={informationMediaQueries}>
               <Box sx={eventTitleBoxMediaQueries} style={{ display: "flex" }}>
