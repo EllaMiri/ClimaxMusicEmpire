@@ -38,9 +38,6 @@ const FreshgeeDiscography = () => {
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
               data-cookieconsent="marketing"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
-              // data-cookiecategory="functionality"
               data-cookieblock-src={song.url}
               width="100%"
               height="352"
@@ -49,6 +46,16 @@ const FreshgeeDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+            <div
+              style={{ color: "white" }}
+              class="cookieconsent-optout-marketing"
+            >
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to play this song.
+            </div>
           </Box>
         ))}
       </Box>
@@ -57,9 +64,6 @@ const FreshgeeDiscography = () => {
           <Box key={video.url} className={styles.videoIframeContainer}>
             <iframe
               data-cookieconsent="marketing"
-              // data-cookiecategory="targeting"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
               data-cookieblock-src={video.url}
               width="100%"
               height="320px"
@@ -67,6 +71,16 @@ const FreshgeeDiscography = () => {
               display="block"
               position="relative"
             />
+            <div
+              style={{ color: "white" }}
+              class="cookieconsent-optout-marketing"
+            >
+              Please
+              <a href="javascript:Cookiebot.renew()">
+                accept marketing-cookies
+              </a>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>
