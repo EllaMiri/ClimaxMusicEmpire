@@ -89,7 +89,8 @@ const DetailedArtist = () => {
 
   const DescriptionMediaQueries = {
     textAlign: { xs: "center", md: "left" },
-    marginTop: { xs: "1rem" }
+    marginTop: { xs: "1rem" },
+    width: {xs: '90%', md: '60%'}
   };
 
   const h1MediaQueries = {
@@ -135,7 +136,6 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
@@ -197,7 +197,6 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
@@ -256,7 +255,6 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
@@ -315,7 +313,6 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
