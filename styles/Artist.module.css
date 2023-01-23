@@ -18,15 +18,15 @@
 
 .imageContainer {
   display: flex;
-  width: 40rem;
-  height: 40rem;
+  /* width: 40rem;
+  height: 40rem; */
   position: relative;
 }
 
 .image {
   margin-left: 0.5rem;
-  width: 30rem;
-  height: 30rem;
+  width: 42rem;
+  height: auto;
 }
 
 .description {
@@ -36,16 +36,19 @@
 @media screen and (max-width: 1200px) {
   .imageContainer {
     margin-bottom: 1rem;
-    width: 30rem;
-    height: 30rem;
     margin-left: 0;
+  }
+
+  .image {
+    width: 32rem;
+    height: 32rem;
   }
 }
 
 @media screen and (max-width: 900px) {
-  .imageContainer {
-    width: 30rem;
-    height: 30rem;
+  .image {
+    width: 27rem;
+    height: auto;
     margin: 0 auto 1rem auto;
   }
 
@@ -59,9 +62,9 @@
 }
 
 @media screen and (max-width: 600px) {
-  .imageContainer {
-    width: 20rem;
-    height: 20rem;
+  .image {
+    width: 18rem;
+    height: auto;
   }
 
   .ourArtistsBtn {

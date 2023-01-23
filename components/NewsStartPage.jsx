@@ -88,17 +88,13 @@ const News = () => {
       )}
       {!isMobile && (
         <Box className={styles.container}>
-          <Box className={styles.newsImage}>
-            <Image
-              fill
-              sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-              src="/shedondey.png"
-              alt="She Don Dey song by Icekid Ds"
-              className={styles.newsImage}
-            />
-          </Box>
+          {/* <Box className={styles.newsImage}> */}
+          <img
+            src="./shedondey.png"
+            alt="She Don Dey song by Icekid Ds"
+            className={styles.image}
+          />
+          {/* </Box> */}
 
           <Box className={styles.textContainer}>
             <Box className={styles.titleContainer}>

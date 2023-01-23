@@ -75,7 +75,7 @@ const Artists = () => {
           <Link href="/Artists/BoiOus">
             <Box className={styles.imageContainer}>
               <img
-                src="./boi-ous.png"
+                src="./BoiOusArtist.png"
                 alt="Artist Boi Ous"
                 style={{ height: "auto", width: "18rem" }}
                 className={styles.image}
@@ -108,7 +108,7 @@ const Artists = () => {
           <Link href="/Artists/IcekidDs">
             <Box className={styles.imageContainer}>
               <img
-                src="./icekid-ds.png"
+                src="./IcekidDsArtist.png"
                 alt="Artist IceKid DS"
                 className={styles.image}
                 style={{ height: "auto", width: "18rem" }}
@@ -140,7 +140,7 @@ const Artists = () => {
           <Link href="/Artists/Freshgee">
             <Box className={styles.imageContainer}>
               <img
-                src="./freshgee.png"
+                src="./FreshgeeArtist.png"
                 alt="Artist Freshgee"
                 className={styles.image}
                 style={{ height: "auto", width: "18rem" }}
@@ -172,7 +172,7 @@ const Artists = () => {
           <Link href="/Artists/PrincipalOfMinds">
             <Box className={styles.imageContainer}>
               <img
-                src="./PrincipalOfMinds.png"
+                src="./PrincipalOfMindsArtist.png"
                 alt="Artist Principal of Minds"
                 className={styles.image}
                 style={{ height: "auto", width: "18rem" }}
