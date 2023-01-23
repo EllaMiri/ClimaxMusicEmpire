@@ -102,6 +102,7 @@ const DetailedArtist = () => {
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
             <SEO
+              title="Principal of Minds"
               description="Details about the artist Principal of Minds"
               facebook={{
                 url: "https://www.facebook.com/PrincipalofMinds",
@@ -168,6 +169,7 @@ const DetailedArtist = () => {
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
             <SEO
+              title="Boi Ous"
               description="Details about the artist Boi Ous"
               facebook={{
                 url: "https://www.facebook.com/1ousmacbook",
@@ -231,6 +233,7 @@ const DetailedArtist = () => {
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
             <SEO
+              title="Icekid DS"
               description="Details about the artist Icekid DS"
               facebook={{
                 url: "https://www.facebook.com/profile.php?id=100064038551838",
@@ -294,6 +297,7 @@ const DetailedArtist = () => {
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <SEO
+              title="Freshgee"
               description="Details about the artist Freshgee"
               facebook={{
                 url: "https://www.facebook.com/profile.php?id=100066468461859",

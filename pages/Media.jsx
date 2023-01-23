@@ -30,7 +30,10 @@ const Media = () => {
 
   return (
     <>
-      <SEO description="All images on the artists within Climax Music Empire" />
+      <SEO
+        title="Media"
+        description="All images on the artists within Climax Music Empire"
+      />
       {!isMobile && (
         <Box className={styles.mediaContainer}>
           <Box className={styles.titleBox}>
