@@ -82,7 +82,7 @@ const IcekidDsDiscography = () => {
             ></iframe>
             <div
               style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              className="cookieconsent-optout-marketing"
             >
               Please
               <a href="javascript:Cookiebot.renew()">
@@ -108,7 +108,7 @@ const IcekidDsDiscography = () => {
             />
             <div
               style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              className="cookieconsent-optout-marketing"
             >
               Please
               <a href="javascript:Cookiebot.renew()">
