@@ -1,11 +1,14 @@
 import {
   Box,
-  Button, Checkbox,
+  Button,
+  Checkbox,
   FormControl,
-  FormControlLabel, FormGroup, FormHelperText,
+  FormControlLabel,
+  FormGroup,
+  FormHelperText,
   RadioGroup,
   TextField,
-  Typography
+  Typography,
 } from "@mui/material";
 import { Radio } from "@mui/material";
 import { useState, useRef } from "react";
@@ -16,7 +19,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import styles from "../../styles/ContactForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
@@ -67,24 +69,26 @@ const ContactForm = () => {
     description: Yup.string()
       .required("Description is required")
       .min(10, "Description must be at lease 10 character"),
-    approve: Yup.bool()
-      .oneOf([true], "You much accept the the information is being sent to the company")
+    approve: Yup.bool().oneOf(
+      [true],
+      "You much accept the the information is being sent to the company"
+    ),
   });
 
   const {
     register,
     handleSubmit,
-    formState: { errors }
+    formState: { errors },
   } = useForm({
-    resolver: yupResolver(validationSchema)
+    resolver: yupResolver(validationSchema),
   });
 
   const descriptionMediaQueries = {
-    width: { xs: "15rem", sm: "20rem", md: "23rem" }
+    width: { xs: "15rem", sm: "20rem", md: "23rem" },
   };
 
   const radioGroup = {
-    flexDirection: { xs: "column", lg: "row" }
+    flexDirection: { xs: "column", lg: "row" },
   };
 
   return (
@@ -101,7 +105,7 @@ const ContactForm = () => {
           flexDirection: "column",
           alignItems: "center",
           paddingTop: "3rem",
-          paddingBottom: "3rem"
+          paddingBottom: "3rem",
         }}
       >
         <FormControl>
@@ -197,19 +201,17 @@ const ContactForm = () => {
             {errors.description?.message}
           </Typography>
 
-            <FormGroup>
-              <FormControl>
-                <FormControlLabel
-                  control={
-                    <Checkbox  onChange={handleChange} required />
-                  }
-                  label="I accept that this information is being sent to the company in the purpose of contact!"
-                  id="approve"
-                  name="approve"
-                  {...register("approve")}
-                />
-              </FormControl>
-              </FormGroup>
+          <FormGroup>
+            <FormControl>
+              <FormControlLabel
+                control={<Checkbox onChange={handleChange} required />}
+                label="I accept that this information is being sent to the company in the purpose of contact!"
+                id="approve"
+                name="approve"
+                {...register("approve")}
+              />
+            </FormControl>
+          </FormGroup>
           <Typography variant="p" color="red">
             {errors.approve?.message}
           </Typography>
