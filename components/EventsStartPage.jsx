@@ -78,7 +78,14 @@ const EventsStartPage = () => {
         </Box>
       )}
       {!isMobile && (
-        <Box className={styles.container}>
+        <Box
+          style={{
+            minHeight: "105vh",
+            display: "flex",
+            justifyContent: "center",
+          }}
+          className={styles.container}
+        >
           <Box className={styles.eventImage}>
             <Image
               fill
