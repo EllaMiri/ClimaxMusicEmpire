@@ -14,7 +14,10 @@ const News = () => {
   return (
     <>
       {isMobile && (
-        <Box className={styles.mobileContainer}>
+        <Box
+          style={{ marginBottom: "11rem" }}
+          className={styles.mobileContainer}
+        >
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
@@ -30,7 +33,7 @@ const News = () => {
                 component="span"
                 className={styles.secondTitle1}
               >
-                Icekid Ds new song She Don Dey is
+                New song
               </Typography>
               <Typography
                 variant="span"
@@ -123,7 +126,7 @@ const News = () => {
                 component="span"
                 className={styles.secondTitle1}
               >
-                Icekid Ds new song She Don Dey is
+                New song
               </Typography>
               <Typography
                 variant="span"

@@ -47,6 +47,7 @@ const Artist = () => {
 
   return (
     <Box
+      style={{ marginBottom: "5rem" }}
       // style={{
       //   minHeight: "105vh",
       //   display: "flex",

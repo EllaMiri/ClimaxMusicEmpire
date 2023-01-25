@@ -13,7 +13,10 @@ const EventsStartPage = () => {
   return (
     <>
       {isMobile && (
-        <Box className={styles.mobileContainer}>
+        <Box
+          style={{ marginBottom: "11rem" }}
+          className={styles.mobileContainer}
+        >
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
