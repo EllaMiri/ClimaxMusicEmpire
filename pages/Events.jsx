@@ -43,7 +43,7 @@ const informationMediaQueries = {
   flexDirection: { xs: "column" },
   alignItems: "flex-start",
   marginBottom: { xs: "1rem", md: "0" },
-  marginRight: {xs: 0, md: '1rem'}
+  marginRight: { xs: 0, md: "1rem" },
 };
 
 const h1MediaQueries = {
