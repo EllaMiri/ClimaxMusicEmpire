@@ -209,7 +209,7 @@ const Artists = () => {
             </Box>
           </Link>
         </Box>
-        ;
+        
       </Box>
     </Box>
   );
