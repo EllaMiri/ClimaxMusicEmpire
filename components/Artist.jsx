@@ -46,7 +46,16 @@ const Artist = () => {
   };
 
   return (
-    <Box id="contact2" sx={artistMediaQueries}>
+    <Box
+      style={{ marginBottom: "5rem" }}
+      // style={{
+      //   minHeight: "105vh",
+      //   display: "flex",
+      //   justifyContent: "center",
+      // }}
+      id="contact2"
+      sx={artistMediaQueries}
+    >
       <Box sx={titleBoxMediaQueries} className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ARTIST
@@ -61,17 +70,7 @@ const Artist = () => {
         </Typography>
       </Box>
       <Box sx={contentMediaQueries}>
-        <Box className={styles.imageContainer} sx={imageContainer}>
-          <Image
-            fill
-            sizes="(max-width: 768px) 100vw,
-              (max-width: 1200px) 50vw,
-              33vw"
-            className={styles.image}
-            src="/IcekidDSAndBoiOus.png"
-            alt="Icekid DS and Boi Ous"
-          />
-        </Box>
+        <img className={styles.image} src="/ArtistImage.png" alt="" />
         <Box sx={textAndBtnMediaQueries}>
           <Typography className={styles.description} component="p" variant="p">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt

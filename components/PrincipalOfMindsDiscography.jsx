@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
-import Iframe from "react-iframe";
 
 const PrincipalOfMindsDiscography = () => {
   let songs = [
@@ -70,13 +69,12 @@ const PrincipalOfMindsDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={Cookiebot.renew()}
+              className="cookieconsent-optout-marketing"
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
+              <p>accept marketing-cookies</p>
               to play this song.
             </div>
           </Box>
@@ -96,13 +94,17 @@ const PrincipalOfMindsDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              onClick={Cookiebot.renew()}
+              style={{ color: "white", cursor: "pointer" }}
+              className="cookieconsent-optout-marketing"
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
+              <p
+
+              // href="javascript:Cookiebot.renew()"
+              >
                 accept marketing-cookies
-              </a>
+              </p>
               to watch this video.
             </div>
           </Box>

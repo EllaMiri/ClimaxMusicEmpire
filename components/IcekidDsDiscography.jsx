@@ -85,13 +85,12 @@ const IcekidDsDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={Cookiebot.renew()}
+              className="cookieconsent-optout-marketing"
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
+              <p>accept marketing-cookies</p>
               to play this song.
             </div>
           </Box>
@@ -111,13 +110,12 @@ const IcekidDsDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={Cookiebot.renew()}
+              className="cookieconsent-optout-marketing"
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
+              <p>accept marketing-cookies</p>
               to watch this video.
             </div>
           </Box>

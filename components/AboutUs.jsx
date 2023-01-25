@@ -41,7 +41,11 @@ const AboutUs = () => {
   };
 
   return (
-    <Box sx={aboutUSMediaQueries}>
+    <Box
+      style={{ marginBottom: "11rem" }}
+      // style={{ minHeight: "105vh", display: "flex", justifyContent: "center" }}
+      sx={aboutUSMediaQueries}
+    >
       <Box className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ABOUT

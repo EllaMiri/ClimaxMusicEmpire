@@ -1,8 +1,11 @@
 import {
   Box,
   Button,
+  Checkbox,
   FormControl,
   FormControlLabel,
+  FormGroup,
+  FormHelperText,
   RadioGroup,
   TextField,
   Typography,
@@ -20,6 +23,7 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
+  const [checked, setChecked] = useState(true);
 
   const submitNofify = () => toast.success("Email sent");
 
@@ -29,6 +33,10 @@ const ContactForm = () => {
     const getShow = e.target.value;
     setShowHide(getShow);
     setShowRole(getShow);
+  };
+
+  const handleChange = (event) => {
+    setChecked(event.target.checked);
   };
 
   const onSubmit = () => {
@@ -61,6 +69,10 @@ const ContactForm = () => {
     description: Yup.string()
       .required("Description is required")
       .min(10, "Description must be at lease 10 character"),
+    approve: Yup.bool().oneOf(
+      [true],
+      "You much accept the the information is being sent to the company"
+    ),
   });
 
   const {
@@ -187,6 +199,21 @@ const ContactForm = () => {
           />
           <Typography variant="p" color="red">
             {errors.description?.message}
+          </Typography>
+
+          <FormGroup>
+            <FormControl>
+              <FormControlLabel
+                control={<Checkbox onChange={handleChange} required />}
+                label="I accept that this information is being sent to the company in the purpose of contact!"
+                id="approve"
+                name="approve"
+                {...register("approve")}
+              />
+            </FormControl>
+          </FormGroup>
+          <Typography variant="p" color="red">
+            {errors.approve?.message}
           </Typography>
           <Button
             type="submit"
