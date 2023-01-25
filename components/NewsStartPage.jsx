@@ -90,7 +90,6 @@ const News = () => {
         </Box>
       )}
       {!isMobile && (
-
         <Box
           style={{ marginBottom: "11rem" }}
         
@@ -104,8 +103,6 @@ const News = () => {
             className={styles.image}
           />
         
-
-
           <Box className={styles.textContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
@@ -165,9 +162,10 @@ const News = () => {
             </Box>
           </Box>
         </Box>
+      </Box>
       )}
+    <Box/>
     </>
-  );
-};
+  )};
 
 export default News;
