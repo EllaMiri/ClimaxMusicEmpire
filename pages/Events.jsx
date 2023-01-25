@@ -76,8 +76,8 @@ const Events = () => {
             <Image
               src={events.image}
               alt="event image"
-              height={300}
-              width={300}
+              height={310}
+              width={310}
             />
             <Box sx={informationMediaQueries}>
               <Box sx={eventTitleBoxMediaQueries} style={{ display: "flex" }}>
