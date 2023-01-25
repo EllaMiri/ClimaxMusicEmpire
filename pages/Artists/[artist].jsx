@@ -27,8 +27,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const icekidDsMockData = [
     {
@@ -42,8 +42,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const freshgeeMockData = [
     {
@@ -57,8 +57,8 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
   const principalOfMindsMockData = [
     {
@@ -72,12 +72,12 @@ const DetailedArtist = () => {
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />
-    }
+      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+    },
   ];
 
   const ArtistBoxMediaQueries = {
-    flexDirection: { xs: "column", md: "row" }
+    flexDirection: { xs: "column", md: "row" },
   };
 
   const ArtistNameMediaQueries = {
@@ -90,7 +90,7 @@ const DetailedArtist = () => {
   const DescriptionMediaQueries = {
     textAlign: { xs: "center", md: "left" },
     marginTop: { xs: "1rem" },
-    width: {xs: '90%', md: '60%'}
+    width: { xs: "90%", md: "60%" },
   };
 
   const h1MediaQueries = {
@@ -101,9 +101,9 @@ const DetailedArtist = () => {
   const iconsMediaQueries = {
     display: "flex",
     justifyContent: "space-evenly",
-    width: {md: "32%"},
-    marginTop: "1rem"
-  }
+    width: { md: "32%" },
+    marginTop: "1rem",
+  };
 
   return (
     <Box>
@@ -114,7 +114,7 @@ const DetailedArtist = () => {
               title="Principal of Minds"
               description="Details about the artist Principal of Minds"
               facebook={{
-                url: "https://www.facebook.com/PrincipalofMinds"
+                url: "https://www.facebook.com/PrincipalofMinds",
               }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
@@ -144,9 +144,7 @@ const DetailedArtist = () => {
                 {principalOfMinds.description}
               </Typography>
             </Box>
-            <Box
-              sx={iconsMediaQueries}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/principalofminds/"
                 target="_blank"
@@ -176,7 +174,7 @@ const DetailedArtist = () => {
               title="Boi Ous"
               description="Details about the artist Boi Ous"
               facebook={{
-                url: "https://www.facebook.com/1ousmacbook"
+                url: "https://www.facebook.com/1ousmacbook",
               }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
@@ -205,9 +203,7 @@ const DetailedArtist = () => {
                 {boiOus.description}
               </Typography>
             </Box>
-            <Box
-              sx={iconsMediaQueries}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/boi0usgram/"
                 target="_blank"
@@ -234,7 +230,7 @@ const DetailedArtist = () => {
               title="Icekid DS"
               description="Details about the artist Icekid DS"
               facebook={{
-                url: "https://www.facebook.com/profile.php?id=100064038551838"
+                url: "https://www.facebook.com/profile.php?id=100064038551838",
               }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
@@ -263,9 +259,7 @@ const DetailedArtist = () => {
                 {icekidDs.description}
               </Typography>
             </Box>
-            <Box
-              sx={iconsMediaQueries}
-              >
+            <Box sx={iconsMediaQueries}>
               <Link href="https://www.instagram.com/icekid_ds/" target="_blank">
                 {icekidDs.instagram}
               </Link>
@@ -292,7 +286,7 @@ const DetailedArtist = () => {
               title="Freshgee"
               description="Details about the artist Freshgee"
               facebook={{
-                url: "https://www.facebook.com/profile.php?id=100066468461859"
+                url: "https://www.facebook.com/profile.php?id=100066468461859",
               }}
             />
             <Box sx={ArtistNameMediaQueries} className={styles.flex}>
@@ -321,9 +315,7 @@ const DetailedArtist = () => {
                 {freshgee.description}
               </Typography>
             </Box>
-            <Box
-              sx={iconsMediaQueries}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/official_freshgee/"
                 target="_blank"

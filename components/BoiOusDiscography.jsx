@@ -22,8 +22,8 @@ const BoiOusDiscography = () => {
   ];
 
   const titleMediaQueries = {
-    fontSize: {xs: '2rem', sm: '2.5rem', md: '4rem'}
-  }
+    fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+  };
 
   return (
     <Box>
@@ -31,7 +31,12 @@ const BoiOusDiscography = () => {
         <Typography sx={titleMediaQueries} variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
-        <Typography sx={titleMediaQueries} className={styles.goldColor} variant="h2" component="h2">
+        <Typography
+          sx={titleMediaQueries}
+          className={styles.goldColor}
+          variant="h2"
+          component="h2"
+        >
           Y
         </Typography>
       </Box>
