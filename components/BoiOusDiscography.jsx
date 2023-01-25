@@ -45,11 +45,8 @@ const BoiOusDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-
               style={{ color: "white", cursor: "pointer" }}
-            
               onClick={Cookiebot.renew()}
-
               className="cookieconsent-optout-marketing"
             >
               Please
@@ -73,12 +70,8 @@ const BoiOusDiscography = () => {
               position="relative"
             />
             <div
-
               style={{ color: "white", cursor: "pointer" }}
-         
               onClick={Cookiebot.renew()}
-
-    
               className="cookieconsent-optout-marketing"
             >
               Please
