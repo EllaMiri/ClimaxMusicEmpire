@@ -65,8 +65,7 @@ const PrincipalOfMindsDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white", cursor: "pointer" }}
-              onClick={Cookiebot.renew()}
+              style={{ color: "white" }}
               className="cookieconsent-optout-marketing"
             >
               Please
@@ -90,8 +89,7 @@ const PrincipalOfMindsDiscography = () => {
               position="relative"
             />
             <div
-              onClick={Cookiebot.renew()}
-              style={{ color: "white", cursor: "pointer" }}
+              style={{ color: "white" }}
               className="cookieconsent-optout-marketing"
             >
               Please
