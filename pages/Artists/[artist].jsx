@@ -34,7 +34,7 @@ const DetailedArtist = () => {
     {
       name: "ICEKID",
       description:
-        "L am olor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Samuel Aigbogun Precious popularly known as Icekid Ds is a Sweden based Nigerian Singer, Song writer and record producer. Icekid DS is a versatile singer in the genre of Afro pop, R&B and Rap blending Africa's Afro with Global sounds.",
       name1: "DS",
 
       image: "/IcekidDsDetailImage.png",
@@ -49,7 +49,7 @@ const DetailedArtist = () => {
     {
       name: "FRESH",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Freshgee believes that music is beyond a form of entertainment, that music unites so many cultures with different people around the world, that music is a universal language  and he's really mindful of this in his creative process. He came from Edo state, southside of Nigeria, West Africa. His childhood and his daily experiences gave him more inspirations in line with his music.",
       name1: "GEE",
 
       image: "/FreshgeeDetailImage.png",
