@@ -164,7 +164,6 @@ const News = () => {
         </Box>
       </Box>
       )}
-    <Box/>
     </>
   )};
 
