@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
-import Iframe from "react-iframe";
 
 const PrincipalOfMindsDiscography = () => {
   let songs = [
