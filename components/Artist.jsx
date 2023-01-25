@@ -47,11 +47,11 @@ const Artist = () => {
 
   return (
     <Box
-      style={{
-        minHeight: "105vh",
-        display: "flex",
-        justifyContent: "center",
-      }}
+      // style={{
+      //   minHeight: "105vh",
+      //   display: "flex",
+      //   justifyContent: "center",
+      // }}
       id="contact2"
       sx={artistMediaQueries}
     >

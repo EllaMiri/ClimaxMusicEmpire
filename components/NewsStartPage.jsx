@@ -88,11 +88,12 @@ const News = () => {
       )}
       {!isMobile && (
         <Box
-          style={{
-            minHeight: "105vh",
-            display: "flex",
-            justifyContent: "center",
-          }}
+          style={{ marginBottom: "11rem" }}
+          // style={{
+          //   minHeight: "105vh",
+          //   display: "flex",
+          //   justifyContent: "center",
+          // }}
           className={styles.container}
         >
           <Box className={styles.newsImage}>

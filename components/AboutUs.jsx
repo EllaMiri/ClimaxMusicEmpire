@@ -42,7 +42,8 @@ const AboutUs = () => {
 
   return (
     <Box
-      style={{ minHeight: "105vh", display: "flex", justifyContent: "center" }}
+      style={{ marginBottom: "11rem" }}
+      // style={{ minHeight: "105vh", display: "flex", justifyContent: "center" }}
       sx={aboutUSMediaQueries}
     >
       <Box className={styles.titleBox}>
