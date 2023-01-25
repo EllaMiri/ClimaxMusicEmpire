@@ -46,7 +46,7 @@ const EventsStartPage = () => {
               (max-width: 1200px) 50vw,
               33vw"
                 className={styles.eventImage}
-                src="/eventStartPage.png"
+                src="/EmergenzaEvent.png"
                 alt="event"
               />
             </Box>
@@ -86,7 +86,7 @@ const EventsStartPage = () => {
               (max-width: 1200px) 50vw,
               33vw"
               className={styles.eventImage}
-              src="/eventStartPage.png"
+              src="/EmergenzaEvent.png"
               alt="event"
             />
           </Box>

@@ -95,19 +95,21 @@ const Artists = () => {
               OUS
             </Typography>
           </Box>
-          <Box onClick={routeBoiOus} className={styles.imageContainer}>
-            <img
-              src="./boi-ous.png"
-              alt="Artist Boi Ous"
-              style={{ height: "auto", width: "18rem" }}
-              className={styles.image}
-            />
-            <Box className={styles.overlay}>
-              <Typography className={styles.text}>READ MORE</Typography>
-            </Box>
-          </Box>
-        </Box>
 
+          <Link href="/Artists/BoiOus">
+            <Box className={styles.imageContainer}>
+              <img
+                src="./BoiOusArtist.png"
+                alt="Artist Boi Ous"
+                style={{ height: "auto", width: "18rem" }}
+                className={styles.image}
+              />
+              <Box className={styles.overlay}>
+                <Typography className={styles.text}>READ MORE</Typography>
+              </Box>
+            </Box>
+          </Link>
+        </Box>
         <Box>
           <Box className={styles.artistNameBox}>
             <Typography
@@ -126,17 +128,20 @@ const Artists = () => {
               DS
             </Typography>
           </Box>
-          <Box onClick={routeIcekidDs} className={styles.imageContainer}>
-            <img
-              src="./icekid-ds.png"
-              alt="Artist IceKid DS"
-              className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
-            />
-            <Box className={styles.overlay}>
-              <Typography className={styles.text}>READ MORE</Typography>
+
+          <Link href="/Artists/IcekidDs">
+            <Box className={styles.imageContainer}>
+              <img
+                src="./IcekidDsArtist.png"
+                alt="Artist IceKid DS"
+                className={styles.image}
+                style={{ height: "auto", width: "18rem" }}
+              />
+              <Box className={styles.overlay}>
+                <Typography className={styles.text}>READ MORE</Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box sx={freshgeeMediaQueries}>
           <Box className={styles.artistNameBox}>
@@ -156,17 +161,20 @@ const Artists = () => {
               GEE
             </Typography>
           </Box>
-          <Box onClick={routeFreshgee} className={styles.imageContainer}>
-            <img
-              src="./freshgee.png"
-              alt="Artist Freshgee"
-              className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
-            />
-            <Box className={styles.overlay}>
-              <Typography className={styles.text}>READ MORE</Typography>
+
+          <Link href="/Artists/Freshgee">
+            <Box className={styles.imageContainer}>
+              <img
+                src="./FreshgeeArtist.png"
+                alt="Artist Freshgee"
+                className={styles.image}
+                style={{ height: "auto", width: "18rem" }}
+              />
+              <Box className={styles.overlay}>
+                <Typography className={styles.text}>READ MORE</Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Box>
         <Box>
           <Box className={styles.artistNameBox}>
@@ -186,21 +194,22 @@ const Artists = () => {
               MINDS
             </Typography>
           </Box>
-          <Box
-            onClick={routePrincipalOfMinds}
-            className={styles.imageContainer}
-          >
-            <img
-              src="./PrincipalOfMinds.png"
-              alt="Artist Principal of Minds"
-              className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
-            />
-            <Box className={styles.overlay}>
-              <Typography className={styles.text}>READ MORE</Typography>
+
+          <Link href="/Artists/PrincipalOfMinds">
+            <Box className={styles.imageContainer}>
+              <img
+                src="./PrincipalOfMindsArtist.png"
+                alt="Artist Principal of Minds"
+                className={styles.image}
+                style={{ height: "auto", width: "18rem" }}
+              />
+              <Box className={styles.overlay}>
+                <Typography className={styles.text}>READ MORE</Typography>
+              </Box>
             </Box>
-          </Box>
+          </Link>
         </Box>
+        ;
       </Box>
     </Box>
   );

@@ -46,7 +46,7 @@ const BoiOusDiscography = () => {
             ></iframe>
             <div
               style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              className="cookieconsent-optout-marketing"
             >
               Please
               <a href="javascript:Cookiebot.renew()">
@@ -72,7 +72,7 @@ const BoiOusDiscography = () => {
             />
             <div
               style={{ color: "white" }}
-              class="cookieconsent-optout-marketing"
+              className="cookieconsent-optout-marketing"
             >
               Please
               <a href="javascript:Cookiebot.renew()">

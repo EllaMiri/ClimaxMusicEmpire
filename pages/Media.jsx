@@ -56,7 +56,7 @@ const Media = () => {
             <Box className={styles.imageBox}>
               <img
                 className={styles.image}
-                src="/galleryImage.png"
+                src="/MediaImage.png"
                 alt="artist image"
               />
             </Box>
@@ -86,12 +86,10 @@ const Media = () => {
               </Typography>
             </Box>
             <Box className={styles.imageBoxMobile}>
-              <Image
-                layout="intrinsic"
-                src="/galleryImage.png"
+              <img
+                src="/MediaImage.png"
                 alt="artist image"
-                height={450}
-                width={350}
+                className={styles.image}
               />
             </Box>
           </Box>
