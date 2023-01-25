@@ -1,61 +1,61 @@
 .desktopImageContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .imageMediaQueries {
-    height: auto;
-    width: 23rem;
-    padding-right: 1rem !important;
-    padding-left: 1rem !important;
+  height: auto;
+  width: 23rem;
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 .imageMobileContainer {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .imageMobileMediaQueries {
-    width: 20rem;
-    height: auto;
+  width: 20rem;
+  height: auto;
 }
 
 .modalImageContainer {
-    display: flex;
-    justify-content: center;
-    height: 100%;
-    width: auto;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  width: auto;
 }
 
 .modalImage {
-    height: 45rem;
-    width: 50%;
+  height: 45rem;
+  width: auto;
 }
 
 .arrowIconsContainer {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .arrowIcons {
-    font-size: 2rem !important;
-    color: #e2b945 !important;
+  font-size: 2rem !important;
+  color: #e2b945 !important;
 }
 
 @media screen and (max-width: 1200px) {
-    .imageMediaQueries {
-        width: 20rem;
-    }
+  .imageMediaQueries {
+    width: 20rem;
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    .imageMediaQueries {
-        width: 15rem;
-    }
+  .imageMediaQueries {
+    width: 15rem;
+  }
 }
 
 @media screen and (max-width: 500px) {
-    .imageMobileMediaQueries {
-        width: 15rem;
-    }
+  .imageMobileMediaQueries {
+    width: 15rem;
+  }
 }

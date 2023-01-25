@@ -22,7 +22,7 @@ const DetailedArtist = () => {
         "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
       name1: "OUS",
 
-      image: "/boi-ous.png",
+      image: "/BoiOusDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -34,10 +34,10 @@ const DetailedArtist = () => {
     {
       name: "ICEKID",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "L am olor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
       name1: "DS",
 
-      image: "/icekid-ds.png",
+      image: "/IcekidDsDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -52,7 +52,7 @@ const DetailedArtist = () => {
         "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
       name1: "GEE",
 
-      image: "/freshgee1.png",
+      image: "/FreshgeeDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -67,7 +67,7 @@ const DetailedArtist = () => {
         "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
       name1: "MINDS",
 
-      image: "/PrincipalOfMinds.png",
+      image: "/PrincipalOfMindsDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -83,7 +83,7 @@ const DetailedArtist = () => {
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
     flexWrap: "wrap",
-    marginLeft: { xs: "0", md: "3rem" },
+    // marginLeft: { xs: "0", md: "3rem" },
     marginBottom: { xs: ".5rem" },
   };
 
@@ -94,6 +94,7 @@ const DetailedArtist = () => {
 
   const h1MediaQueries = {
     fontSize: { xs: "2.5rem", sm: "4rem" },
+    display: { xs: "block" },
   };
 
   return (
@@ -122,7 +123,8 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
+                // style={{ width: "25%" }}
                 src={principalOfMinds.image}
                 alt="pricipal of minds image"
               />
@@ -189,7 +191,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={boiOus.image}
                 alt="boi ous image"
               />
@@ -253,7 +255,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={icekidDs.image}
                 alt="icekid image"
               />
@@ -317,7 +319,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={freshgee.image}
                 alt="freshgee image"
               />

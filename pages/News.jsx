@@ -94,7 +94,7 @@ const News = () => {
               </Typography>
             </Box>
             <img
-              src="./news-freshgee.png"
+              src="./FreshgeeNews.png"
               alt="Nigerian afrobeat artist Freshgee"
               className={styles.image}
             />
@@ -171,8 +171,11 @@ const News = () => {
 
           <Box className={styles.reverseContainer}>
             <img
-              src="./news-freshgee.png"
-              alt="She Don Dey song by Icekid Ds"
+              src="./FreshgeeNews.png"
+              alt="Nigerian
+              afrobeat
+              artist
+              Freshgee"
               className={styles.image}
             />
             <Box className={styles.textContainer}>
