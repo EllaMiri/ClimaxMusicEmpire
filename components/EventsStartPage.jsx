@@ -71,7 +71,7 @@ const EventsStartPage = () => {
                 variant="contained"
                 color="secondary"
               >
-                More events
+                All events
               </Button>
             </Box>
           </Box>
@@ -143,7 +143,7 @@ const EventsStartPage = () => {
                 variant="contained"
                 color="secondary"
               >
-                More events
+                All events
               </Button>
             </Box>
           </Box>
