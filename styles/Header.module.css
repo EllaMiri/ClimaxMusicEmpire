@@ -2,7 +2,6 @@
   height: 5rem;
   min-height: 5rem;
   display: flex;
-  transition: height 400ms;
   padding: 0 2rem;
   justify-content: space-between;
   position: absolute;
