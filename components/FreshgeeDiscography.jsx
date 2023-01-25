@@ -47,13 +47,12 @@ const FreshgeeDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white" }}
+              style={{ color: "white", cursor: "pointer" }}
               class="cookieconsent-optout-marketing"
+              onClick={Cookiebot.renew()}
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
+              <p>accept marketing-cookies</p>
               to play this song.
             </div>
           </Box>
@@ -72,13 +71,12 @@ const FreshgeeDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
+              style={{ color: "white", cursor: "pointer" }}
               class="cookieconsent-optout-marketing"
+              onClick={Cookiebot.renew()}
             >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
+              <p>accept marketing-cookies</p>
               to watch this video.
             </div>
           </Box>
