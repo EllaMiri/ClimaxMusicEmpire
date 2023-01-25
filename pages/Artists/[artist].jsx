@@ -64,7 +64,7 @@ const DetailedArtist = () => {
     {
       name: "PRINCIPAL OF",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Principal of Minds is a rapper who's dedicated to the art of understanding, his message is to spread awareness and understanding. He works with themes that works as a chain where one song leads to the other, allowing his listeners to grow with him. A firm believer that humanity can't grow without unity he fights to change the idea that Hip Hop is all about money, cars and depredating women. With years on his back he has crafted a style that blends with his showmanship.",
       name1: "MINDS",
 
       image: "/PrincipalOfMindsDetailImage.png",
