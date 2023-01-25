@@ -46,7 +46,16 @@ const Artist = () => {
   };
 
   return (
-    <Box id="contact2" sx={artistMediaQueries}>
+    <Box
+      style={{ marginBottom: "5rem" }}
+      // style={{
+      //   minHeight: "105vh",
+      //   display: "flex",
+      //   justifyContent: "center",
+      // }}
+      id="contact2"
+      sx={artistMediaQueries}
+    >
       <Box sx={titleBoxMediaQueries} className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ARTIST

@@ -25,6 +25,12 @@ const Contact = () => {
 
   return (
     <Box
+      style={{ marginBottom: "11rem" }}
+      // style={{
+      //   minHeight: "105vh",
+      //   display: "flex",
+      //   justifyContent: "center",
+      // }}
       id="contact"
       sx={contactPageMediaQueries}
       className={styles.contactPageBox}

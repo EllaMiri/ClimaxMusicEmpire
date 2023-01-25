@@ -1,160 +1,161 @@
 .moreEventsBtn {
-    border: 1px solid #e2b945 !important;
-    margin-top: 0.7rem !important;
+  border: 1px solid #e2b945 !important;
+  margin-top: 0.7rem !important;
 }
 .moreEventsBtn:hover {
-    background-color: #9e8335 !important;
+  background-color: #9e8335 !important;
 }
 
 .container {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 5rem;
-    margin-left: 3rem;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5rem;
+  margin-left: 3rem;
 }
 
 .eventImage {
-    height: 42.125rem;
-    width: 40rem;
-    position: relative;
+  height: 42.125rem;
+  width: 40rem;
+  position: relative;
 }
 
 .textContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
 }
 
 .titleContainer {
-    display: flex;
+  display: flex;
 }
 
 .secondTitleBox {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .secondTitle1 {
-    font-family: Montserrat !important;
-    font-size: 1.5rem !important;
+  font-family: Montserrat !important;
+  font-size: 1.5rem !important;
 }
 
 .secondTitle2 {
-    font-family: Montserrat !important;
-    font-size: 1.5rem !important;
-    margin-left: 0.5rem !important;
-    color: #e2b945 !important;
+  font-family: Montserrat !important;
+  font-size: 1.5rem !important;
+  margin-left: 0.5rem !important;
+  color: #e2b945 !important;
 }
 
 .link {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .clickToListen {
-    font-family: Montserrat !important;
-    font-size: 1rem !important;
-    margin-bottom: 1rem !important;
-    color: #e2b945 !important;
+  font-family: Montserrat !important;
+  font-size: 1rem !important;
+  margin-bottom: 1rem !important;
+  color: #e2b945 !important;
 }
 
 .eventsDescription {
-    margin-left: 5rem !important;
-    margin-right: 5rem !important;
+  margin-left: 5rem !important;
+  margin-right: 5rem !important;
 }
 
 .s {
-    color: #e2b945 !important;
+  color: #e2b945 !important;
 }
 
 .mobileContainer {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .mobileTextContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem !important;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .mobileEventsDescription {
-    text-align: center;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-top: 1rem !important;
-    margin-bottom: 1rem !important;
+  text-align: center;
+  margin-left: 1rem !important;
+  margin-right: 1rem !important;
+  margin-top: 1rem !important;
+  margin-bottom: 1rem !important;
 }
 
 .mobileMoreEventsBtn {
-    border: 1px solid #e2b945 !important;
+  border: 1px solid #e2b945 !important;
 }
 
 .mobileMoreEventsBtn:hover {
-    background-color: #9e8335 !important;
+  background-color: #9e8335 !important;
 }
 
 @media screen and (min-width: 320px) {
-    .secondTitle1 {
-        font-size: 1rem;
-        text-align: center;
-    }
-    .secondTitle2 {
-        font-size: 1rem;
-        text-align: center;
-    }
+  .secondTitle1 {
+    font-size: 1rem;
+    text-align: center;
+  }
+  .secondTitle2 {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 450px) {
-    .secondTitle1 {
-        font-size: 1.2rem;
-    }
-    .secondTitle2 {
-        font-size: 1.2rem;
-    }
+  .secondTitle1 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  .secondTitle2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 550px) {
-    .secondTitle1 {
-        font-size: 1.3rem;
-    }
-    .secondTitle2 {
-        font-size: 1.3rem;
-    }
+  .secondTitle1 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
+  .secondTitle2 {
+    font-size: 1.3rem;
+    text-align: center;
+  }
 }
 @media screen and (min-width: 900px) {
-    .secondTitle1 {
-        font-size: 1.1rem;
-    }
-
-
+  .secondTitle1 {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (min-width: 1100px) {
-    .secondTitle1 {
-        font-size: 1.3rem;
-    }
-    .secondTitle2 {
-        font-size: 1.3rem;
-    }
+  .secondTitle1 {
+    font-size: 1.3rem;
+  }
+  .secondTitle2 {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 1200px) {
-    .eventImage {
-        height: 30rem;
-        width: 30rem;
-    }
+  .eventImage {
+    height: 30rem;
+    width: 30rem;
+  }
 }
 
 @media screen and (max-width: 700px) {
-    .eventImage {
-        height: 20rem;
-        width: 20rem;
-    }
+  .eventImage {
+    height: 20rem;
+    width: 20rem;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    .eventImage {
-        height: 15rem;
-        width: 15rem;
-    }
+  .eventImage {
+    height: 15rem;
+    width: 15rem;
+  }
 }

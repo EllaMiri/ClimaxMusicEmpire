@@ -92,6 +92,7 @@ const Header = () => {
           {!isMenuOpen && (
             <Link href="/">
               <Image
+                priority="true"
                 className={styles.logo}
                 src={logo}
                 alt="Climax Music Empire"

@@ -284,7 +284,7 @@ const MediaSlideShow = () => {
                 <img
                   src={item.image}
                   className={styles.imageMobileMediaQueries}
-                  alt=""
+                  alt={item.id}
                   onClick={() => handleOpen(item, index)}
                 />
               </div>
