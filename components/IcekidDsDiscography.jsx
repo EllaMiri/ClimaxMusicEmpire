@@ -81,13 +81,9 @@ const IcekidDsDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-
               style={{ color: "white", cursor: "pointer" }}
-
               onClick={Cookiebot.renew()}
-
               className="cookieconsent-optout-marketing"
-
             >
               Please
               <p>accept marketing-cookies</p>
@@ -110,13 +106,9 @@ const IcekidDsDiscography = () => {
               position="relative"
             />
             <div
-
               style={{ color: "white", cursor: "pointer" }}
-
               onClick={Cookiebot.renew()}
-
               className="cookieconsent-optout-marketing"
-
             >
               Please
               <p>accept marketing-cookies</p>
