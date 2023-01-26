@@ -5,7 +5,6 @@ import {
   FormControl,
   FormControlLabel,
   FormGroup,
-  FormHelperText,
   RadioGroup,
   TextField,
   Typography,

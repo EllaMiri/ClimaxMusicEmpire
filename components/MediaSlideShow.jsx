@@ -1,7 +1,7 @@
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Modal, Box } from "@mui/material";
-import { useState, useEffect, useContext } from "react";
+import { useState, useContext } from "react";
 import styles from "../styles/MediaSlideShow.module.css";
 import { images } from "./data/data";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";

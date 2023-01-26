@@ -1,7 +1,6 @@
 import { Box, Typography } from "@mui/material";
-import Image from "next/image";
 import MediaSlideShow from "../components/MediaSlideShow";
-import { useState, useEffect, useContext } from "react";
+import { useContext } from "react";
 import styles from "../styles/Media.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SEO from "@bradgarropy/next-seo";

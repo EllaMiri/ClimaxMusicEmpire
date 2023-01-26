@@ -1,6 +1,5 @@
 import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import Link from "next/link";
 import styles from "../../styles/Artists.module.css";
 import SEO from "@bradgarropy/next-seo";
 import { useRouter } from "next/router";

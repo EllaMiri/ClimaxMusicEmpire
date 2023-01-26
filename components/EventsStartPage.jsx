@@ -1,6 +1,6 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import styles from "../styles/Events.module.css";
+import styles from "../styles/EventsStartPage.module.css";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import Image from "next/image";

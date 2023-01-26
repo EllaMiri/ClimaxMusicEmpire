@@ -1,7 +1,6 @@
 import { Typography, Box, Button } from "@mui/material";
 import { useRouter } from "next/router";
-import styles from "../styles/Artist.module.css";
-import Image from "next/image";
+import styles from "../styles/ArtistStartPage.module.css";
 
 const Artist = () => {
   const router = useRouter();

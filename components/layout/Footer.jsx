@@ -1,9 +1,9 @@
-import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
+import logo from "../../public/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Footer.module.css";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import Link from "next/link";
-import { Link as Scroll, scroller } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import YouTubeIcon from "@mui/icons-material/YouTube";

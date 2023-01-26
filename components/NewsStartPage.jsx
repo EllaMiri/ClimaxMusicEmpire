@@ -1,7 +1,7 @@
 import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import Link from "next/link";
-import styles from "../styles/News.module.css";
+import styles from "../styles/NewsStartPage.module.css";
 import { useRouter } from "next/router";
 import { useContext } from "react";
 import Image from "next/image";
