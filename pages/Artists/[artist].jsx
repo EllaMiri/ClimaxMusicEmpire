@@ -19,7 +19,7 @@ const DetailedArtist = () => {
     {
       name: "BOI",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Boi Ous is from the Smiling Coast of West Africa, the Gambia. A very talented, creative & gifted mind when it comes to what he do. His music is based on his everyday lifestyle as a creative and motivated young man trying to figure out life. His songs are uplifting and very inspirational to each and every one of his listeners.",
       name1: "OUS",
 
       image: "/BoiOusDetailImage.png",
