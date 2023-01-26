@@ -3,7 +3,6 @@ import styles from "../styles/Discography.module.css";
 import Iframe from "react-iframe";
 
 const FreshgeeDiscography = () => {
-
   // Array with the spotify songs
   let songs = [
     {
@@ -17,7 +16,7 @@ const FreshgeeDiscography = () => {
     },
   ];
 
-    // Array with the youtube videos
+  // Array with the youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/E5fMwwtMQE8",
@@ -60,8 +59,12 @@ const FreshgeeDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-           <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+            <div
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to listen to this song.</p>
@@ -82,7 +85,11 @@ const FreshgeeDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to watch this video.</p>

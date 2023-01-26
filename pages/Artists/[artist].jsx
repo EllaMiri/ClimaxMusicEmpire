@@ -24,9 +24,7 @@ const DetailedArtist = () => {
       name1: "OUS",
 
       image: "/BoiOusDetailImage.png",
-      instagram: (
-        <InstagramIcon className={styles.instagramIcon} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
       youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
@@ -40,15 +38,13 @@ const DetailedArtist = () => {
       name1: "DS",
 
       image: "/IcekidDsDetailImage.png",
-      instagram: (
-        <InstagramIcon className={styles.instagramIcon}  />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
       youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
 
-   // Array with information about artist Freshgee
+  // Array with information about artist Freshgee
   const freshgeeMockData = [
     {
       name: "FRESH",
@@ -57,15 +53,13 @@ const DetailedArtist = () => {
       name1: "GEE",
 
       image: "/FreshgeeDetailImage.png",
-      instagram: (
-        <InstagramIcon className={styles.instagramIcon} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
       youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
-  
-   // Array with information about artist Principal of Minds
+
+  // Array with information about artist Principal of Minds
   const principalOfMindsMockData = [
     {
       name: "PRINCIPAL OF",
@@ -74,9 +68,7 @@ const DetailedArtist = () => {
       name1: "MINDS",
 
       image: "/PrincipalOfMindsDetailImage.png",
-      instagram: (
-        <InstagramIcon className={styles.instagramIcon} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
       youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
@@ -110,7 +102,6 @@ const DetailedArtist = () => {
     width: { md: "32%" },
     marginTop: "1rem",
   };
-
 
   // Renders out artist depending on the query in the URL
   return (

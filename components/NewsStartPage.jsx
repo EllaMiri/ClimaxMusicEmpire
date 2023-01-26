@@ -9,16 +9,14 @@ import { MobileContext } from "../pages/_app";
 
 const News = () => {
   const router = useRouter();
-  
+
   //Context for responivness
   const isMobile = useContext(MobileContext);
 
   return (
     <>
       {isMobile && (
-        <Box
-          className={styles.mobileContainer}
-        >
+        <Box className={styles.mobileContainer}>
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">

@@ -8,16 +8,14 @@ import { MobileContext } from "../pages/_app";
 
 const EventsStartPage = () => {
   const router = useRouter();
-  
+
   //Context for the responsivness
   const isMobile = useContext(MobileContext);
 
   return (
     <>
       {isMobile && (
-        <Box
-          className={styles.mobileContainer}
-        >
+        <Box className={styles.mobileContainer}>
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
@@ -79,9 +77,7 @@ const EventsStartPage = () => {
         </Box>
       )}
       {!isMobile && (
-        <Box
-          className={styles.container}
-        >
+        <Box className={styles.container}>
           <Box className={styles.eventImage}>
             <Image
               fill

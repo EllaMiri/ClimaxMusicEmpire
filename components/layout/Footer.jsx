@@ -11,7 +11,6 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { useRouter } from "next/router";
 
 const Footer = () => {
-
   // Media queries
   const lowerMediaQueries = {
     fontSize: { xs: ".7rem", sm: ".8rem", md: "1rem" },
@@ -56,30 +55,24 @@ const Footer = () => {
           href="https://www.instagram.com/climaxmusicempire/"
           target="_blank"
         >
-          <InstagramIcon
-          className={styles.instagramIcon}
-          />
+          <InstagramIcon className={styles.instagramIcon} />
         </Link>
         <Link
           aria-label="Climax Music Empire facebook account"
           href="https://www.facebook.com/profile.php?id=100085416694420"
           target="_blank"
         >
-          <FacebookIcon
-          className={styles.facebookIcon}
-          />
+          <FacebookIcon className={styles.facebookIcon} />
         </Link>
         <Link
           aria-label="Climax Music Empire twitter account"
           href="https://twitter.com/Climaxmusicemp"
           target="_blank"
         >
-          <TwitterIcon
-          className={styles.twitterIcon}
-          />
+          <TwitterIcon className={styles.twitterIcon} />
         </Link>
       </Box>
-      
+
       <Box className={styles.lower}>
         <Link className={styles.link} href="/News">
           <Typography

@@ -3,7 +3,6 @@ import styles from "../styles/AboutUs.module.css";
 import Image from "next/image";
 
 const AboutUs = () => {
-
   // Media queries
   const aboutUSMediaQueries = {
     display: { xs: "flex", sm: "flex" },
@@ -43,10 +42,7 @@ const AboutUs = () => {
   };
 
   return (
-    <Box
-      className={styles.aboutUsContainer}
-      sx={aboutUSMediaQueries}
-    >
+    <Box className={styles.aboutUsContainer} sx={aboutUSMediaQueries}>
       <Box className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ABOUT

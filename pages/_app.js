@@ -26,7 +26,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <>
-    {/* Theme provider to use the custom Material UI Theme */}
+      {/* Theme provider to use the custom Material UI Theme */}
       <ThemeProvider theme={CustomTheme}>
         <MobileContext.Provider value={isMobile}>
           <SEO

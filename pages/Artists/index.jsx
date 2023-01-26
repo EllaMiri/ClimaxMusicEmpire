@@ -81,12 +81,7 @@ const Artists = () => {
       <Box sx={artistBoxMediaQueries} className={styles.artistContainer}>
         <Box sx={boiOusMediaQueries}>
           <Box className={styles.artistNameBox}>
-            <Typography
-            
-              className={styles.monserrat}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               BOI
             </Typography>
             <Typography
@@ -112,11 +107,7 @@ const Artists = () => {
         </Box>
         <Box>
           <Box className={styles.artistNameBox}>
-            <Typography
-              className={styles.monserrat}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               ICEKID
             </Typography>
             <Typography
@@ -142,18 +133,10 @@ const Artists = () => {
         </Box>
         <Box sx={freshgeeMediaQueries}>
           <Box className={styles.artistNameBox}>
-            <Typography
-             className={styles.monserrat}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               FRESH
             </Typography>
-            <Typography
-              component="p"
-              variant="p"
-              className={styles.yellowText}
-            >
+            <Typography component="p" variant="p" className={styles.yellowText}>
               GEE
             </Typography>
           </Box>
@@ -171,11 +154,7 @@ const Artists = () => {
         </Box>
         <Box>
           <Box className={styles.artistNameBox}>
-            <Typography
-              className={styles.monserrat}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               PRINCIPAL OF
             </Typography>
             <Typography

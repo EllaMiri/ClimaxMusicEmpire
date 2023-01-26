@@ -21,7 +21,6 @@ const style = {
 };
 
 const MediaSlideShow = () => {
-  
   //States for current image, clicked image and open of the modal
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
@@ -56,7 +55,7 @@ const MediaSlideShow = () => {
     setCurrentIndex(newIndex);
   };
 
-   //Sets the right image when you click it and lets you click the left arrow
+  //Sets the right image when you click it and lets you click the left arrow
   const handelRotationLeft = () => {
     const totalLength = images.length;
     if (currentIndex === 0) {
@@ -301,7 +300,6 @@ const MediaSlideShow = () => {
       {!isMobile && clickedImage && (
         <Modal
           open={open}
-         
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"

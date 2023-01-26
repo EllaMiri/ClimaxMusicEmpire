@@ -20,10 +20,10 @@ import styles from "../../styles/ContactForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-  //Contact Form on the start page
+//Contact Form on the start page
 const ContactForm = () => {
   // States for the information in the contact form
-  
+
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
   const [firstname, setFirstName] = useState();
@@ -112,15 +112,8 @@ const ContactForm = () => {
   };
 
   return (
-    <Box
-      className={styles.contactForm}
-      component="form"
-      ref={form}
-      noValidate
-    >
-      <div
-      className={styles.container}
-      >
+    <Box className={styles.contactForm} component="form" ref={form} noValidate>
+      <div className={styles.container}>
         <FormControl>
           <RadioGroup
             sx={radioGroup}

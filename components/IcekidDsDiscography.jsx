@@ -3,7 +3,6 @@ import styles from "../styles/Discography.module.css";
 import Iframe from "react-iframe";
 
 const IcekidDsDiscography = () => {
-
   // Array with the spotify songs
   let songs = [
     {
@@ -50,7 +49,7 @@ const IcekidDsDiscography = () => {
     },
   ];
 
-    // Array with the youtube videos
+  // Array with the youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/b0hPwFZIyWo",
@@ -92,8 +91,12 @@ const IcekidDsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-             <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+            <div
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to listen to this song.</p>
@@ -114,8 +117,12 @@ const IcekidDsDiscography = () => {
               display="block"
               position="relative"
             />
-           <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+            <div
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to watch this video.</p>

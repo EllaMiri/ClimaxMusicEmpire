@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
 
 const PrincipalOfMindsDiscography = () => {
-
   // Array of the spotify songs
   let songs = [
     {
@@ -34,7 +33,7 @@ const PrincipalOfMindsDiscography = () => {
     },
   ];
 
-   //Array of youtube videos
+  //Array of youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/oLEpNF7m9ZA",
@@ -44,7 +43,6 @@ const PrincipalOfMindsDiscography = () => {
     },
   ];
 
-  
   // Media queries
   const titleMediaQueries = {
     fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
@@ -78,8 +76,12 @@ const PrincipalOfMindsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-          <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+            <div
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to listen to this song.</p>
@@ -100,8 +102,12 @@ const PrincipalOfMindsDiscography = () => {
               display="block"
               position="relative"
             />
-           <div
-              style={{ color: "white", display: "flex", justifyContent: "center" }}
+            <div
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
               <p> Please accept marketing-cookies to watch this video.</p>

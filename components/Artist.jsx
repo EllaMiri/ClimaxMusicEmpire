@@ -6,7 +6,6 @@ import Image from "next/image";
 const Artist = () => {
   const router = useRouter();
 
-
   // Media queries
   const artistMediaQueries = {
     display: { xs: "flex", sm: "flex" },
@@ -48,10 +47,7 @@ const Artist = () => {
   };
 
   return (
-    <Box
-      id="contact2"
-      sx={artistMediaQueries}
-    >
+    <Box id="contact2" sx={artistMediaQueries}>
       <Box sx={titleBoxMediaQueries} className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ARTIST

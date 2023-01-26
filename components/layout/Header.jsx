@@ -9,7 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link as Scroll, scroller } from "react-scroll";
 import { useRouter } from "next/router";
 
-  //Header
+//Header
 const Header = () => {
   //State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -120,7 +120,6 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    
                     onClick={scrollToPageDesktop}
                     className={styles.listItems}
                   >
@@ -189,7 +188,7 @@ const Header = () => {
             <nav className={styles.headerRight}>
               <CloseIcon
                 onClick={toggleMenu}
-               className={styles.closeIcon}
+                className={styles.closeIcon}
               ></CloseIcon>
               <ul className={styles.navLinks}>
                 <li className={styles.listItemsOpen}>

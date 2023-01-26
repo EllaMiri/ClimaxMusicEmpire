@@ -1,6 +1,5 @@
 import { createTheme } from "@mui/material/styles";
 
-
 // Our custom theme created with Material UI to enable custom styling to elements
 let customTheme = createTheme();
 customTheme = createTheme(customTheme, {

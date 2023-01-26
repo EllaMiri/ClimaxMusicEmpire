@@ -13,11 +13,11 @@ const Media = () => {
 
   //Media queries
   const h1TitleMediaQueries = {
-    fontSize: { xs: "2.5rem", sm: '3.75rem', md: "4rem" },
+    fontSize: { xs: "2.5rem", sm: "3.75rem", md: "4rem" },
   };
 
   const h2TitleMediaQueries = {
-    fontSize: { sm: "2.5rem", sm: '3.75rem', md: "4rem" },
+    fontSize: { sm: "2.5rem", sm: "3.75rem", md: "4rem" },
   };
 
   return (

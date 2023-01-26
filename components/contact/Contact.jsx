@@ -3,7 +3,6 @@ import styles from "../../styles/Contact.module.css";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
-
   // Media queries for the contact part on the start page
 
   const contactPageMediaQueries = {
@@ -37,11 +36,7 @@ const Contact = () => {
             <Typography variant="h2" component="h2">
               CONTACT
             </Typography>
-            <Typography
-              variant="h2"
-              component="h2"
-              className={styles.us}
-            >
+            <Typography variant="h2" component="h2" className={styles.us}>
               US
             </Typography>
           </Box>

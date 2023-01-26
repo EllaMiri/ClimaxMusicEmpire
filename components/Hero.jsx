@@ -3,7 +3,6 @@ import styles from "../styles/Hero.module.css";
 import { Link } from "react-scroll";
 
 const Hero = () => {
-
   // Media queries
   const textContentMediaQueries = {
     width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
@@ -44,11 +43,7 @@ const Hero = () => {
         </video>
       </Box>
       <Box sx={mobileImageMediaQueries}>
-        <img
-          src="./IcekidDsShow.png"
-          alt=""
-          className={styles.img}
-        />
+        <img src="./IcekidDsShow.png" alt="" className={styles.img} />
       </Box>
       <Box className={styles.heroText} sx={textContentMediaQueries}>
         <Box className={styles.titleBox} sx={titleBoxMediaQueries}>
@@ -67,11 +62,7 @@ const Hero = () => {
             </Typography>
           </Box>
           <Box sx={descriptionMediaQueries} className={styles.description}>
-            <Typography
-              className={styles.paragraph}
-              variant="p"
-              component="p"
-            >
+            <Typography className={styles.paragraph} variant="p" component="p">
               Swedens aspiring music label
             </Typography>
             <Link
