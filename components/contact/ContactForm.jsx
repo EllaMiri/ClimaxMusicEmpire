@@ -23,11 +23,21 @@ import "react-toastify/dist/ReactToastify.css";
 const ContactForm = () => {
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
+  const [firstname, setFirstName] = useState();
+  const [lastname, setLastName] = useState();
+  const [email, setEmail] = useState();
+  const [company, setCompany] = useState();
+  const [description, setDescription] = useState();
+
   const [checked, setChecked] = useState(true);
 
   const submitNofify = () => toast.success("Email sent");
 
   const form = useRef();
+
+  const handleForm = () => {
+    form.current.reset();
+  };
 
   const handleShow = (e) => {
     const getShow = e.target.value;
@@ -55,6 +65,7 @@ const ContactForm = () => {
           console.log(error.text);
         }
       );
+    handleForm();
     submitNofify();
   };
 
@@ -96,7 +107,7 @@ const ContactForm = () => {
       className={styles.contactForm}
       component="form"
       ref={form}
-      onSubmit={onSubmit}
+      // onSubmit={e => handleForm(e)}
       noValidate
     >
       <div
@@ -144,6 +155,8 @@ const ContactForm = () => {
         <Box className={styles.formBox}>
           <TextField
             className={styles.text}
+            value={firstname}
+            onChange={(e) => setFirstName(e.target.value)}
             required
             id="firstname"
             name="firstName"
@@ -156,6 +169,8 @@ const ContactForm = () => {
           </Typography>
           <TextField
             className={styles.text}
+            value={lastname}
+            onChange={(e) => setLastName(e.target.value)}
             required
             id="lastname"
             name="lastName"
@@ -167,13 +182,21 @@ const ContactForm = () => {
             {errors.lastname?.message}
           </Typography>
           {showHide === "showCompany" ? (
-            <TextField className={styles.text} id="company" label="Company" />
+            <TextField
+              className={styles.text}
+              id="company"
+              label="Company"
+              value={company}
+              onChange={(e) => setCompany(e.target.value)}
+            />
           ) : (
             ""
           )}
 
           <TextField
             className={styles.text}
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
             id="email"
             name="email"
@@ -187,6 +210,8 @@ const ContactForm = () => {
 
           <TextField
             sx={descriptionMediaQueries}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
             required
             id="description"
             name="description"
@@ -204,8 +229,15 @@ const ContactForm = () => {
           <FormGroup>
             <FormControl>
               <FormControlLabel
-                control={<Checkbox onChange={handleChange} required />}
-                label="I accept that this information is being sent to the company in the purpose of contact!"
+                style={{ color: "white" }}
+                control={
+                  <Checkbox
+                    style={{ color: "white" }}
+                    onChange={handleChange}
+                    required
+                  />
+                }
+                label="I accept that this information is being sent to the company for contact purposes."
                 id="approve"
                 name="approve"
                 {...register("approve")}

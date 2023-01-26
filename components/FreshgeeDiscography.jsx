@@ -57,8 +57,7 @@ const FreshgeeDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white", cursor: "pointer" }}
-              onClick={Cookiebot.renew()}
+              style={{ color: "white" }}
               className="cookieconsent-optout-marketing"
             >
               Please
@@ -81,8 +80,7 @@ const FreshgeeDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white", cursor: "pointer" }}
-              onClick={Cookiebot.renew()}
+              style={{ color: "white" }}
               className="cookieconsent-optout-marketing"
             >
               Please
