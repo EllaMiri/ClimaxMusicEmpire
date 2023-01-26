@@ -15,19 +15,21 @@ const style = {
   transform: "translate(-50%, -50%)",
   bgcolor: "black",
   width: { md: "80%", xl: "60%" },
-  // height: { md: "70%" },
   border: "2px solid #e2b945",
   boxShadow: 24,
   p: 4,
 };
 
 const MediaSlideShow = () => {
+  //States for current image, clicked image and open of the modal
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [open, setOpen] = useState(false);
 
+  //Context for responsivness
   const isMobile = useContext(MobileContext);
 
+  //Handles the modal
   const handleOpen = (item, index) => {
     setOpen(true);
     setCurrentIndex(index);
@@ -35,6 +37,7 @@ const MediaSlideShow = () => {
   };
   const handleClose = () => setOpen(false);
 
+  //Sets the right image when you click it and lets you click the right arrow
   const handelRotationRight = () => {
     const totalLength = images.length;
     if (currentIndex + 1 >= totalLength) {
@@ -52,6 +55,7 @@ const MediaSlideShow = () => {
     setCurrentIndex(newIndex);
   };
 
+  //Sets the right image when you click it and lets you click the left arrow
   const handelRotationLeft = () => {
     const totalLength = images.length;
     if (currentIndex === 0) {
@@ -296,10 +300,6 @@ const MediaSlideShow = () => {
       {!isMobile && clickedImage && (
         <Modal
           open={open}
-          // clickedImg={clickedImage}
-          // handelrotationright={handelRotationRight}
-          // setclickedimg={setClickedImage}
-          // handelrotationleft={handelRotationLeft}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"

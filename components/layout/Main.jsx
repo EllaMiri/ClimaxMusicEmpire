@@ -7,6 +7,7 @@ import Contact from "../contact/Contact";
 import EventsStartPage from "../EventsStartPage";
 
 const Main = () => {
+  // Component that renders the other components to the start page
   return (
     <div>
       <Hero />

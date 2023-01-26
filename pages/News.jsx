@@ -9,6 +9,7 @@ import { MobileContext } from "./_app";
 const News = () => {
   const isMobile = useContext(MobileContext);
 
+  // Media queries
   const h1MediaQueries = {
     fontSize: { xs: "2.5rem", sm: "3.75rem" },
   };

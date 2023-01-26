@@ -1,3 +1,5 @@
+// Data for the slideshow
+
 export const images = [
   {
     image: "/BoiOusArtist.png",

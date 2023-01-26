@@ -5,6 +5,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        {/* Script from cookiebot that renders the cookie-banner on the page and controls the consent for the cookies */}
         <Script
           id="Cookiebot"
           src="https://consent.cookiebot.com/uc.js"
@@ -13,6 +14,7 @@ export default function Document() {
           type="text/javascript"
           strategy="beforeInteractive"
         ></Script>
+        {/* Google fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
         <link
           rel="preconnect"

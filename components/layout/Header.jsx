@@ -9,46 +9,19 @@ import CloseIcon from "@mui/icons-material/Close";
 import { Link as Scroll, scroller } from "react-scroll";
 import { useRouter } from "next/router";
 
+//Header
 const Header = () => {
+  //State
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  //Hamburger menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   const router = useRouter();
 
-  // const scrollTargetDesktop = (target) =>
-  //   scroller.scrollTo(target, {
-  //     smooth: true,
-  //     duration: 700,
-  //     offset: 0,
-  //     spy: true,
-  //   });
-
-  // const scrollToPageDesktop = async (target) => {
-  //   if (router.pathname !== "/") {
-  //     await router.push("/");
-  //   }
-  //   scrollTargetDesktop(target);
-  // };
-
-  // const scrollTargetMobile = (target) =>
-  //   scroller.scrollTo(target, {
-  //     smooth: true,
-  //     duration: 700,
-  //     offset: 0,
-  //     spy: true,
-  //   });
-
-  // const scrollToPageMobile = async (target) => {
-  //   if (router.pathname !== "/") {
-  //     await router.push("/");
-  //   }
-  //   scrollTargetMobile(target);
-  //   toggleMenu();
-  // };
-
+  //Scroll to the Contact form
   function scrollToContact() {
     window.scrollTo({
       top: 1900,
@@ -57,6 +30,7 @@ const Header = () => {
     });
   }
 
+  // Scroll to contact function for mobile
   const scrollToPageMobile = async () => {
     if (router.pathname !== "/") {
       await router.push("/");
@@ -64,6 +38,8 @@ const Header = () => {
     scrollToContact();
     toggleMenu();
   };
+
+  // Scroll to contact function for desktop
   const scrollToPageDesktop = async () => {
     if (router.pathname !== "/") {
       await router.push("/");
@@ -71,6 +47,7 @@ const Header = () => {
     scrollToContact();
   };
 
+  //Media queries
   const burgerMenuBreakpoints = {
     display: { xs: "block", sm: "block", md: "none", lg: "none", xl: "none" },
     cursor: "pointer",
@@ -143,7 +120,6 @@ const Header = () => {
                 </li>
                 {router.pathname !== "/" && (
                   <li
-                    // onClick={() => scrollToPageDesktop("contact2")}
                     onClick={scrollToPageDesktop}
                     className={styles.listItems}
                   >
@@ -212,11 +188,7 @@ const Header = () => {
             <nav className={styles.headerRight}>
               <CloseIcon
                 onClick={toggleMenu}
-                style={{
-                  color: "white",
-                  fontSize: "2.5rem",
-                  cursor: "pointer",
-                }}
+                className={styles.closeIcon}
               ></CloseIcon>
               <ul className={styles.navLinks}>
                 <li className={styles.listItemsOpen}>
@@ -281,13 +253,6 @@ const Header = () => {
                     </Scroll>
                   </li>
                 )}
-
-                {/* <li className={styles.listItemsOpen}>
-                  
-                  <Typography variant="p" component="p">
-                    Contact
-                  </Typography>
-                </li> */}
                 <li className={styles.listItemsOpen}>
                   <Link
                     onClick={toggleMenu}

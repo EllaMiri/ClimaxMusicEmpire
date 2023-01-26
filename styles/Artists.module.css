@@ -1,5 +1,6 @@
 .yellowText {
   color: #e2b945 !important;
+  font-family: Montserrat !important;
 }
 
 .artistContainer {
@@ -17,7 +18,7 @@
 
 .image {
   display: block;
-  width: 100%;
+  width: 18rem !important;
   height: auto;
 }
 
@@ -55,4 +56,8 @@
 
 .imageContainer:hover .overlay {
   opacity: 1;
+}
+
+.monserrat {
+  font-family: Montserrat !important;
 }

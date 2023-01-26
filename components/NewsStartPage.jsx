@@ -9,15 +9,14 @@ import { MobileContext } from "../pages/_app";
 
 const News = () => {
   const router = useRouter();
+
+  //Context for responivness
   const isMobile = useContext(MobileContext);
 
   return (
     <>
       {isMobile && (
-        <Box
-          style={{ marginBottom: "11rem" }}
-          className={styles.mobileContainer}
-        >
+        <Box className={styles.mobileContainer}>
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
@@ -90,7 +89,7 @@ const News = () => {
         </Box>
       )}
       {!isMobile && (
-        <Box style={{ marginBottom: "11rem" }} className={styles.container}>
+        <Box className={styles.container}>
           <Box className={styles.container}>
             <img
               src="./shedondey.png"

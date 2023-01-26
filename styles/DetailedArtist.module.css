@@ -26,6 +26,16 @@
   height: auto;
 }
 
+.instagramIcon {
+  font-size: 2rem !important;
+  color: #e2b945 !important;
+}
+
+.youtubeIcon {
+  font-size: 2.5rem !important;
+  color: #e2b945 !important;
+}
+
 @media screen and (max-width: 1200px) {
   .artistImage {
     width: 30%;

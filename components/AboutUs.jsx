@@ -3,6 +3,7 @@ import styles from "../styles/AboutUs.module.css";
 import Image from "next/image";
 
 const AboutUs = () => {
+  // Media queries
   const aboutUSMediaQueries = {
     display: { xs: "flex", sm: "flex" },
     alignItems: { xs: "center", sm: "center", md: "flex-start" },
@@ -30,7 +31,7 @@ const AboutUs = () => {
       md: "row-reverse",
       lg: "row-reverse",
     },
-    justifyContent: { xs: "center", sm: "space-around" },
+    justifyContent: { xs: "center", sm: "space-between" },
     alignItems: { xs: "center" },
   };
 
@@ -41,11 +42,7 @@ const AboutUs = () => {
   };
 
   return (
-    <Box
-      style={{ marginBottom: "11rem" }}
-      // style={{ minHeight: "105vh", display: "flex", justifyContent: "center" }}
-      sx={aboutUSMediaQueries}
-    >
+    <Box className={styles.aboutUsContainer} sx={aboutUSMediaQueries}>
       <Box className={styles.titleBox}>
         <Typography component="h2" variant="h2">
           ABOUT

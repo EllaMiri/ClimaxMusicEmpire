@@ -3,6 +3,7 @@ import styles from "../styles/Discography.module.css";
 import Iframe from "react-iframe";
 
 const FreshgeeDiscography = () => {
+  // Array with the spotify songs
   let songs = [
     {
       url: "https://open.spotify.com/embed/album/4jralfqL4gCZAPO8X1hBjg?utm_source=generator",
@@ -15,6 +16,7 @@ const FreshgeeDiscography = () => {
     },
   ];
 
+  // Array with the youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/E5fMwwtMQE8",
@@ -23,13 +25,24 @@ const FreshgeeDiscography = () => {
       url: "https://www.youtube.com/embed/dL_QIZN0vVk",
     },
   ];
+
+  //Media queries
+  const titleMediaQueries = {
+    fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+  };
+
   return (
     <Box>
       <Box className={styles.title}>
-        <Typography variant="h2" component="h2">
+        <Typography sx={titleMediaQueries} variant="h2" component="h2">
           DISCOGRAPH
         </Typography>
-        <Typography className={styles.goldColor} variant="h2" component="h2">
+        <Typography
+          sx={titleMediaQueries}
+          className={styles.goldColor}
+          variant="h2"
+          component="h2"
+        >
           Y
         </Typography>
       </Box>
@@ -47,12 +60,14 @@ const FreshgeeDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white" }}
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to play this song.
+              <p> Please accept marketing-cookies to listen to this song.</p>
             </div>
           </Box>
         ))}
@@ -70,12 +85,14 @@ const FreshgeeDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
+              style={{
+                color: "white",
+                display: "flex",
+                justifyContent: "center",
+              }}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to watch this video.
+              <p> Please accept marketing-cookies to watch this video.</p>
             </div>
           </Box>
         ))}

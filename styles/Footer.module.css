@@ -39,3 +39,31 @@
 .container {
   margin-top: 7rem;
 }
+
+.youtubeIcon {
+  color: white !important;
+  font-size: 2.4rem !important;
+}
+
+.instagramIcon {
+  color: white !important;
+  font-size: 2rem !important;
+  margin-left: 3rem !important;
+}
+
+.facebookIcon {
+  color: white !important;
+  font-size: 2rem !important;
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
+
+}
+
+.twitterIcon {
+  color: white !important;
+  font-size: 2rem !important;
+}
+
+.link {
+  text-decoration: none !important;
+}

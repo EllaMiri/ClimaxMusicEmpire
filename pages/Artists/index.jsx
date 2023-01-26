@@ -6,6 +6,7 @@ import SEO from "@bradgarropy/next-seo";
 import { useRouter } from "next/router";
 
 const Artists = () => {
+  //Media queries
   const artistsBoxMediaQueries = {
     paddingTop: { xs: "6rem" },
   };
@@ -41,6 +42,7 @@ const Artists = () => {
 
   const router = useRouter();
 
+  // Function for routing that refresh the page when going to each artist page, so that the cookie-banner will update
   const routePrincipalOfMinds = async () => {
     await router.push("/Artists/PrincipalOfMinds");
     router.reload();
@@ -79,17 +81,13 @@ const Artists = () => {
       <Box sx={artistBoxMediaQueries} className={styles.artistContainer}>
         <Box sx={boiOusMediaQueries}>
           <Box className={styles.artistNameBox}>
-            <Typography
-              style={{ fontFamily: "Montserrat" }}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               BOI
             </Typography>
             <Typography
               component="p"
               variant="p"
-              style={{ fontFamily: "Montserrat", marginLeft: "0.5rem" }}
+              style={{ marginLeft: "0.5rem" }}
               className={styles.yellowText}
             >
               OUS
@@ -100,7 +98,6 @@ const Artists = () => {
             <img
               src="./BoiOusArtist.png"
               alt="Artist Boi Ous"
-              style={{ height: "auto", width: "18rem" }}
               className={styles.image}
             />
             <Box className={styles.overlay}>
@@ -110,17 +107,13 @@ const Artists = () => {
         </Box>
         <Box>
           <Box className={styles.artistNameBox}>
-            <Typography
-              style={{ fontFamily: "Montserrat" }}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               ICEKID
             </Typography>
             <Typography
               component="p"
               variant="p"
-              style={{ fontFamily: "Montserrat", marginLeft: "0.5rem" }}
+              style={{ marginLeft: "0.5rem" }}
               className={styles.yellowText}
             >
               DS
@@ -132,7 +125,6 @@ const Artists = () => {
               src="./IcekidDsArtist.png"
               alt="Artist IceKid DS"
               className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
             />
             <Box className={styles.overlay}>
               <Typography className={styles.text}>READ MORE</Typography>
@@ -141,19 +133,10 @@ const Artists = () => {
         </Box>
         <Box sx={freshgeeMediaQueries}>
           <Box className={styles.artistNameBox}>
-            <Typography
-              style={{ fontFamily: "Montserrat" }}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               FRESH
             </Typography>
-            <Typography
-              component="p"
-              variant="p"
-              style={{ fontFamily: "Montserrat" }}
-              className={styles.yellowText}
-            >
+            <Typography component="p" variant="p" className={styles.yellowText}>
               GEE
             </Typography>
           </Box>
@@ -163,7 +146,6 @@ const Artists = () => {
               src="./FreshgeeArtist.png"
               alt="Artist Freshgee"
               className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
             />
             <Box className={styles.overlay}>
               <Typography className={styles.text}>READ MORE</Typography>
@@ -172,17 +154,13 @@ const Artists = () => {
         </Box>
         <Box>
           <Box className={styles.artistNameBox}>
-            <Typography
-              style={{ fontFamily: "Montserrat" }}
-              component="p"
-              variant="p"
-            >
+            <Typography className={styles.monserrat} component="p" variant="p">
               PRINCIPAL OF
             </Typography>
             <Typography
               component="p"
               variant="p"
-              style={{ fontFamily: "Montserrat", marginLeft: "0.5rem" }}
+              style={{ marginLeft: "0.5rem" }}
               className={styles.yellowText}
             >
               MINDS
@@ -197,14 +175,12 @@ const Artists = () => {
               src="./PrincipalOfMindsArtist.png"
               alt="Artist Principal of Minds"
               className={styles.image}
-              style={{ height: "auto", width: "18rem" }}
             />
             <Box className={styles.overlay}>
               <Typography className={styles.text}>READ MORE</Typography>
             </Box>
           </Box>
         </Box>
-        ;
       </Box>
     </Box>
   );

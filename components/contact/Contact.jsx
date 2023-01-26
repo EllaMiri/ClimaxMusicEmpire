@@ -3,6 +3,8 @@ import styles from "../../styles/Contact.module.css";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
+  // Media queries for the contact part on the start page
+
   const contactPageMediaQueries = {
     flexDirection: { xs: "column", md: "row" },
     alignItems: { xs: "center" },
@@ -19,18 +21,11 @@ const Contact = () => {
 
   const descriptionBoxMediaQueries = {
     textAlign: { xs: "center" },
-    // marginLeft: "1.3rem",
-    // marginRight: "auto",
   };
 
+  // Text for the contact part including the contact form component
   return (
     <Box
-      style={{ marginBottom: "11rem" }}
-      // style={{
-      //   minHeight: "105vh",
-      //   display: "flex",
-      //   justifyContent: "center",
-      // }}
       id="contact"
       sx={contactPageMediaQueries}
       className={styles.contactPageBox}
@@ -41,17 +36,13 @@ const Contact = () => {
             <Typography variant="h2" component="h2">
               CONTACT
             </Typography>
-            <Typography
-              style={{ marginLeft: "1.2rem", color: "#e2b945" }}
-              variant="h2"
-              component="h2"
-            >
+            <Typography variant="h2" component="h2" className={styles.us}>
               US
             </Typography>
           </Box>
           <Box
             sx={descriptionBoxMediaQueries}
-            style={{ marginBottom: ".5rem" }}
+            className={styles.descriptionBox}
           >
             <Typography
               variant="p"

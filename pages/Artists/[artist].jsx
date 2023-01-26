@@ -15,6 +15,7 @@ const DetailedArtist = () => {
   const router = useRouter();
   const artist = router.query.artist;
 
+  // Array with information about artist Boi Ous
   const boiOusMockData = [
     {
       name: "BOI",
@@ -23,13 +24,12 @@ const DetailedArtist = () => {
       name1: "OUS",
 
       image: "/BoiOusDetailImage.png",
-      instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+  // Array with information about artist IceKid DS
   const icekidDsMockData = [
     {
       name: "ICEKID",
@@ -38,13 +38,13 @@ const DetailedArtist = () => {
       name1: "DS",
 
       image: "/IcekidDsDetailImage.png",
-      instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+
+  // Array with information about artist Freshgee
   const freshgeeMockData = [
     {
       name: "FRESH",
@@ -53,13 +53,13 @@ const DetailedArtist = () => {
       name1: "GEE",
 
       image: "/FreshgeeDetailImage.png",
-      instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+
+  // Array with information about artist Principal of Minds
   const principalOfMindsMockData = [
     {
       name: "PRINCIPAL OF",
@@ -68,14 +68,13 @@ const DetailedArtist = () => {
       name1: "MINDS",
 
       image: "/PrincipalOfMindsDetailImage.png",
-      instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
-      ),
+      instagram: <InstagramIcon className={styles.instagramIcon} />,
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
 
+  //Media queries
   const ArtistBoxMediaQueries = {
     flexDirection: { xs: "column", md: "row" },
   };
@@ -83,13 +82,13 @@ const DetailedArtist = () => {
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
     flexWrap: "wrap",
-    // marginLeft: { xs: "0", md: "3rem" },
     marginBottom: { xs: ".5rem" },
   };
 
   const DescriptionMediaQueries = {
     textAlign: { xs: "center", md: "left" },
     marginTop: { xs: "1rem" },
+    width: { xs: "90%", md: "60%" },
   };
 
   const h1MediaQueries = {
@@ -97,6 +96,14 @@ const DetailedArtist = () => {
     display: { xs: "block" },
   };
 
+  const iconsMediaQueries = {
+    display: "flex",
+    justifyContent: "space-evenly",
+    width: { md: "32%" },
+    marginTop: "1rem",
+  };
+
+  // Renders out artist depending on the query in the URL
   return (
     <Box>
       {artist === "PrincipalOfMinds" &&
@@ -124,27 +131,18 @@ const DetailedArtist = () => {
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
                 className={styles.artistImage}
-                // style={{ width: "25%" }}
                 src={principalOfMinds.image}
                 alt="pricipal of minds image"
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
                 {principalOfMinds.description}
               </Typography>
             </Box>
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                width: "32%",
-                marginTop: "1rem",
-              }}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/principalofminds/"
                 target="_blank"
@@ -197,21 +195,13 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
                 {boiOus.description}
               </Typography>
             </Box>
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                width: "32%",
-                marginTop: "1rem",
-              }}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/boi0usgram/"
                 target="_blank"
@@ -261,21 +251,13 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
                 {icekidDs.description}
               </Typography>
             </Box>
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                width: "32%",
-                marginTop: "1rem",
-              }}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link href="https://www.instagram.com/icekid_ds/" target="_blank">
                 {icekidDs.instagram}
               </Link>
@@ -325,21 +307,13 @@ const DetailedArtist = () => {
               />
               <Typography
                 sx={DescriptionMediaQueries}
-                style={{ width: "60%" }}
                 variant="p"
                 component="p"
               >
                 {freshgee.description}
               </Typography>
             </Box>
-            <Box
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                width: "32%",
-                marginTop: "1rem",
-              }}
-            >
+            <Box sx={iconsMediaQueries}>
               <Link
                 href="https://www.instagram.com/official_freshgee/"
                 target="_blank"
