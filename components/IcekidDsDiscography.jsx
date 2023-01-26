@@ -72,9 +72,6 @@ const IcekidDsDiscography = () => {
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
               data-cookieconsent="marketing"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
-              // data-cookiecategory="functionality"
               data-cookieblock-src={song.url}
               width="100%"
               height="352"
@@ -83,6 +80,14 @@ const IcekidDsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
+            <div
+              style={{ color: "white" }}
+              className="cookieconsent-optout-marketing"
+            >
+              Please
+              <p>accept marketing-cookies</p>
+              to play this song.
+            </div>
           </Box>
         ))}
       </Box>
@@ -91,9 +96,6 @@ const IcekidDsDiscography = () => {
           <Box key={video.url} className={styles.videoIframeContainer}>
             <iframe
               data-cookieconsent="marketing"
-              // data-cookiecategory="targeting"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
               data-cookieblock-src={video.url}
               width="100%"
               height="320px"
@@ -102,6 +104,14 @@ const IcekidDsDiscography = () => {
               display="block"
               position="relative"
             />
+            <div
+              style={{ color: "white" }}
+              className="cookieconsent-optout-marketing"
+            >
+              Please
+              <p>accept marketing-cookies</p>
+              to watch this video.
+            </div>
           </Box>
         ))}
       </Box>

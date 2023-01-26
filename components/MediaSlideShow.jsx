@@ -1,11 +1,12 @@
 import { Fade } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";
 import { Modal, Box } from "@mui/material";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "../styles/MediaSlideShow.module.css";
 import { images } from "./data/data";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import { MobileContext } from "../pages/_app";
 
 const style = {
   position: "absolute",
@@ -13,17 +14,19 @@ const style = {
   left: "50%",
   transform: "translate(-50%, -50%)",
   bgcolor: "black",
-  width: { xs: "90%", xl: "60%" },
+  width: { md: "80%", xl: "60%" },
+  // height: { md: "70%" },
   border: "2px solid #e2b945",
   boxShadow: 24,
   p: 4,
 };
 
 const MediaSlideShow = () => {
-  const [isMobile, setIsMobile] = useState(false);
   const [clickedImage, setClickedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(null);
   const [open, setOpen] = useState(false);
+
+  const isMobile = useContext(MobileContext);
 
   const handleOpen = (item, index) => {
     setOpen(true);
@@ -65,17 +68,6 @@ const MediaSlideShow = () => {
     setClickedImage(newItem);
     setCurrentIndex(newIndex);
   };
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
 
   return (
     <div>
@@ -147,6 +139,138 @@ const MediaSlideShow = () => {
                 );
               })}
             </div>
+
+            <div className={styles.desktopImageContainer}>
+              {images.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.id === 7 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 8 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 9 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className={styles.desktopImageContainer}>
+              {images.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.id === 10 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 11 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 12 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className={styles.desktopImageContainer}>
+              {images.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.id === 13 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 14 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 15 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className={styles.desktopImageContainer}>
+              {images.map((item, index) => {
+                return (
+                  <div key={index}>
+                    {item.id === 16 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 17 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                    {item.id === 18 && (
+                      <img
+                        className={styles.imageMediaQueries}
+                        src={item.image}
+                        alt={item.id}
+                        onClick={() => handleOpen(item, index)}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </Fade>
         </div>
       )}
@@ -160,7 +284,7 @@ const MediaSlideShow = () => {
                 <img
                   src={item.image}
                   className={styles.imageMobileMediaQueries}
-                  alt=""
+                  alt={item.id}
                   onClick={() => handleOpen(item, index)}
                 />
               </div>
@@ -172,10 +296,10 @@ const MediaSlideShow = () => {
       {!isMobile && clickedImage && (
         <Modal
           open={open}
-          clickedImg={clickedImage}
-          handelRotationRight={handelRotationRight}
-          setClickedImg={setClickedImage}
-          handelRotationLeft={handelRotationLeft}
+          // clickedImg={clickedImage}
+          // handelrotationright={handelRotationRight}
+          // setclickedimg={setClickedImage}
+          // handelrotationleft={handelRotationLeft}
           onClose={handleClose}
           aria-labelledby="modal-modal-title"
           aria-describedby="modal-modal-description"

@@ -48,8 +48,13 @@ const Footer = () => {
   };
 
   return (
-    <footer>
+    <footer className={styles.container}>
       <Box className={styles.upper}>
+        <Link href="/">
+          <Image src={logo} alt="Climax Music Empire" width={50} />
+        </Link>
+      </Box>
+      <Box className={styles.middle}>
         <Link
           aria-label="Climax Music Empire youtube channel"
           href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
@@ -98,11 +103,11 @@ const Footer = () => {
           />
         </Link>
       </Box>
-      <Box className={styles.middle}>
+      {/* <Box className={styles.middle}>
         <Link href="/">
           <Image src={logo} alt="Climax Music Empire" width={50} />
         </Link>
-      </Box>
+      </Box> */}
       <Box className={styles.lower}>
         <Link style={{ textDecoration: "none" }} href="/News">
           <Typography
@@ -166,6 +171,16 @@ const Footer = () => {
             EVENTS
           </Typography>
         </Link>
+      </Box>
+      <Box className={styles.copyright}>
+        <Typography
+          variant="p"
+          component="p"
+          sx={lowerMediaQueries}
+          className={styles.links}
+        >
+          © Copyright 2023 Climax Music Empire
+        </Typography>
       </Box>
     </footer>
   );

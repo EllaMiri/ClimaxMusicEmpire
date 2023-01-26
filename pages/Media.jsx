@@ -1,24 +1,14 @@
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import MediaSlideShow from "../components/MediaSlideShow";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import styles from "../styles/Media.module.css";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import SEO from "@bradgarropy/next-seo";
+import { MobileContext } from "./_app";
 
 const Media = () => {
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const isMobile = useContext(MobileContext);
 
   const h1TitleMediaQueries = {
     fontSize: { xs: "2.5rem", md: "4rem" },
@@ -30,7 +20,10 @@ const Media = () => {
 
   return (
     <>
-      <SEO description="All images on the artists within Climax Music Empire" />
+      <SEO
+        title="Media"
+        description="All images on the artists within Climax Music Empire"
+      />
       {!isMobile && (
         <Box className={styles.mediaContainer}>
           <Box className={styles.titleBox}>
@@ -51,19 +44,17 @@ const Media = () => {
           <Box className={styles.contentBox}>
             <Box className={styles.textBox}>
               <Typography className={styles.text} variant="p" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Each of our artists have a different and unique style worth
+                showing. We always make sure to collect images of our concerts
+                and artists so that the fans can get a better visualisation of
+                us as a company, our artists and what we do. Scroll down to view
+                a slideshow with images of our artists and shows.
               </Typography>
             </Box>
             <Box className={styles.imageBox}>
               <img
                 className={styles.image}
-                src="/galleryImage.png"
+                src="/MediaImage.png"
                 alt="artist image"
               />
             </Box>
@@ -93,12 +84,10 @@ const Media = () => {
               </Typography>
             </Box>
             <Box className={styles.imageBoxMobile}>
-              <Image
-                layout="intrinsic"
-                src="/galleryImage.png"
+              <img
+                src="/MediaImage.png"
                 alt="artist image"
-                height={450}
-                width={350}
+                className={styles.image}
               />
             </Box>
           </Box>
@@ -109,13 +98,11 @@ const Media = () => {
                 variant="p"
                 component="p"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Each of our artists have a different and unique style worth
+                showing. We always make sure to collect images of our concerts
+                and artists so that the fans can get a better visualisation of
+                us as a company, our artists and what we do. Scroll down to view
+                a slideshow with images of our artists and shows.
               </Typography>
             </Box>
           </Box>

@@ -92,6 +92,7 @@ const Header = () => {
           {!isMenuOpen && (
             <Link href="/">
               <Image
+                priority="true"
                 className={styles.logo}
                 src={logo}
                 alt="Climax Music Empire"
@@ -104,6 +105,18 @@ const Header = () => {
           <>
             <nav className={styles.headerRight}>
               <ul className={styles.navLinks}>
+                <li className={styles.listItems}>
+                  <Link className={styles.linkStyle} href="/">
+                    <Typography
+                      id="headerHome"
+                      sx={navLinksBreakpoints}
+                      variant="p"
+                      component="p"
+                    >
+                      Home
+                    </Typography>
+                  </Link>
+                </li>
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/News">
                     <Typography
@@ -206,6 +219,17 @@ const Header = () => {
                 }}
               ></CloseIcon>
               <ul className={styles.navLinks}>
+                <li className={styles.listItemsOpen}>
+                  <Link
+                    onClick={toggleMenu}
+                    className={styles.linkStyle}
+                    href="/"
+                  >
+                    <Typography variant="p" component="p">
+                      Home
+                    </Typography>
+                  </Link>
+                </li>
                 <li className={styles.listItemsOpen}>
                   <Link
                     onClick={toggleMenu}

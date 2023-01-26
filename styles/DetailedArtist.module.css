@@ -2,12 +2,14 @@
   display: flex;
   padding-top: 6rem;
   flex-direction: column;
+  margin-left: 3rem !important;
+  margin-right: 3rem !important;
 }
 
 .artistBox {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .yellowNamePart {
@@ -19,24 +21,30 @@
   display: flex;
 }
 
+.artistImage {
+  width: 30%;
+  height: auto;
+}
+
 @media screen and (max-width: 1200px) {
   .artistImage {
-    width: 110%;
-    height: auto;
-  }
-  .artistImageFreshgee {
-    width: 110%;
-    height: auto;
+    width: 30%;
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 900px) {
   .artistImage {
-    width: 115%;
-    height: auto;
+    width: 60%;
   }
-  .artistImageFreshgee {
-    width: 115%;
-    height: auto;
+}
+
+@media screen and (max-width: 500px) {
+  .artistImage {
+    width: 60%;
+  }
+
+  .detailedArtistBox {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }

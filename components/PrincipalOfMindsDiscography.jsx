@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import styles from "../styles/Discography.module.css";
-import Iframe from "react-iframe";
 
 const PrincipalOfMindsDiscography = () => {
   let songs = [
@@ -57,9 +56,6 @@ const PrincipalOfMindsDiscography = () => {
           <Box className={styles.iframeContainer} key={song.url}>
             <iframe
               data-cookieconsent="marketing"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
-              // data-cookiecategory="functionality"
               data-cookieblock-src={song.url}
               width="100%"
               height="352"
@@ -68,12 +64,13 @@ const PrincipalOfMindsDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-            <div class="cookieconsent-optout-marketing">
+            <div
+              style={{ color: "white" }}
+              className="cookieconsent-optout-marketing"
+            >
               Please
-              <a href="javascript:Cookiebot.renew()">
-                accept marketing-cookies
-              </a>
-              to watch this video.
+              <p>accept marketing-cookies</p>
+              to play this song.
             </div>
           </Box>
         ))}
@@ -83,9 +80,6 @@ const PrincipalOfMindsDiscography = () => {
           <Box key={video.url} className={styles.videoIframeContainer}>
             <iframe
               data-cookieconsent="marketing"
-              // data-cookiecategory="targeting"
-              // alt="Please accept cookie policy first"
-              // data-cookiescript="accepted"
               data-cookieblock-src={video.url}
               width="100%"
               height="320px"
@@ -94,11 +88,17 @@ const PrincipalOfMindsDiscography = () => {
               display="block"
               position="relative"
             />
-            <div class="cookieconsent-optout-marketing">
+            <div
+              style={{ color: "white" }}
+              className="cookieconsent-optout-marketing"
+            >
               Please
-              <a href="javascript:Cookiebot.renew()">
+              <p
+
+              // href="javascript:Cookiebot.renew()"
+              >
                 accept marketing-cookies
-              </a>
+              </p>
               to watch this video.
             </div>
           </Box>

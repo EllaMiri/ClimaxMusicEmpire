@@ -19,10 +19,10 @@ const DetailedArtist = () => {
     {
       name: "BOI",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Boi Ous is from the Smiling Coast of West Africa, the Gambia. A very talented, creative & gifted mind when it comes to what he do. His music is based on his everyday lifestyle as a creative and motivated young man trying to figure out life. His songs are uplifting and very inspirational to each and every one of his listeners.",
       name1: "OUS",
 
-      image: "/boi-ous.png",
+      image: "/BoiOusDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -34,10 +34,10 @@ const DetailedArtist = () => {
     {
       name: "ICEKID",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Samuel Aigbogun Precious popularly known as Icekid Ds is a Sweden based Nigerian Singer, Song writer and record producer. Icekid DS is a versatile singer in the genre of Afro pop, R&B and Rap blending Africa's Afro with Global sounds.",
       name1: "DS",
 
-      image: "/icekid-ds.png",
+      image: "/IcekidDsDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -49,10 +49,10 @@ const DetailedArtist = () => {
     {
       name: "FRESH",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Freshgee believes that music is beyond a form of entertainment, that music unites so many cultures with different people around the world, that music is a universal language  and he's really mindful of this in his creative process. He came from Edo state, southside of Nigeria, West Africa. His childhood and his daily experiences gave him more inspirations in line with his music.",
       name1: "GEE",
 
-      image: "/freshgee1.png",
+      image: "/FreshgeeDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -64,10 +64,10 @@ const DetailedArtist = () => {
     {
       name: "PRINCIPAL OF",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Principal of Minds is a rapper who's dedicated to the art of understanding, his message is to spread awareness and understanding. He works with themes that works as a chain where one song leads to the other, allowing his listeners to grow with him. A firm believer that humanity can't grow without unity he fights to change the idea that Hip Hop is all about money, cars and depredating women. With years on his back he has crafted a style that blends with his showmanship.",
       name1: "MINDS",
 
-      image: "/PrincipalOfMinds.png",
+      image: "/PrincipalOfMindsDetailImage.png",
       instagram: (
         <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
       ),
@@ -83,7 +83,7 @@ const DetailedArtist = () => {
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
     flexWrap: "wrap",
-    marginLeft: { xs: "0", md: "3rem" },
+    // marginLeft: { xs: "0", md: "3rem" },
     marginBottom: { xs: ".5rem" },
   };
 
@@ -94,6 +94,7 @@ const DetailedArtist = () => {
 
   const h1MediaQueries = {
     fontSize: { xs: "2.5rem", sm: "4rem" },
+    display: { xs: "block" },
   };
 
   return (
@@ -102,6 +103,7 @@ const DetailedArtist = () => {
         principalOfMindsMockData.map((principalOfMinds) => (
           <Box className={styles.detailedArtistBox} key={principalOfMinds.name}>
             <SEO
+              title="Principal of Minds"
               description="Details about the artist Principal of Minds"
               facebook={{
                 url: "https://www.facebook.com/PrincipalofMinds",
@@ -121,7 +123,8 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
+                // style={{ width: "25%" }}
                 src={principalOfMinds.image}
                 alt="pricipal of minds image"
               />
@@ -168,6 +171,7 @@ const DetailedArtist = () => {
         boiOusMockData.map((boiOus) => (
           <Box className={styles.detailedArtistBox} key={boiOus.name}>
             <SEO
+              title="Boi Ous"
               description="Details about the artist Boi Ous"
               facebook={{
                 url: "https://www.facebook.com/1ousmacbook",
@@ -187,7 +191,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={boiOus.image}
                 alt="boi ous image"
               />
@@ -231,6 +235,7 @@ const DetailedArtist = () => {
         icekidDsMockData.map((icekidDs) => (
           <Box className={styles.detailedArtistBox} key={icekidDs.name}>
             <SEO
+              title="Icekid DS"
               description="Details about the artist Icekid DS"
               facebook={{
                 url: "https://www.facebook.com/profile.php?id=100064038551838",
@@ -250,7 +255,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={icekidDs.image}
                 alt="icekid image"
               />
@@ -294,6 +299,7 @@ const DetailedArtist = () => {
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <SEO
+              title="Freshgee"
               description="Details about the artist Freshgee"
               facebook={{
                 url: "https://www.facebook.com/profile.php?id=100066468461859",
@@ -313,7 +319,7 @@ const DetailedArtist = () => {
             </Box>
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
-                style={{ width: "25%" }}
+                className={styles.artistImage}
                 src={freshgee.image}
                 alt="freshgee image"
               />

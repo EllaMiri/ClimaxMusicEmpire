@@ -8,18 +8,7 @@ import SEO from "@bradgarropy/next-seo";
 
 const events1MockData = [
   {
-    image: "/event.png",
-    name: "Emergenza",
-    name1: "Live",
-    location: "Sticky finger",
-    time: "18:00",
-    date: "23 Sept 2022",
-  },
-];
-
-const events2MockData = [
-  {
-    image: "/event.png",
+    image: "/EmergenzaEvent.png",
     name: "Emergenza",
     name1: "Live",
     location: "Sticky finger",
@@ -63,7 +52,10 @@ const h1MediaQueries = {
 const Events = () => {
   return (
     <Box sx={eventPageContainer} className={styles.eventPageContainer}>
-      <SEO description="All events that Climax Music Empire and their artists is attending" />
+      <SEO
+        title="Events"
+        description="All events that Climax Music Empire and their artists is attending"
+      />
       <Box className={styles.titleBox}>
         <Typography sx={h1MediaQueries} variant="h1" component="h1">
           EVENT
@@ -84,58 +76,7 @@ const Events = () => {
               src={events.image}
               alt="event image"
               height={330}
-              width={300}
-            />
-            <Box sx={informationMediaQueries}>
-              <Box sx={eventTitleBoxMediaQueries} style={{ display: "flex" }}>
-                <Typography
-                  variant="p"
-                  component="p"
-                  className={styles.eventTitle}
-                >
-                  {events.name}
-                </Typography>
-                <Typography
-                  variant="p"
-                  component="p"
-                  className={styles.eventTitleYellow}
-                >
-                  {events.name1}
-                </Typography>
-              </Box>
-              <Box style={{ display: "flex" }}>
-                <LocationOnIcon className={styles.eventIcons} />
-                <Typography variant="p" component="p">
-                  {events.location}
-                </Typography>
-              </Box>
-              <Box style={{ display: "flex" }}>
-                <WatchLaterIcon className={styles.eventIcons} />
-                <Typography variant="p" component="p">
-                  {events.time}
-                </Typography>
-              </Box>
-              <Box style={{ display: "flex" }}>
-                <CalendarTodayIcon className={styles.eventIcons} />
-                <Typography variant="p" component="p">
-                  {events.date}
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-        ))}
-        {events2MockData.map((events) => (
-          <Box
-            sx={secondEventInformationContainer}
-            key={events.name}
-            style={{ display: "flex", alignItems: "center" }}
-          >
-            <Image
-              src={events.image}
-              alt="event image"
-              height={330}
-              width={300}
-              style={{ marginLeft: "1rem" }}
+              width={330}
             />
             <Box sx={informationMediaQueries}>
               <Box sx={eventTitleBoxMediaQueries} style={{ display: "flex" }}>

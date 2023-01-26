@@ -2,28 +2,21 @@ import { Button, Typography } from "@mui/material";
 import { Box } from "@mui/system";
 import styles from "../styles/Events.module.css";
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useContext } from "react";
 import Image from "next/image";
+import { MobileContext } from "../pages/_app";
 
 const EventsStartPage = () => {
   const router = useRouter();
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    const handleWindowResize = () => {
-      window.innerWidth < 900 ? setIsMobile(true) : setIsMobile(false);
-    };
-    window.addEventListener("resize", handleWindowResize);
-    return () => {
-      window.removeEventListener("resize", handleWindowResize);
-    };
-  }, []);
+  const isMobile = useContext(MobileContext);
 
   return (
     <>
       {isMobile && (
-        <Box className={styles.mobileContainer}>
+        <Box
+          style={{ marginBottom: "11rem" }}
+          className={styles.mobileContainer}
+        >
           <Box className={styles.mobileTextContainer}>
             <Box className={styles.titleContainer}>
               <Typography variant="h2" component="h2">
@@ -56,7 +49,7 @@ const EventsStartPage = () => {
               (max-width: 1200px) 50vw,
               33vw"
                 className={styles.eventImage}
-                src="/eventStartPage.png"
+                src="/EmergenzaEvent.png"
                 alt="event"
               />
             </Box>
@@ -65,13 +58,10 @@ const EventsStartPage = () => {
               component="p"
               variant="p"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our events are designed to always bring enjoyment and good vibes.
+              As a fan you can expect amazing artist performances, and as an
+              artist signed with us you can expect global touring deals,
+              festival performances and event marketing.
             </Typography>
             <Box>
               <Button
@@ -81,14 +71,22 @@ const EventsStartPage = () => {
                 variant="contained"
                 color="secondary"
               >
-                More events
+                All events
               </Button>
             </Box>
           </Box>
         </Box>
       )}
       {!isMobile && (
-        <Box className={styles.container}>
+        <Box
+          style={{ marginBottom: "11rem" }}
+          // style={{
+          //   minHeight: "105vh",
+          //   display: "flex",
+          //   justifyContent: "center",
+          // }}
+          className={styles.container}
+        >
           <Box className={styles.eventImage}>
             <Image
               fill
@@ -96,7 +94,7 @@ const EventsStartPage = () => {
               (max-width: 1200px) 50vw,
               33vw"
               className={styles.eventImage}
-              src="/eventStartPage.png"
+              src="/EmergenzaEvent.png"
               alt="event"
             />
           </Box>
@@ -132,13 +130,10 @@ const EventsStartPage = () => {
               component="p"
               variant="p"
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Our events are designed to always bring enjoyment and good vibes.
+              As a fan you can expect amazing artist performances, and as an
+              artist signed with us you can expect global touring deals,
+              festival performances and event marketing.
             </Typography>
             <Box>
               <Button
@@ -148,7 +143,7 @@ const EventsStartPage = () => {
                 variant="contained"
                 color="secondary"
               >
-                More events
+                All events
               </Button>
             </Box>
           </Box>
