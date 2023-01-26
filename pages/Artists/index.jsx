@@ -202,7 +202,6 @@ const Artists = () => {
             </Box>
           </Box>
         </Box>
-        
       </Box>
     </Box>
   );
