@@ -73,17 +73,13 @@ const Artist = () => {
         <img className={styles.image} src="/ArtistImage.png" alt="" />
         <Box sx={textAndBtnMediaQueries}>
           <Typography className={styles.description} component="p" variant="p">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt
-            dolorum labore nemo ratione reprehenderit iure officia quod id quasi
-            recusandae. Tempore ullam rem dignissimos doloremque quam deleniti
-            consequatur velit natus? Lorem ipsum dolor sit amet consectetur
-            adipisicing elit. Incidunt dolorum labore nemo ratione reprehenderit
-            iure officia quod id quasi recusandae. Tempore ullam rem dignissimos
-            doloremque quam deleniti consequatur velit natus? Lorem ipsum dolor
-            sit amet consectetur adipisicing elit. Incidunt dolorum labore nemo
-            ratione reprehenderit iure officia quod id quasi recusandae. Tempore
-            ullam rem dignissimos doloremque quam deleniti consequatur velit
-            natus?
+            Artists are the heart of what we do and we have deep reverence and
+            respect for their creativity. We believe live music is vital to art
+            and culture which is why we created this platform so that artists
+            and music lovers can enjoy the art of creativity. Beyond global
+            touring deals and festival performances, our Artist Empire offers
+            services such as management, business marketing and consulting to
+            artists across all genres.
           </Typography>
           <Button
             id="ourArtistsBtn"

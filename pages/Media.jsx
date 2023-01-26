@@ -44,13 +44,11 @@ const Media = () => {
           <Box className={styles.contentBox}>
             <Box className={styles.textBox}>
               <Typography className={styles.text} variant="p" component="p">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Each of our artists have a different and unique style worth
+                showing. We always make sure to collect images of our concerts
+                and artists so that the fans can get a better visualisation of
+                us as a company, our artists and what we do. Scroll down to view
+                a slideshow with images of our artists and shows.
               </Typography>
             </Box>
             <Box className={styles.imageBox}>
@@ -100,13 +98,11 @@ const Media = () => {
                 variant="p"
                 component="p"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-                sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Each of our artists have a different and unique style worth
+                showing. We always make sure to collect images of our concerts
+                and artists so that the fans can get a better visualisation of
+                us as a company, our artists and what we do. Scroll down to view
+                a slideshow with images of our artists and shows.
               </Typography>
             </Box>
           </Box>

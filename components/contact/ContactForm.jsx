@@ -204,8 +204,15 @@ const ContactForm = () => {
           <FormGroup>
             <FormControl>
               <FormControlLabel
-                control={<Checkbox onChange={handleChange} required />}
-                label="I accept that this information is being sent to the company in the purpose of contact!"
+                style={{ color: "white" }}
+                control={
+                  <Checkbox
+                    style={{ color: "white" }}
+                    onChange={handleChange}
+                    required
+                  />
+                }
+                label="I accept that this information is being sent to the company for contact purposes."
                 id="approve"
                 name="approve"
                 {...register("approve")}

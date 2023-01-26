@@ -38,7 +38,7 @@ const Hero = () => {
     display: { xs: "none", sm: "block" },
   };
 
-  const mobileVideoMediaQueries = {
+  const mobileImageMediaQueries = {
     display: { xs: "block", sm: "none" },
   };
 
@@ -49,20 +49,18 @@ const Hero = () => {
           <source src="./rollingWEB.mp4" type="video/mp4" />
         </video>
       </Box>
-      <Box sx={mobileVideoMediaQueries}>
-        <video autoPlay muted loop className={styles.video}>
-          <source src="./heroVideoMobile.mp4" type="video/mp4" />
-        </video>
+      <Box sx={mobileImageMediaQueries}>
+        <img
+          src="./IcekidDsShow.png"
+          alt=""
+          style={{ opacity: "50%" }}
+          className={styles.video}
+        />
       </Box>
       <Box className={styles.heroText} sx={textContentMediaQueries}>
         <Box className={styles.titleBox} sx={titleBoxMediaQueries}>
           <Box className={styles.headingContainer}>
-            <Typography
-              className={styles.heading}
-              // sx={titleMediaQueries}
-              variant="h1"
-              component="h1"
-            >
+            <Typography className={styles.heading} variant="h1" component="h1">
               CLIMAX MUSIC
             </Typography>
             <Typography

@@ -19,7 +19,7 @@ const DetailedArtist = () => {
     {
       name: "BOI",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Boi Ous is from the Smiling Coast of West Africa, the Gambia. A very talented, creative & gifted mind when it comes to what he do. His music is based on his everyday lifestyle as a creative and motivated young man trying to figure out life. His songs are uplifting and very inspirational to each and every one of his listeners.",
       name1: "OUS",
 
       image: "/BoiOusDetailImage.png",
@@ -34,7 +34,7 @@ const DetailedArtist = () => {
     {
       name: "ICEKID",
       description:
-        "L am olor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Samuel Aigbogun Precious popularly known as Icekid Ds is a Sweden based Nigerian Singer, Song writer and record producer. Icekid DS is a versatile singer in the genre of Afro pop, R&B and Rap blending Africa's Afro with Global sounds.",
       name1: "DS",
 
       image: "/IcekidDsDetailImage.png",
@@ -49,7 +49,7 @@ const DetailedArtist = () => {
     {
       name: "FRESH",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Freshgee believes that music is beyond a form of entertainment, that music unites so many cultures with different people around the world, that music is a universal language  and he's really mindful of this in his creative process. He came from Edo state, southside of Nigeria, West Africa. His childhood and his daily experiences gave him more inspirations in line with his music.",
       name1: "GEE",
 
       image: "/FreshgeeDetailImage.png",
@@ -64,7 +64,7 @@ const DetailedArtist = () => {
     {
       name: "PRINCIPAL OF",
       description:
-        "Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Loremipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit ametLorem ipsum dolor sit amet Lorem ipsum dolor sit amet ",
+        "Principal of Minds is a rapper who's dedicated to the art of understanding, his message is to spread awareness and understanding. He works with themes that works as a chain where one song leads to the other, allowing his listeners to grow with him. A firm believer that humanity can't grow without unity he fights to change the idea that Hip Hop is all about money, cars and depredating women. With years on his back he has crafted a style that blends with his showmanship.",
       name1: "MINDS",
 
       image: "/PrincipalOfMindsDetailImage.png",
