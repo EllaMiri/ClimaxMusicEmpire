@@ -1,6 +1,6 @@
-import { Button, Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import styles from "../styles/AllNews.module.css";
+import styles from "../styles/News.module.css";
 import Link from "next/link";
 import { useContext } from "react";
 import SEO from "@bradgarropy/next-seo";

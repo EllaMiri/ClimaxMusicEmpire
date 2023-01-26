@@ -1,12 +1,12 @@
 import { Typography, Box } from "@mui/material";
 import Image from "next/image";
-import logo from "../../assets/CLIMAXMUSICLOGOv3.png";
+import logo from "../../public/CLIMAXMUSICLOGOv3.png";
 import styles from "../../styles/Header.module.css";
 import Link from "next/link";
-import BurgerMenu from "../../assets/BurgerMenu.png";
+import BurgerMenu from "../../public/BurgerMenu.png";
 import { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
-import { Link as Scroll, scroller } from "react-scroll";
+import { Link as Scroll } from "react-scroll";
 import { useRouter } from "next/router";
 
 //Header

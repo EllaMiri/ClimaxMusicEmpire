@@ -4,8 +4,6 @@ import CustomTheme from "../styles/muiTheme";
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import SEO from "@bradgarropy/next-seo";
-import Head from "next/head";
-import Script from "next/script";
 import { createContext, useEffect, useState } from "react";
 
 //Context for the responivness that we use in several components
