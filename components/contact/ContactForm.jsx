@@ -31,7 +31,6 @@ const ContactForm = () => {
 
   const [checked, setChecked] = useState(true);
 
-
   const submitNofify = () => toast.success("Email sent");
 
   const form = useRef();
