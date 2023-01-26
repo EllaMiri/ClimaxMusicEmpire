@@ -8,14 +8,16 @@ import SEO from "@bradgarropy/next-seo";
 import { MobileContext } from "./_app";
 
 const Media = () => {
+  //Context for the responsivness
   const isMobile = useContext(MobileContext);
 
+  //Media queries
   const h1TitleMediaQueries = {
-    fontSize: { xs: "2.5rem", md: "4rem" },
+    fontSize: { xs: "2.5rem", sm: '3.75rem', md: "4rem" },
   };
 
   const h2TitleMediaQueries = {
-    fontSize: { sm: "2.5rem", md: "4rem" },
+    fontSize: { sm: "2.5rem", sm: '3.75rem', md: "4rem" },
   };
 
   return (

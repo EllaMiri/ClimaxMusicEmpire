@@ -8,6 +8,7 @@ import Head from "next/head";
 import Script from "next/script";
 import { createContext, useEffect, useState } from "react";
 
+//Context for the responivness that we use in several components
 export const MobileContext = createContext(null);
 
 export default function App({ Component, pageProps }) {
@@ -25,6 +26,7 @@ export default function App({ Component, pageProps }) {
   }, []);
   return (
     <>
+    {/* Theme provider to use the custom Material UI Theme */}
       <ThemeProvider theme={CustomTheme}>
         <MobileContext.Provider value={isMobile}>
           <SEO

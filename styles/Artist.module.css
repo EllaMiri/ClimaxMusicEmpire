@@ -18,8 +18,6 @@
 
 .imageContainer {
   display: flex;
-  /* width: 40rem;
-  height: 40rem; */
   position: relative;
 }
 
@@ -31,6 +29,10 @@
 
 .description {
   text-align: left;
+}
+
+#contact2 {
+  margin-bottom: 5rem !important;
 }
 
 @media screen and (max-width: 1200px) {

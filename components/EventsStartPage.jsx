@@ -8,13 +8,14 @@ import { MobileContext } from "../pages/_app";
 
 const EventsStartPage = () => {
   const router = useRouter();
+  
+  //Context for the responsivness
   const isMobile = useContext(MobileContext);
 
   return (
     <>
       {isMobile && (
         <Box
-          style={{ marginBottom: "11rem" }}
           className={styles.mobileContainer}
         >
           <Box className={styles.mobileTextContainer}>
@@ -79,12 +80,6 @@ const EventsStartPage = () => {
       )}
       {!isMobile && (
         <Box
-          style={{ marginBottom: "11rem" }}
-          // style={{
-          //   minHeight: "105vh",
-          //   display: "flex",
-          //   justifyContent: "center",
-          // }}
           className={styles.container}
         >
           <Box className={styles.eventImage}>

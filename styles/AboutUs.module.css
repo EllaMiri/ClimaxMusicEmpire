@@ -13,6 +13,10 @@
   position: relative;
 }
 
+.aboutUsContainer {
+  margin-bottom: 11rem !important;
+}
+
 @media screen and (max-width: 900px) {
   .imageContainer {
     width: 8.5rem;

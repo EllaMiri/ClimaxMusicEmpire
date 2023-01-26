@@ -1,5 +1,6 @@
 .contactPageBox {
   display: flex;
+  margin-bottom: 11rem !important;
 }
 
 .textBox {
@@ -30,7 +31,11 @@
   margin-right: 0.4rem !important;
 }
 
-/* .secondVerse {
-  display: flex;
-  justify-content: center;
-} */
+.us {
+  margin-left: 1.2rem !important;
+  color: #e2b945 !important;
+}
+
+.descriptionBox {
+  margin-bottom: .5rem !important;
+}

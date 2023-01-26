@@ -9,6 +9,10 @@
   margin-bottom: 2rem;
 }
 
+.flex {
+  display: flex !important;
+}
+
 .eventsBoxes {
   width: 100%;
   display: flex;

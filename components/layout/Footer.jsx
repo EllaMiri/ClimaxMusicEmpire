@@ -11,27 +11,15 @@ import TwitterIcon from "@mui/icons-material/Twitter";
 import { useRouter } from "next/router";
 
 const Footer = () => {
+
+  // Media queries
   const lowerMediaQueries = {
     fontSize: { xs: ".7rem", sm: ".8rem", md: "1rem" },
   };
 
   const router = useRouter();
 
-  // const scrollTarget = (target) =>
-  //   scroller.scrollTo(target, {
-  //     smooth: true,
-  //     duration: 700,
-  //     offset: 0,
-  //     spy: true,
-  //   });
-
-  // const scrollToPage = async (target) => {
-  //   if (router.pathname !== "/") {
-  //     await router.push("/");
-  //   }
-  //   scrollTarget(target);
-  // };
-
+  // Settings for scroll to contact
   function scrollToContact() {
     window.scrollTo({
       top: 1900,
@@ -40,6 +28,7 @@ const Footer = () => {
     });
   }
 
+  // Scroll to contact on the first page
   const scrollToPage = async () => {
     if (router.pathname !== "/") {
       await router.push("/");
@@ -60,7 +49,7 @@ const Footer = () => {
           href="https://www.youtube.com/channel/UC0wGpK66OgQLjWZJR-NzcSQ"
           target="_blank"
         >
-          <YouTubeIcon style={{ color: "white", fontSize: "2.4rem" }} />
+          <YouTubeIcon className={styles.youtubeIcon} />
         </Link>
         <Link
           aria-label="Climax Music Empire Instagram account"
@@ -68,12 +57,7 @@ const Footer = () => {
           target="_blank"
         >
           <InstagramIcon
-            style={{
-              color: "white",
-              fontSize: "2rem",
-              marginLeft: "3rem",
-              marginRight: "rem",
-            }}
+          className={styles.instagramIcon}
           />
         </Link>
         <Link
@@ -82,12 +66,7 @@ const Footer = () => {
           target="_blank"
         >
           <FacebookIcon
-            style={{
-              color: "white",
-              fontSize: "2rem",
-              marginLeft: "3rem",
-              marginRight: "3rem",
-            }}
+          className={styles.facebookIcon}
           />
         </Link>
         <Link
@@ -96,20 +75,13 @@ const Footer = () => {
           target="_blank"
         >
           <TwitterIcon
-            style={{
-              color: "white",
-              fontSize: "2rem",
-            }}
+          className={styles.twitterIcon}
           />
         </Link>
       </Box>
-      {/* <Box className={styles.middle}>
-        <Link href="/">
-          <Image src={logo} alt="Climax Music Empire" width={50} />
-        </Link>
-      </Box> */}
+      
       <Box className={styles.lower}>
-        <Link style={{ textDecoration: "none" }} href="/News">
+        <Link className={styles.link} href="/News">
           <Typography
             id="footerNews"
             variant="p"
@@ -120,7 +92,7 @@ const Footer = () => {
             NEWS
           </Typography>
         </Link>
-        <Link style={{ textDecoration: "none" }} href="/Artists">
+        <Link className={styles.link} href="/Artists">
           <Typography
             id="footerArtists"
             variant="p"
@@ -160,7 +132,7 @@ const Footer = () => {
             </Typography>
           </Scroll>
         )}
-        <Link style={{ textDecoration: "none" }} href="/Events">
+        <Link className={styles.link} href="/Events">
           <Typography
             id="footerEvents"
             variant="p"

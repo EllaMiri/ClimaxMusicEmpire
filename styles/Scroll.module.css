@@ -12,3 +12,8 @@
   cursor: pointer !important;
   border: none !important;
 }
+
+.arrow {
+  font-size: 3rem !important;
+  color: black !important;
+}

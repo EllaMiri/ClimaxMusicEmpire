@@ -3,6 +3,8 @@ import styles from "../styles/Hero.module.css";
 import { Link } from "react-scroll";
 
 const Hero = () => {
+
+  // Media queries
   const textContentMediaQueries = {
     width: { xs: "100%", sm: "100%", md: "100%", lg: "100%" },
   };
@@ -26,14 +28,6 @@ const Hero = () => {
     },
   };
 
-  // const paragraphMediaQueries = {
-  //   fontSize: { xs: ".8rem", sm: "1.2rem", md: "1.3rem", lg: "1.5rem" },
-  // };
-
-  // const titleMediaQueries = {
-  //   fontSize: { xs: "1.6rem", sm: "3rem", md: "4rem", lg: "5rem" },
-  // };
-
   const desktopVideoMediaQueries = {
     display: { xs: "none", sm: "block" },
   };
@@ -53,8 +47,7 @@ const Hero = () => {
         <img
           src="./IcekidDsShow.png"
           alt=""
-          style={{ opacity: "50%" }}
-          className={styles.video}
+          className={styles.img}
         />
       </Box>
       <Box className={styles.heroText} sx={textContentMediaQueries}>
@@ -66,7 +59,6 @@ const Hero = () => {
             <Typography
               className={styles.heading}
               sx={[lastTitleMediaQueries]}
-              // titleMediaQueries]}
               variant="h2"
               component="h2"
               style={{ color: "#e2b945" }}
@@ -77,7 +69,6 @@ const Hero = () => {
           <Box sx={descriptionMediaQueries} className={styles.description}>
             <Typography
               className={styles.paragraph}
-              // sx={paragraphMediaQueries}
               variant="p"
               component="p"
             >

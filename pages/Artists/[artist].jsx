@@ -15,6 +15,7 @@ const DetailedArtist = () => {
   const router = useRouter();
   const artist = router.query.artist;
 
+  // Array with information about artist Boi Ous
   const boiOusMockData = [
     {
       name: "BOI",
@@ -24,12 +25,13 @@ const DetailedArtist = () => {
 
       image: "/BoiOusDetailImage.png",
       instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
+        <InstagramIcon className={styles.instagramIcon} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+  // Array with information about artist IceKid DS
   const icekidDsMockData = [
     {
       name: "ICEKID",
@@ -39,12 +41,14 @@ const DetailedArtist = () => {
 
       image: "/IcekidDsDetailImage.png",
       instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
+        <InstagramIcon className={styles.instagramIcon}  />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+
+   // Array with information about artist Freshgee
   const freshgeeMockData = [
     {
       name: "FRESH",
@@ -54,12 +58,14 @@ const DetailedArtist = () => {
 
       image: "/FreshgeeDetailImage.png",
       instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
+        <InstagramIcon className={styles.instagramIcon} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
+  
+   // Array with information about artist Principal of Minds
   const principalOfMindsMockData = [
     {
       name: "PRINCIPAL OF",
@@ -69,13 +75,14 @@ const DetailedArtist = () => {
 
       image: "/PrincipalOfMindsDetailImage.png",
       instagram: (
-        <InstagramIcon style={{ fontSize: "2rem", color: "#e2b945" }} />
+        <InstagramIcon className={styles.instagramIcon} />
       ),
       spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon style={{ fontSize: "2.5rem", color: "#e2b945" }} />,
+      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
     },
   ];
 
+  //Media queries
   const ArtistBoxMediaQueries = {
     flexDirection: { xs: "column", md: "row" },
   };
@@ -83,7 +90,6 @@ const DetailedArtist = () => {
   const ArtistNameMediaQueries = {
     justifyContent: { xs: "center", md: "flex-start" },
     flexWrap: "wrap",
-    // marginLeft: { xs: "0", md: "3rem" },
     marginBottom: { xs: ".5rem" },
   };
 
@@ -105,6 +111,8 @@ const DetailedArtist = () => {
     marginTop: "1rem",
   };
 
+
+  // Renders out artist depending on the query in the URL
   return (
     <Box>
       {artist === "PrincipalOfMinds" &&
@@ -132,7 +140,6 @@ const DetailedArtist = () => {
             <Box sx={ArtistBoxMediaQueries} className={styles.artistBox}>
               <img
                 className={styles.artistImage}
-                // style={{ width: "25%" }}
                 src={principalOfMinds.image}
                 alt="pricipal of minds image"
               />

@@ -20,7 +20,10 @@ import styles from "../../styles/ContactForm.module.css";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
+  //Contact Form on the start page
 const ContactForm = () => {
+  // States for the information in the contact form
+  
   const [showHide, setShowHide] = useState("showArtist");
   const [_, setShowRole] = useState("showArtist");
   const [firstname, setFirstName] = useState();
@@ -31,14 +34,17 @@ const ContactForm = () => {
 
   const [checked, setChecked] = useState(true);
 
+  // Success message when email is sent
   const submitNofify = () => toast.success("Email sent");
 
   const form = useRef();
 
+  //Reset the form when message is sent
   const handleForm = () => {
     form.current.reset();
   };
 
+  //Show inputs depenting on if you choice artist or eventplanner checkbox
   const handleShow = (e) => {
     const getShow = e.target.value;
     setShowHide(getShow);
@@ -49,6 +55,7 @@ const ContactForm = () => {
     setChecked(event.target.checked);
   };
 
+  // When user clicks submit form:
   const onSubmit = () => {
     emailjs
       .sendForm(
@@ -69,6 +76,7 @@ const ContactForm = () => {
     submitNofify();
   };
 
+  // Input validation for the form
   const validationSchema = Yup.object().shape({
     firstname: Yup.string()
       .required("Firstname is required")
@@ -94,6 +102,7 @@ const ContactForm = () => {
     resolver: yupResolver(validationSchema),
   });
 
+  // Media queries
   const descriptionMediaQueries = {
     width: { xs: "15rem", sm: "20rem", md: "23rem" },
   };
@@ -107,17 +116,10 @@ const ContactForm = () => {
       className={styles.contactForm}
       component="form"
       ref={form}
-      // onSubmit={e => handleForm(e)}
       noValidate
     >
       <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          paddingTop: "3rem",
-          paddingBottom: "3rem",
-        }}
+      className={styles.container}
       >
         <FormControl>
           <RadioGroup
@@ -226,13 +228,13 @@ const ContactForm = () => {
             {errors.description?.message}
           </Typography>
 
-          <FormGroup>
+          <FormGroup className={styles.formGroup}>
             <FormControl>
               <FormControlLabel
-                style={{ color: "white" }}
+                className={styles.white}
                 control={
                   <Checkbox
-                    style={{ color: "white" }}
+                    className={styles.white}
                     onChange={handleChange}
                     required
                   />

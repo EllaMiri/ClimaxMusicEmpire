@@ -3,6 +3,8 @@ import styles from "../styles/Discography.module.css";
 import Iframe from "react-iframe";
 
 const BoiOusDiscography = () => {
+
+  // Array with the spotify songs
   let songs = [
     {
       url: "https://open.spotify.com/embed/track/1RxJLlpt8fD6caAp82bEzn?utm_source=generator",
@@ -12,6 +14,8 @@ const BoiOusDiscography = () => {
     },
   ];
 
+
+  // Array with the youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/6EY1vhSnhFo",
@@ -21,6 +25,7 @@ const BoiOusDiscography = () => {
     },
   ];
 
+  //Media queries
   const titleMediaQueries = {
     fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
   };
@@ -54,12 +59,10 @@ const BoiOusDiscography = () => {
               loading="lazy"
             ></iframe>
             <div
-              style={{ color: "white" }}
+              style={{ color: "white", display: "flex", justifyContent: "center" }}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to play this song.
+              <p> Please accept marketing-cookies to listen to this song.</p>
             </div>
           </Box>
         ))}
@@ -78,12 +81,12 @@ const BoiOusDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
+              style={{ color: "white", display: "flex", justifyContent: "center"}}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to watch this video.
+              
+              <p> Please accept marketing-cookies to watch this video.</p>
+              
             </div>
           </Box>
         ))}

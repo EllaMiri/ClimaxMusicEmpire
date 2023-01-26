@@ -3,6 +3,8 @@ import styles from "../styles/Discography.module.css";
 import Iframe from "react-iframe";
 
 const FreshgeeDiscography = () => {
+
+  // Array with the spotify songs
   let songs = [
     {
       url: "https://open.spotify.com/embed/album/4jralfqL4gCZAPO8X1hBjg?utm_source=generator",
@@ -15,6 +17,7 @@ const FreshgeeDiscography = () => {
     },
   ];
 
+    // Array with the youtube videos
   let videos = [
     {
       url: "https://www.youtube.com/embed/E5fMwwtMQE8",
@@ -24,6 +27,7 @@ const FreshgeeDiscography = () => {
     },
   ];
 
+  //Media queries
   const titleMediaQueries = {
     fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
   };
@@ -56,13 +60,11 @@ const FreshgeeDiscography = () => {
               allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
               loading="lazy"
             ></iframe>
-            <div
-              style={{ color: "white" }}
+           <div
+              style={{ color: "white", display: "flex", justifyContent: "center" }}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to play this song.
+              <p> Please accept marketing-cookies to listen to this song.</p>
             </div>
           </Box>
         ))}
@@ -80,12 +82,10 @@ const FreshgeeDiscography = () => {
               position="relative"
             />
             <div
-              style={{ color: "white" }}
+              style={{ color: "white", display: "flex", justifyContent: "center" }}
               className="cookieconsent-optout-marketing"
             >
-              Please
-              <p>accept marketing-cookies</p>
-              to watch this video.
+              <p> Please accept marketing-cookies to watch this video.</p>
             </div>
           </Box>
         ))}

@@ -75,7 +75,12 @@
 }
 
 .logoBurgerMenu {
-  /* display: block; */
   margin-top: 1rem;
   margin-left: 1rem;
+}
+
+.closeIcon {
+  color: white !important;
+  font-size: 2.5rem !important;
+  cursor: pointer !important;
 }

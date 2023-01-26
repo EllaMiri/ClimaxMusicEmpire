@@ -6,6 +6,7 @@ import LocationOnIcon from "@mui/icons-material/LocationOn";
 import WatchLaterIcon from "@mui/icons-material/WatchLater";
 import SEO from "@bradgarropy/next-seo";
 
+// Data for the event to be mapped out
 const events1MockData = [
   {
     image: "/EmergenzaEvent.png",
@@ -17,11 +18,12 @@ const events1MockData = [
   },
 ];
 
+//Media queries
 const eventPageContainer = {
   display: { xs: "flex" },
   flexDirection: { xs: "column" },
   alignItems: { xs: "center", md: "flex-start" },
-  marginLeft: { md: "2rem" },
+  marginLeft: { md: "3rem" },
 };
 
 const eventInformationContainer = {
@@ -80,7 +82,7 @@ const Events = () => {
               width={330}
             />
             <Box sx={informationMediaQueries}>
-              <Box sx={eventTitleBoxMediaQueries} style={{ display: "flex" }}>
+              <Box sx={eventTitleBoxMediaQueries} className={styles.flex}>
                 <Typography
                   variant="p"
                   component="p"
@@ -96,19 +98,19 @@ const Events = () => {
                   {events.name1}
                 </Typography>
               </Box>
-              <Box style={{ display: "flex" }}>
+              <Box className={styles.flex}>
                 <LocationOnIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.location}
                 </Typography>
               </Box>
-              <Box style={{ display: "flex" }}>
+              <Box className={styles.flex}>
                 <WatchLaterIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.time}
                 </Typography>
               </Box>
-              <Box style={{ display: "flex" }}>
+              <Box className={styles.flex}>
                 <CalendarTodayIcon className={styles.eventIcons} />
                 <Typography variant="p" component="p">
                   {events.date}
