@@ -85,6 +85,9 @@ const Header = () => {
                 <li className={styles.listItems}>
                   <Link className={styles.linkStyle} href="/">
                     <Typography
+                      className={
+                        router.pathname == "/" ? `${styles.active}` : ""
+                      }
                       id="headerHome"
                       sx={navLinksBreakpoints}
                       variant="p"
@@ -101,6 +104,9 @@ const Header = () => {
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
+                      className={
+                        router.pathname == "/News" ? `${styles.active}` : ""
+                      }
                     >
                       News
                     </Typography>
@@ -113,6 +119,9 @@ const Header = () => {
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
+                      className={
+                        router.pathname == "/Media" ? `${styles.active}` : ""
+                      }
                     >
                       Media
                     </Typography>
@@ -159,6 +168,9 @@ const Header = () => {
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
+                      className={
+                        router.pathname == "/Events" ? `${styles.active}` : ""
+                      }
                     >
                       Events
                     </Typography>
@@ -171,6 +183,9 @@ const Header = () => {
                       sx={navLinksBreakpoints}
                       variant="p"
                       component="p"
+                      className={
+                        router.pathname == "/Artists" ? `${styles.active}` : ""
+                      }
                     >
                       Artists
                     </Typography>
@@ -197,7 +212,13 @@ const Header = () => {
                     className={styles.linkStyle}
                     href="/"
                   >
-                    <Typography variant="p" component="p">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      className={
+                        router.pathname == "/" ? `${styles.active}` : ""
+                      }
+                    >
                       Home
                     </Typography>
                   </Link>
@@ -208,7 +229,13 @@ const Header = () => {
                     className={styles.linkStyle}
                     href="/News"
                   >
-                    <Typography variant="p" component="p">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      className={
+                        router.pathname == "/News" ? `${styles.active}` : ""
+                      }
+                    >
                       News
                     </Typography>
                   </Link>
@@ -219,7 +246,13 @@ const Header = () => {
                     className={styles.linkStyle}
                     href="/Media"
                   >
-                    <Typography variant="p" component="p">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      className={
+                        router.pathname == "/Media" ? `${styles.active}` : ""
+                      }
+                    >
                       Media
                     </Typography>
                   </Link>
@@ -259,7 +292,13 @@ const Header = () => {
                     className={styles.linkStyle}
                     href="/Events"
                   >
-                    <Typography variant="p" component="p">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      className={
+                        router.pathname == "/Events" ? `${styles.active}` : ""
+                      }
+                    >
                       Events
                     </Typography>
                   </Link>
@@ -270,7 +309,13 @@ const Header = () => {
                     className={styles.linkStyle}
                     href="/Artists"
                   >
-                    <Typography variant="p" component="p">
+                    <Typography
+                      variant="p"
+                      component="p"
+                      className={
+                        router.pathname == "/Artists" ? `${styles.active}` : ""
+                      }
+                    >
                       Artists
                     </Typography>
                   </Link>
