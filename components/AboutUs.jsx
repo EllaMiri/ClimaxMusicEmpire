@@ -3,7 +3,7 @@ import styles from "../styles/AboutUs.module.css";
 import Image from "next/image";
 
 const AboutUs = () => {
-  // Media queries
+  // Media queries!
   const aboutUSMediaQueries = {
     display: { xs: "flex", sm: "flex" },
     alignItems: { xs: "center", sm: "center", md: "flex-start" },
