@@ -30,6 +30,11 @@ const Artists = () => {
     marginBottom: { xs: "1rem", lg: "0" },
   };
 
+  const correct = {
+    marginLeft: { xs: "0", md: "1rem", lg: "1rem" },
+    marginTop: { xs: "1rem" },
+  };
+
   const titleBox = {
     justifyContent: { xs: "center", lg: "flex-start" },
     marginLeft: { xs: "0", lg: "5rem" },
@@ -130,7 +135,7 @@ const Artists = () => {
             </Box>
           </Box>
         </Box>
-        <Box sx={freshgeeMediaQueries}>
+        {/* <Box sx={freshgeeMediaQueries}>
           <Box className={styles.artistNameBox}>
             <Typography className={styles.monserrat} component="p" variant="p">
               FRESH
@@ -150,8 +155,8 @@ const Artists = () => {
               <Typography className={styles.text}>READ MORE</Typography>
             </Box>
           </Box>
-        </Box>
-        <Box>
+        </Box> */}
+        <Box sx={correct}>
           <Box className={styles.artistNameBox}>
             <Typography className={styles.monserrat} component="p" variant="p">
               PRINCIPAL OF

@@ -45,19 +45,19 @@ const DetailedArtist = () => {
   ];
 
   // Array with information about artist Freshgee
-  const freshgeeMockData = [
-    {
-      name: "FRESH",
-      description:
-        "Freshgee believes that music is beyond a form of entertainment, that music unites so many cultures with different people around the world, that music is a universal language  and he's really mindful of this in his creative process. He came from Edo state, southside of Nigeria, West Africa. His childhood and his daily experiences gave him more inspirations in line with his music.",
-      name1: "GEE",
+  // const freshgeeMockData = [
+  //   {
+  //     name: "FRESH",
+  //     description:
+  //       "Freshgee believes that music is beyond a form of entertainment, that music unites so many cultures with different people around the world, that music is a universal language  and he's really mindful of this in his creative process. He came from Edo state, southside of Nigeria, West Africa. His childhood and his daily experiences gave him more inspirations in line with his music.",
+  //     name1: "GEE",
 
-      image: "/FreshgeeDetailImage.png",
-      instagram: <InstagramIcon className={styles.instagramIcon} />,
-      spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
-      youtube: <YouTubeIcon className={styles.youtubeIcon} />,
-    },
-  ];
+  //     image: "/FreshgeeDetailImage.png",
+  //     instagram: <InstagramIcon className={styles.instagramIcon} />,
+  //     spotify: <img src="/spotify.png" alt="Spotify icon" width="35rem" />,
+  //     youtube: <YouTubeIcon className={styles.youtubeIcon} />,
+  //   },
+  // ];
 
   // Array with information about artist Principal of Minds
   const principalOfMindsMockData = [
@@ -277,7 +277,7 @@ const DetailedArtist = () => {
             <IcekidDsDiscography />
           </Box>
         ))}
-      {artist === "Freshgee" &&
+      {/* {artist === "Freshgee" &&
         freshgeeMockData.map((freshgee) => (
           <Box className={styles.detailedArtistBox} key={freshgee.name}>
             <SEO
@@ -335,7 +335,7 @@ const DetailedArtist = () => {
             </Box>
             <FreshgeeDiscography />
           </Box>
-        ))}
+        ))} */}
     </Box>
   );
 };
