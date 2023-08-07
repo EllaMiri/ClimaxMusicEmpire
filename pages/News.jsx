@@ -77,7 +77,7 @@ const News = () => {
             </Box>
           </Box>
 
-          <Box className={styles.mobileContainer}>
+          {/* <Box className={styles.mobileContainer}>
             <Box className={styles.secondTitleBox}>
               <Typography
                 variant="span"
@@ -110,7 +110,7 @@ const News = () => {
                 him as part of our label.
               </Typography>
             </Box>
-          </Box>
+          </Box> */}
         </>
       )}
       {!isMobile && (
@@ -170,7 +170,7 @@ const News = () => {
             </Box>
           </Box>
 
-          <Box className={styles.reverseContainer}>
+          {/* <Box className={styles.reverseContainer}>
             <img
               src="./FreshgeeNews.png"
               alt="Nigerian
@@ -206,7 +206,7 @@ const News = () => {
                 him as part of our label.
               </Typography>
             </Box>
-          </Box>
+          </Box> */}
         </>
       )}
     </Box>
